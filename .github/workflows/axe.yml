@@ -35,12 +35,12 @@ jobs:
 
       - name: Serve built site and run axe
         run: |
-          # Start a local server in the background
           serve _site --listen 4001 &
           SERVER_PID=$!
           sleep 3
 
-          # Pages to test (light mode = default)
+          mkdir -p axe-results
+
           PAGES=(
             "/"
             "/domains/"
@@ -50,6 +50,7 @@ jobs:
             "/domains/algorithmic-accountability/full-model/"
             "/domains/open-source-in-government/full-model/"
             "/about/"
+            "/adoptions/"
             "/tools/"
             "/tools/advocate/"
             "/tools/policy-pro/"
@@ -57,20 +58,23 @@ jobs:
 
           FAILED=0
           for PAGE in "${PAGES[@]}"; do
+            SLUG=$(echo "$PAGE" | sed 's|/|_|g' | sed 's|^_||' | sed 's|_$||')
+            SLUG="${SLUG:-home}"
             echo "::group::Testing http://localhost:4001${PAGE}"
             axe "http://localhost:4001${PAGE}" \
               --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa \
-              --reporter cli || FAILED=1
+              --exit \
+              --save "axe-results/${SLUG}.json" || FAILED=1
             echo "::endgroup::"
           done
 
           kill $SERVER_PID
           exit $FAILED
 
-      - name: Upload axe results on failure
-        if: failure()
+      - name: Upload axe results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: axe-results
           path: axe-results/
-          retention-days: 7
+          retention-days: 14

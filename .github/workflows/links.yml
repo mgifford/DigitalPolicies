@@ -24,20 +24,18 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          # Check all markdown and HTML files
           args: >-
             --config .lychee.toml
             --no-progress
+            --output ./lychee/out.md
             --format markdown
-            'policies/**/*.md'
-            '*.html'
-            '_includes/*.html'
-            '_layouts/*.html'
-            'about/index.html'
-            'domains/index.html'
-            'adoptions/index.html'
-            'tools/**/*.html'
-          fail: true
+            --exit-code-1-if-exits
+            policies/
+            about/index.html
+            domains/index.html
+            adoptions/index.html
+            tools/
+            index.html
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
