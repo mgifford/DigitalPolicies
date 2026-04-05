@@ -44,11 +44,14 @@ jobs:
         # Checks the compiled _site output for broken internal links.
         # External links are skipped here (--disable-external) to keep CI fast
         # and avoid false positives from rate-limiting; lychee.yml handles those.
+        # --swap-urls strips the GitHub Pages baseurl prefix (e.g. /DigitalPolicies)
+        # so htmlproofer can resolve absolute paths against the _site/ directory.
         run: |
           bundle exec htmlproofer _site \
             --disable-external \
             --ignore-status-codes "0,999" \
             --ignore-files "/_site\/feed\.xml/" \
+            --swap-urls "^${{ steps.pages.outputs.base_path }}:" \
             2>&1
 
       - name: Upload artifact
