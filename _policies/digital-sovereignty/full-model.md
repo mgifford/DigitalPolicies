@@ -275,7 +275,7 @@ This policy model is a living document. Contributions especially welcome from pe
 - Open source government policy
 - International digital governance
 
-Open an [Issue](https://github.com/mgifford/DigitalPolicies/issues) to propose changes or additions. See [CONTRIBUTING.md](../../CONTRIBUTING.md) for the contribution process.
+Open an [Issue](https://github.com/mgifford/DigitalPolicies/issues) to propose changes or additions. See [CONTRIBUTING.md](https://github.com/mgifford/DigitalPolicies/blob/main/CONTRIBUTING.md) for the contribution process.
 
 ---
 

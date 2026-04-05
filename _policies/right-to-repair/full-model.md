@@ -346,7 +346,7 @@ This policy model is a living document. The known gaps (medical devices, vehicle
 - Consumer protection law
 - Open source software and interoperability standards
 
-Open an [Issue](https://github.com/mgifford/DigitalPolicies/issues) to propose changes or additions. See [CONTRIBUTING.md](../../CONTRIBUTING.md) for the contribution process.
+Open an [Issue](https://github.com/mgifford/DigitalPolicies/issues) to propose changes or additions. See [CONTRIBUTING.md](https://github.com/mgifford/DigitalPolicies/blob/main/CONTRIBUTING.md) for the contribution process.
 
 ---
 
