@@ -34,6 +34,7 @@ jobs:
             about/index.html
             domains/index.html
             adoptions/index.html
+            search/index.html
             tools/
             index.html
         env:

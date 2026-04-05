@@ -453,6 +453,32 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+/* --- Search toggle icon link ------------------------------ */
+.search-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius);
+  color: var(--color-text);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: color var(--transition),
+              border-color var(--transition),
+              background var(--transition);
+  flex-shrink: 0;
+}
+.search-toggle:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-primary-pale);
+}
+.search-toggle:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
 /* --- Theme toggle button ---------------------------------- */
 .theme-toggle {
   display: flex;

@@ -2,7 +2,7 @@
 
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
-> **Related domains:** [Data Centers & Environmental Sustainability](../data-centers/full-model/), Digital Sovereignty (coming soon), [Open Source in Government](../open-source-in-government/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/)
+> **Related domains:** [Data Centers & Environmental Sustainability](../data-centers/full-model/), [Digital Sovereignty](../digital-sovereignty/full-model/), [Open Source in Government](../open-source-in-government/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/)
 > **Key sources:** EU Right to Repair Directive (2024), Canada Bill C-244 (2024), US Right to Repair state laws, EU Digital Markets Act (interoperability), FSFE Device Neutrality, EFF analysis
 
 ---
@@ -270,8 +270,91 @@ Policies addressing e-waste must not simply shift harm — they must reduce it. 
 
 ---
 
+## Worked Examples
+
+### Example A: Municipal Device Procurement
+
+A city government procures 2,000 laptops for staff over a 4-year refresh cycle. Under this policy:
+
+- **Procurement phase:** The city's tender requires vendors to provide: a repairability score for each model bid; disclosure of any parts-pairing restrictions; a 5-year spare parts availability commitment; and confirmation that software updates will not introduce new repair restrictions.
+- **Evaluation:** Two vendors respond. One offers devices with iFixit repairability scores of 7/10 and 8/10 respectively, no parts pairing, and 6-year parts availability. The other offers 4/10 and 5/10 scores with parts pairing on batteries and screens. The first vendor wins on quality criteria despite a 4% higher unit cost.
+- **Outcome:** Over four years, the city repairs rather than replaces 340 devices that would previously have been written off. Estimated saving: €180,000. Estimated e-waste avoided: 680 kg.
+
+### Example B: Agricultural Right to Repair Complaint
+
+A farming cooperative in a remote region operates 24 GPS-enabled tractors from a single manufacturer. Their nearest authorised repair dealer is 200km away. Under this policy:
+
+- **Complaint:** During spring planting, three tractors develop a software fault that prevents GPS operation. The authorised dealer cannot attend for 11 days. An independent agricultural engineer can fix the fault but needs diagnostic software.
+- **Enforcement:** The cooperative files a complaint with the designated enforcement authority. The authority issues an urgent compliance notice requiring the manufacturer to provide diagnostic access within 48 hours.
+- **Outcome:** The independent engineer diagnoses and resolves the fault within 6 hours of gaining diagnostic access. The manufacturer faces a €15,000 fine for the repair access denial and is added to the authority's published compliance watchlist.
+
+### Example C: Messaging Interoperability for a Public Service Platform
+
+A regional government has developed a citizen engagement platform used by 400,000 residents. A community organisation wants to integrate it with their open source case management system to reduce re-entry of data. Under this policy:
+
+- **API requirement:** The platform's developer (a contracted vendor) is required to provide a documented, publicly accessible API under the interoperability provision.
+- **Community benefit:** The community organisation integrates their system within 3 months, eliminating duplicate data entry for 1,200 case workers.
+- **Outcome:** The API is adopted by six other organisations. The vendor, initially resistant, finds that the open API becomes a selling point in other jurisdictions.
+
+---
+
+## Glossary
+
+**Anti-circumvention:** Legal provisions that prohibit bypassing digital locks (DRM), sometimes invoked to prevent legitimate repair.
+
+**Authorised repair network:** Repair providers officially approved by the manufacturer, often the only channel with access to parts, tools, and diagnostic software.
+
+**Basel Convention:** An international treaty (1989) controlling transboundary movement of hazardous wastes; 2022 amendments extended coverage to e-waste.
+
+**Calibration lock:** A software mechanism that requires manufacturer-supplied tools to recalibrate a component after replacement, preventing independent repair even when parts are available.
+
+**Device neutrality:** The right of device owners to install any lawful software on hardware they own, including alternative operating systems and application stores.
+
+**DRM (Digital Rights Management):** Technical protection measures applied to digital content or software, sometimes used to prevent repair or modification.
+
+**E-waste:** Electronic waste — discarded electronic equipment including devices, cables, and components.
+
+**EPR (Extended Producer Responsibility):** A policy approach that makes manufacturers financially responsible for end-of-life collection and recycling.
+
+**Firmware:** Low-level software embedded in hardware that controls basic device functions.
+
+**Gatekeeper:** Under the EU Digital Markets Act, a company designated as controlling a core platform service that must comply with interoperability and other obligations.
+
+**Indice de réparabilité:** France's mandatory repairability index, scoring consumer electronics 0–10.
+
+**Interoperability:** The ability of different systems and software to communicate and work together.
+
+**Parts pairing:** A software mechanism that ties specific hardware components to specific devices, preventing third-party parts from functioning correctly.
+
+**Right to repair:** The legal right of product owners to repair, have repaired, and access tools and documentation for repair of products they own.
+
+**WEEE Directive:** EU Waste Electrical and Electronic Equipment Directive — establishes producer responsibility for electronics recycling.
+
+---
+
+## Contributing to This Domain
+
+This policy model is a living document. The known gaps (medical devices, vehicles, proprietary calibration databases, non-gatekeeper platform interoperability) are priorities for development. Contributions especially welcome from people with expertise in:
+
+- Medical device regulation and right to repair
+- Agricultural technology and farm equipment law
+- Automotive software and OBD (on-board diagnostics) access
+- EU Digital Markets Act implementation
+- EPR schemes and e-waste policy
+- Consumer protection law
+- Open source software and interoperability standards
+
+Open an [Issue](https://github.com/mgifford/DigitalPolicies/issues) to propose changes or additions. See [CONTRIBUTING.md](../../CONTRIBUTING.md) for the contribution process.
+
+---
+
+*This policy model is published under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt this material for any purpose, including commercial use, provided you give appropriate credit.*
+
+---
+
 ## Changelog
 
 | Version | Date | Summary |
 |---|---|---|
+| 0.2 | 2026-04-04 | Added worked examples, glossary, contributing section; updated Digital Sovereignty link |
 | 0.1 | 2026-04-04 | Initial draft |

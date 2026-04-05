@@ -125,8 +125,8 @@
   taxonomy_title: "A Greener Web"
   official_name: "Web Sustainability"
   slug: web-sustainability
-  status: in-development
-  full_model:
+  status: draft
+  full_model: /domains/web-sustainability/full-model/
   icon: "🌱"
   description: >
     The internet's carbon footprint is roughly equivalent to aviation. Web
@@ -160,8 +160,8 @@
   taxonomy_title: "Whose Internet Is It?"
   official_name: "Digital Sovereignty"
   slug: digital-sovereignty
-  status: in-development
-  full_model:
+  status: draft
+  full_model: /domains/digital-sovereignty/full-model/
   icon: "🌐"
   description: >
     Digital sovereignty means communities can understand, audit, and exit the digital

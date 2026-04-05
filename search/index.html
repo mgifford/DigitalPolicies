@@ -1,0 +1,411 @@
+---
+layout: default
+title: Search
+description: Search all Open Digital Policies model policy language, domains, and resources.
+---
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__title">Search</h1>
+    <p class="page-header__description">
+      Search across all policy domains, model language, and resources.
+    </p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width: var(--content-width);">
+
+    <form class="search-form" role="search" id="search-form" action="" novalidate>
+      <div class="search-form__field">
+        <label for="search-input" class="sr-only">Search Open Digital Policies</label>
+        <input
+          type="search"
+          id="search-input"
+          name="q"
+          class="search-form__input"
+          placeholder="Search policies, domains, tools&hellip;"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          aria-label="Search Open Digital Policies"
+          aria-controls="search-results"
+          aria-describedby="search-hint"
+        >
+        <button type="submit" class="search-form__btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true" focusable="false" width="20" height="20">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+      </div>
+      <p id="search-hint" class="search-form__hint">
+        Try "data centers", "open source", "repair", "AI governance", or "sovereignty".
+      </p>
+    </form>
+
+    <div id="search-status" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+    <div id="search-results" aria-label="Search results">
+      <!-- Results injected by JS -->
+    </div>
+
+  </div>
+</section>
+
+<style>
+.search-form {
+  margin-bottom: var(--space-xl);
+}
+.search-form__field {
+  display: flex;
+  gap: 0;
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-surface);
+  transition: border-color var(--transition);
+}
+.search-form__field:focus-within {
+  border-color: var(--color-focus-ring);
+  box-shadow: 0 0 0 3px var(--color-focus-ring-shadow);
+}
+.search-form__input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-sans);
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  outline: none;
+}
+.search-form__input::placeholder {
+  color: var(--color-text-muted);
+}
+.search-form__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.search-form__btn:hover {
+  background: var(--color-primary-light);
+}
+.search-form__btn:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: -3px;
+}
+.search-form__hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: var(--space-sm) 0 0;
+}
+
+/* Results */
+.search-result {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-lg) 0;
+}
+.search-result:first-child {
+  border-top: 1px solid var(--color-border);
+}
+.search-result__type {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+.search-result__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-xs);
+}
+.search-result__title a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.search-result__title a:hover {
+  text-decoration: underline;
+}
+.search-result__hook {
+  font-size: var(--font-size-base);
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-sm);
+}
+.search-result__description {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin: 0 0 var(--space-sm);
+  line-height: var(--line-height);
+}
+.search-result__actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.search-result__link {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.search-result__link:hover {
+  text-decoration: underline;
+}
+.search-result__status {
+  font-size: var(--font-size-sm);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.search-result__status--draft {
+  background: var(--color-draft-bg);
+  color: var(--color-draft);
+}
+.search-result__status--in-development {
+  background: var(--color-in-dev-bg);
+  color: var(--color-in-dev);
+}
+
+.search-empty {
+  padding: var(--space-xl) 0;
+  color: var(--color-text-muted);
+}
+.search-loading {
+  padding: var(--space-lg) 0;
+  color: var(--color-text-muted);
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"
+        integrity="sha512-4xUl/d6D6THrAnXAwcajde6mTBZOYIDkAce6wiDQ8m/9SqLMzFBcNs0R4+/rMRwuqaS9cHAKQ85TUFB1bRBPQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        defer></script>
+
+<script>
+(function () {
+  'use strict';
+
+  var INDEX_URL = '{{ site.baseurl }}/search.json';
+  var RESULT_LIMIT = 20;
+
+  var searchInput  = document.getElementById('search-input');
+  var searchForm   = document.getElementById('search-form');
+  var resultsEl    = document.getElementById('search-results');
+  var statusEl     = document.getElementById('search-status');
+
+  var searchData   = null;   // raw JSON array
+  var lunrIndex    = null;   // built Lunr index
+  var indexLoaded  = false;
+
+  // --- Utilities -------------------------------------------------------
+
+  function typeLabel(type) {
+    switch (type) {
+      case 'domain': return 'Policy Domain';
+      case 'tool':   return 'Tool';
+      default:       return 'Page';
+    }
+  }
+
+  function statusChip(status) {
+    if (!status) return '';
+    var cls = status === 'draft' ? 'draft' : 'in-development';
+    var label = status === 'draft' ? 'Draft' : 'In development';
+    return '<span class="search-result__status search-result__status--' + cls + '">' + label + '</span>';
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  // --- Index building --------------------------------------------------
+
+  function buildIndex(data) {
+    return lunr(function () {
+      this.ref('id');
+      this.field('title',       { boost: 10 });
+      this.field('hook',        { boost: 7 });
+      this.field('description', { boost: 5 });
+      this.field('body',        { boost: 2 });
+
+      data.forEach(function (doc) {
+        this.add(doc);
+      }, this);
+    });
+  }
+
+  // --- Rendering -------------------------------------------------------
+
+  function renderResults(query, matches) {
+    if (!query) {
+      resultsEl.innerHTML = '';
+      statusEl.textContent = '';
+      return;
+    }
+
+    if (matches.length === 0) {
+      resultsEl.innerHTML =
+        '<div class="search-empty">' +
+          '<p>No results found for <strong>' + escapeHtml(query) + '</strong>.</p>' +
+          '<p>Try broader terms — e.g. "AI", "data", "open source", "repair".</p>' +
+        '</div>';
+      statusEl.textContent = 'No results for ' + query;
+      return;
+    }
+
+    var dataMap = {};
+    searchData.forEach(function (d) { dataMap[d.id] = d; });
+
+    var html = matches.slice(0, RESULT_LIMIT).map(function (match) {
+      var doc = dataMap[match.ref];
+      if (!doc) return '';
+
+      var title = escapeHtml(doc.title);
+      var hook  = doc.hook  ? '<p class="search-result__hook">' + escapeHtml(doc.hook) + '</p>' : '';
+      var desc  = doc.description
+        ? '<p class="search-result__description">' + escapeHtml(doc.description) + '</p>'
+        : '';
+
+      var actions = '<div class="search-result__actions">';
+      actions += '<a href="' + escapeHtml(doc.url) + '" class="search-result__link">View</a>';
+      if (doc.full_model_url) {
+        actions += '<a href="' + escapeHtml(doc.full_model_url) + '" class="search-result__link">Read full model →</a>';
+      }
+      if (doc.status) {
+        actions += statusChip(doc.status);
+      }
+      actions += '</div>';
+
+      return (
+        '<article class="search-result">' +
+          '<p class="search-result__type">' + typeLabel(doc.type) + '</p>' +
+          '<h2 class="search-result__title"><a href="' + escapeHtml(doc.url) + '">' + title + '</a></h2>' +
+          hook + desc + actions +
+        '</article>'
+      );
+    }).join('');
+
+    resultsEl.innerHTML = html;
+    statusEl.textContent =
+      matches.length === 1
+        ? '1 result for ' + query
+        : (matches.length > RESULT_LIMIT ? RESULT_LIMIT + '+ results' : matches.length + ' results') + ' for ' + query;
+  }
+
+  // --- Search execution ------------------------------------------------
+
+  function doSearch(query) {
+    if (!query || !query.trim()) {
+      resultsEl.innerHTML = '';
+      statusEl.textContent = '';
+      return;
+    }
+
+    query = query.trim();
+
+    if (!indexLoaded || !lunrIndex) {
+      resultsEl.innerHTML = '<p class="search-loading">Loading search index…</p>';
+      return;
+    }
+
+    var results;
+    try {
+      // Try wildcard/fuzzy search so partial terms work
+      results = lunrIndex.search(query + '* ' + query + '~1');
+    } catch (e) {
+      try {
+        results = lunrIndex.search(query);
+      } catch (e2) {
+        results = [];
+      }
+    }
+
+    renderResults(query, results);
+  }
+
+  // --- Index loading ---------------------------------------------------
+
+  function loadIndex() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', INDEX_URL);
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        try {
+          searchData  = JSON.parse(xhr.responseText);
+          lunrIndex   = buildIndex(searchData);
+          indexLoaded = true;
+          // Re-run search if user already typed
+          var q = searchInput.value;
+          if (q && q.trim()) doSearch(q);
+        } catch (e) {
+          console.error('ODP Search: failed to parse index', e);
+        }
+      }
+    };
+    xhr.onerror = function () {
+      console.error('ODP Search: failed to load index');
+    };
+    xhr.send();
+  }
+
+  // --- URL param pre-fill ---------------------------------------------
+
+  function getParam(name) {
+    var params = new URLSearchParams(window.location.search);
+    return params.get(name) || '';
+  }
+
+  // --- Event wiring ---------------------------------------------------
+
+  var debounceTimer;
+  searchInput.addEventListener('input', function () {
+    clearTimeout(debounceTimer);
+    var q = this.value;
+    debounceTimer = setTimeout(function () { doSearch(q); }, 200);
+  });
+
+  searchForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    doSearch(searchInput.value);
+  });
+
+  // Pre-fill from ?q= URL param
+  var initialQuery = getParam('q');
+  if (initialQuery) {
+    searchInput.value = initialQuery;
+  }
+
+  // Load index and run initial search once Lunr is available
+  function waitForLunr() {
+    if (typeof lunr !== 'undefined') {
+      loadIndex();
+      if (initialQuery) {
+        resultsEl.innerHTML = '<p class="search-loading">Loading search index…</p>';
+      }
+    } else {
+      setTimeout(waitForLunr, 50);
+    }
+  }
+  waitForLunr();
+
+}());
+</script>

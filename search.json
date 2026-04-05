@@ -1,0 +1,65 @@
+---
+layout: none
+---
+[
+  {%- assign comma = false -%}
+  {%- for domain in site.data.domains -%}
+  {%- if comma -%},{%- endif -%}
+  {%- assign comma = true -%}
+  {
+    "id": "domain-{{ domain.id }}",
+    "type": "domain",
+    "title": {{ domain.official_name | jsonify }},
+    "hook": {{ domain.taxonomy_title | jsonify }},
+    "description": {{ domain.description | strip_newlines | strip | jsonify }},
+    "status": {{ domain.status | jsonify }},
+    "url": "{{ site.baseurl }}/domains/{{ domain.slug }}/",
+    "full_model_url": {%- if domain.full_model -%}{{ (site.baseurl | append: domain.full_model) | jsonify }}{%- else -%}null{%- endif -%},
+    "body": {{ domain.key_standards | join: ". " | jsonify }}
+  }
+  {%- endfor -%},
+  {
+    "id": "page-about",
+    "type": "page",
+    "title": "About Open Digital Policies",
+    "hook": "Mission, values, and how this project works",
+    "description": "Open Digital Policies provides openly licensed, community-maintained model policy language that advocates, communities, and governments can adopt, adapt, and improve.",
+    "status": null,
+    "url": "{{ site.baseurl }}/about/",
+    "full_model_url": null,
+    "body": "mission values principles open source digital rights community governance contribution"
+  },
+  {
+    "id": "page-adoptions",
+    "type": "page",
+    "title": "Real-World Adoptions",
+    "hook": "Jurisdictions and organisations putting model policy into practice",
+    "description": "Track where model policy language from Open Digital Policies has been adopted, adapted, or cited by real jurisdictions and organisations.",
+    "status": null,
+    "url": "{{ site.baseurl }}/adoptions/",
+    "full_model_url": null,
+    "body": "jurisdictions enacted legislation adopted cities regions governments municipalities policy implementation"
+  },
+  {
+    "id": "page-tools-advocate",
+    "type": "tool",
+    "title": "Advocate Prompt Builder",
+    "hook": "For community advocates, residents, and campaigners",
+    "description": "Assemble a prompt grounded in model policy language for letters to elected officials, public comment testimony, talking points, and plain-language explainers.",
+    "status": null,
+    "url": "{{ site.baseurl }}/tools/advocate/",
+    "full_model_url": null,
+    "body": "advocate community letter testimony council prompt builder AI assistant"
+  },
+  {
+    "id": "page-tools-policy-pro",
+    "type": "tool",
+    "title": "Policy Pro Prompt Builder",
+    "hook": "For policy professionals, researchers, and lawyers",
+    "description": "Build a detailed prompt for policy memo drafting, legislative gap analysis, jurisdiction comparison, and regulatory drafting from model policy language.",
+    "status": null,
+    "url": "{{ site.baseurl }}/tools/policy-pro/",
+    "full_model_url": null,
+    "body": "policy professional researcher lawyer memo legislative gap analysis comparison regulation drafting"
+  }
+]
