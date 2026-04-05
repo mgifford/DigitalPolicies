@@ -30,14 +30,14 @@ Each domain follows a four-pillar structure: **Principles → Standards → Impl
 | [Digital Accessibility & Inclusion](policies/accessibility/full-model.md) | Draft |
 | [Right to Repair, Interoperability & E-Waste](policies/right-to-repair/full-model.md) | Draft |
 | [Open Source in Government](policies/open-source-in-government/full-model.md) | Draft |
+| [AI Adoption & Governance](policies/ai-adoption/full-model.md) | Draft |
+| [Algorithmic Accountability](policies/algorithmic-accountability/full-model.md) | Draft |
 
 ### In development
 
 | Domain | Notes |
 |---|---|
-| AI Adoption & Governance | |
 | Digital Public Infrastructure | |
-| Algorithmic Accountability | |
 | Smart Cities & Privacy | |
 | Digital Sovereignty | |
 | Children & Technology | |
