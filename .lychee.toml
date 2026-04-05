@@ -1,0 +1,51 @@
+# Lychee link checker configuration
+# https://lychee.cli.rs/usage/config/
+
+# Maximum number of concurrent requests
+max_concurrency = 8
+
+# Timeout for each request (seconds)
+timeout = 20
+
+# Number of retries for failed requests
+retry_wait_time = 5
+max_retries = 3
+
+# Accept these HTTP status codes as valid (in addition to 2xx)
+accept = [200, 201, 202, 203, 204, 206, 429]
+
+# User agent — identify ourselves politely
+user_agent = "lychee/2 (Open Digital Policies link checker; https://github.com/mgifford/DigitalPolicies)"
+
+# Skip URLs matching these patterns
+# - Localhost / test URLs
+# - GitHub edit links with Liquid template variables (Jekyll not rendered in source)
+# - Fragment-only links
+# - Known rate-limiters or login-required pages
+exclude = [
+  "^http://localhost",
+  "^http://127\\.0\\.0\\.1",
+  "{{ site",
+  "{{ page",
+  "site\\.baseurl",
+  "site\\.github_repo",
+  "site\\.github_branch",
+  "^#",
+  # LinkedIn rate-limits aggressively
+  "linkedin\\.com",
+  # Twitter/X requires login for many pages
+  "twitter\\.com",
+  "x\\.com",
+]
+
+# Skip these file patterns
+exclude_path = [
+  ".git",
+  "_site",
+  "node_modules",
+  "vendor",
+  "Gemfile.lock",
+]
+
+# Include these schemes
+scheme = ["https", "http"]

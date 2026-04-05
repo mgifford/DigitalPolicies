@@ -8,6 +8,9 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
 end
 
+# Link checking — used in CI after build; not required locally
+gem "html-proofer", "~> 5.0", require: false
+
 # Windows/JRuby compatibility
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"

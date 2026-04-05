@@ -40,6 +40,19 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Check internal links (htmlproofer)
+        # Run after build so we check the compiled output, not raw source.
+        # External links are skipped here — checked separately by lychee.yml on a schedule.
+        # disable-external: true  keeps CI fast and avoids rate-limiting false positives.
+        run: |
+          bundle exec htmlproofer _site \
+            --disable-external \
+            --ignore-urls "/^\/feed\.xml$/" \
+            --ignore-files "/.*\/feed\.xml$/" \
+            --ignore-status-codes "999" \
+            --no-enforce-https \
+            2>&1
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

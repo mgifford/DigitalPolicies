@@ -126,7 +126,7 @@
   official_name: "Web Sustainability"
   slug: web-sustainability
   status: in-development
-  full_model: /domains/web-sustainability/README/
+  full_model:
   icon: "🌱"
   description: >
     The internet's carbon footprint is roughly equivalent to aviation. Web

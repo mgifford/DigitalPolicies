@@ -2,7 +2,7 @@
 
 > **Status:** `Emerging — policy framework not yet formalised in legislation`
 > **Last updated:** 2026-04-04
-> **Related domains:** [Data Centers](../data-centers/), [Right to Repair & E-Waste](../right-to-repair/), [Digital Accessibility](../accessibility/)
+> **Related domains:** [Data Centers](../data-centers/full-model/), [Right to Repair & E-Waste](../right-to-repair/full-model/), [Digital Accessibility](../accessibility/full-model/)
 > **Key source:** W3C Web Sustainability Guidelines (WSG 1.0, 2023; Draft Note 2025)
 
 ---
