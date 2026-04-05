@@ -144,8 +144,8 @@
   taxonomy_title: "Your City Is Watching You"
   official_name: "Smart Cities & Privacy"
   slug: smart-cities
-  status: in-development
-  full_model:
+  status: draft
+  full_model: /domains/smart-cities/full-model/
   icon: "🏙️"
   description: >
     Smart city technology — cameras, sensors, connected infrastructure — can
@@ -175,8 +175,8 @@
   taxonomy_title: "Technology That's Safe for Kids"
   official_name: "Children & Technology"
   slug: children-technology
-  status: in-development
-  full_model:
+  status: draft
+  full_model: /domains/children-technology/full-model/
   icon: "👧"
   description: >
     Children are not small adults. They are among the most targeted groups in the
@@ -191,8 +191,8 @@
   taxonomy_title: "Who Decides What You Can Say Online?"
   official_name: "Freedom of Expression & Content Governance"
   slug: freedom-of-expression
-  status: in-development
-  full_model:
+  status: draft
+  full_model: /domains/freedom-of-expression/full-model/
   icon: "🗣️"
   description: >
     Content moderation done poorly enables harm. Done poorly in the other direction,
@@ -206,8 +206,8 @@
   taxonomy_title: "Digital Infrastructure for Everyone"
   official_name: "Digital Public Infrastructure"
   slug: digital-public-infrastructure
-  status: in-development
-  full_model:
+  status: draft
+  full_model: /domains/digital-public-infrastructure/full-model/
   icon: "🏗️"
   description: >
     Digital public infrastructure — identity systems, payment rails, data exchange

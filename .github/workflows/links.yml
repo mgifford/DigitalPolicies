@@ -30,7 +30,7 @@ jobs:
             --output ./lychee/out.md
             --format markdown
             --exit-code-1-if-exits
-            policies/
+            _policies/
             about/index.html
             domains/index.html
             adoptions/index.html
