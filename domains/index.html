@@ -1,0 +1,152 @@
+---
+layout: default
+title: Policy Domains
+description: Browse all policy domains in Open Digital Policies — from data centers and AI to accessibility and right to repair.
+---
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__title">Policy Domains</h1>
+    <p class="page-header__description">
+      Each domain follows a consistent four-pillar structure:
+      <strong>Principles → Standards → Implementation → Governance.</strong>
+      Model language is grounded in enacted legislation and designed to be adapted for any jurisdiction.
+    </p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+
+    <!-- Jurisdiction detection -->
+    <div class="jurisdiction-prompt" id="jurisdiction-prompt" aria-live="polite">
+      <span class="jurisdiction-prompt__icon" aria-hidden="true">📍</span>
+      <div class="jurisdiction-prompt__text">
+        <strong>Showing policies relevant to <span id="jurisdiction-name">your region</span></strong>
+        <p>
+          <button id="jurisdiction-btn" style="background:none;border:none;padding:0;color:var(--color-primary);cursor:pointer;text-decoration:underline;font-size:0.875rem;">
+            Allow location to see what's enacted near you
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <!-- Ready to use -->
+    <h2 style="margin-bottom: var(--space-lg);">Ready to use</h2>
+    <div class="domains-grid" role="list" style="margin-bottom: var(--space-2xl);">
+      {% assign ready_domains = site.data.domains | where_exp: "d", "d.status == 'draft' or d.status == 'stable'" %}
+      {% for domain in ready_domains %}
+      <article class="domain-card" role="listitem">
+        <header class="domain-card__header">
+          <span class="domain-card__icon" aria-hidden="true">{{ domain.icon }}</span>
+          <span class="badge badge--{{ domain.status }}">{{ domain.status }}</span>
+        </header>
+        <h3 class="domain-card__title">{{ domain.taxonomy_title }}</h3>
+        <p class="domain-card__official-name">{{ domain.official_name }}</p>
+        <p class="domain-card__description">{{ domain.description }}</p>
+
+        {% if domain.key_standards.size > 0 %}
+        <ul style="font-size:0.875rem; color: var(--color-text-muted); padding-left: 1.25rem; margin: 0;">
+          {% for std in domain.key_standards limit:3 %}
+          <li>{{ std }}</li>
+          {% endfor %}
+          {% if domain.key_standards.size > 3 %}
+          <li><em>+ {{ domain.key_standards.size | minus: 3 }} more</em></li>
+          {% endif %}
+        </ul>
+        {% endif %}
+
+        <footer class="domain-card__footer">
+          {% if domain.full_model %}
+          <a href="{{ site.baseurl }}{{ domain.full_model }}" class="domain-card__link">
+            Read the model policy
+          </a>
+          {% endif %}
+          {% if domain.jurisdictions_count > 0 %}
+          <span style="font-size:0.75rem;color:var(--color-text-muted);">
+            {{ domain.jurisdictions_count }} real-world example{% if domain.jurisdictions_count != 1 %}s{% endif %}
+          </span>
+          {% endif %}
+        </footer>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- In development -->
+    <h2 style="margin-bottom: var(--space-md);">In development</h2>
+    <p style="color: var(--color-text-muted); margin-bottom: var(--space-lg);">
+      These domains are identified as priorities but don't yet have complete four-pillar models.
+      Contributions especially welcome — see
+      <a href="https://github.com/{{ site.github_repo }}/blob/{{ site.github_branch }}/CONTRIBUTING.md">CONTRIBUTING.md</a>.
+    </p>
+    <div class="domains-grid" role="list">
+      {% assign dev_domains = site.data.domains | where: "status", "in-development" %}
+      {% for domain in dev_domains %}
+      <article class="domain-card domain-card--in-development" role="listitem">
+        <header class="domain-card__header">
+          <span class="domain-card__icon" aria-hidden="true">{{ domain.icon }}</span>
+          <span class="badge badge--in-development">In development</span>
+        </header>
+        <h3 class="domain-card__title">{{ domain.taxonomy_title }}</h3>
+        <p class="domain-card__official-name">{{ domain.official_name }}</p>
+        <p class="domain-card__description">{{ domain.description }}</p>
+        <footer class="domain-card__footer">
+          <a href="https://github.com/{{ site.github_repo }}/issues/new?labels=new-domain&title={{ domain.official_name | uri_escape }}"
+             class="domain-card__link" rel="noopener">
+            Help build this domain
+          </a>
+        </footer>
+      </article>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Geolocation — browser-native, with explicit consent
+(function() {
+  var btn = document.getElementById('jurisdiction-btn');
+  var nameEl = document.getElementById('jurisdiction-name');
+
+  if (!navigator.geolocation) {
+    btn.parentElement.style.display = 'none';
+    return;
+  }
+
+  btn.addEventListener('click', function() {
+    btn.textContent = 'Detecting location…';
+    btn.disabled = true;
+
+    navigator.geolocation.getCurrentPosition(
+      function(pos) {
+        // Reverse-geocode with a privacy-respecting service
+        fetch('https://nominatim.openstreetmap.org/reverse?format=json&lat=' +
+          pos.coords.latitude + '&lon=' + pos.coords.longitude +
+          '&zoom=3&addressdetails=1',
+          { headers: { 'Accept-Language': 'en' } }
+        )
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var country = data.address && (data.address.country || '');
+          if (country) {
+            nameEl.textContent = country;
+            btn.parentElement.innerHTML = 'Showing policies relevant to <strong>' + country + '</strong>';
+          } else {
+            btn.textContent = 'Could not determine location';
+          }
+        })
+        .catch(function() {
+          btn.textContent = 'Location lookup failed';
+          btn.disabled = false;
+        });
+      },
+      function() {
+        btn.textContent = 'Location access denied — all policies shown';
+        btn.disabled = false;
+      },
+      { timeout: 8000, maximumAge: 3600000 }
+    );
+  });
+})();
+</script>

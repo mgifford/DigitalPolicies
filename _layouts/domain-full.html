@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+{% assign path_parts = page.path | split: "/" %}
+{% assign domain_slug = path_parts[1] %}
+
+{% assign domain = nil %}
+{% for d in site.data.domains %}
+  {% if d.id == domain_slug %}
+    {% assign domain = d %}
+  {% endif %}
+{% endfor %}
+
+<div class="domain-header">
+  <div class="domain-header__inner">
+    <a href="{{ site.baseurl }}/domains/" class="domain-header__back">← All policy domains</a>
+
+    {% if domain %}
+    <p class="domain-header__eyebrow">Policy model</p>
+    <h1 class="domain-header__title">{{ domain.taxonomy_title }}</h1>
+    <p class="domain-header__official-name">{{ domain.official_name }}</p>
+    <div class="domain-header__meta">
+      <span class="badge badge--{{ domain.status | replace: ' ', '-' }}">{{ domain.status | capitalize }}</span>
+      <span>Four-pillar model: Principles → Standards → Implementation → Governance</span>
+    </div>
+    {% else %}
+    <h1 class="domain-header__title">{{ page.title | default: page.name }}</h1>
+    {% endif %}
+  </div>
+</div>
+
+<div class="policy-content">
+
+  <nav class="pillar-nav" aria-label="Policy sections">
+    <p class="pillar-nav__title">On this page</p>
+    <ol>
+      <li><a href="#pillar-1-principles">Principles — the why</a></li>
+      <li><a href="#pillar-2-standards">Standards — the what</a></li>
+      <li><a href="#pillar-3-implementation">Implementation — the how</a></li>
+      <li><a href="#pillar-4-governance">Governance — the who</a></li>
+      <li><a href="#real-world-examples">Real-world examples</a></li>
+      <li><a href="#gaps-and-known-weaknesses">Gaps</a></li>
+    </ol>
+  </nav>
+
+  <div class="policy-body">
+    {{ content }}
+  </div>
+
+  <a class="edit-link"
+     href="https://github.com/{{ site.github_repo }}/edit/{{ site.github_branch }}/{{ page.path }}"
+     rel="noopener">
+    ✏️ Edit this policy on GitHub
+  </a>
+
+</div>

@@ -1,0 +1,70 @@
+title: Open Digital Policies
+tagline: Model policy language for the digital age
+description: >
+  Open Digital Policies provides openly licensed, community-maintained model
+  policy language that advocates, communities, and governments can adopt,
+  adapt, and improve.
+
+url: "https://mgifford.github.io"
+baseurl: "/DigitalPolicies"
+
+author:
+  name: Open Digital Policies community
+  url: https://github.com/mgifford/DigitalPolicies
+
+# GitHub repository (used for edit links)
+github_repo: mgifford/DigitalPolicies
+github_branch: main
+
+# Jekyll settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Process the policies/ directory as a Jekyll collection
+# Jekyll 4.x supports collections without the underscore prefix
+collections_dir: .
+collections:
+  policies:
+    output: true
+    permalink: /domains/:path/
+
+# Apply the domain-full layout to all policy files without requiring front matter
+defaults:
+  - scope:
+      type: policies
+    values:
+      layout: domain-full
+      render_with_liquid: false
+
+# Files/directories to exclude from Jekyll processing
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - FRAMEWORK.md
+  - GLOSSARY.md
+  - EU-LAWS-ANALYSIS.md
+  - INTERNATIONAL-EXAMPLES.md
+  - TAXONOMY.md
+  - POLICY_TEMPLATE.md
+  - Gemfile
+  - Gemfile.lock
+  - "*.sh"
+  - node_modules/
+  - .github/
+  - _site/
+  - adoptions/tracker.md
+  - translations/
+
+# Sass settings
+sass:
+  style: compressed

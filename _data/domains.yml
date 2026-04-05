@@ -1,0 +1,219 @@
+# Domain metadata — drives navigation, cards, and the domain browse page
+# Taxonomy titles are the public-facing hooks; official_name is for context
+
+- id: data-centers
+  taxonomy_title: "Who Pays for AI's Power Bill?"
+  official_name: "Data Centers & Environmental Sustainability"
+  slug: data-centers
+  status: draft
+  full_model: /domains/data-centers/full-model/
+  icon: "⚡"
+  description: >
+    Data centers are the physical backbone of AI, cloud computing, and the internet.
+    They consume enormous amounts of electricity and water — often in communities
+    that see little of the benefit. This model ensures communities share the benefits
+    and aren't left with the costs.
+  core_tension: "Economic development vs. reliable electricity and clean water"
+  key_standards:
+    - "PUE ≤ 1.2 for new facilities"
+    - "Prohibition on fossil fuel backup for operational load"
+    - "Renewable energy additionality requirement"
+    - "Pre-permit Community Impact Disclosure"
+  jurisdictions_count: 4
+
+- id: accessibility
+  taxonomy_title: "Digital Services That Work for Everyone"
+  official_name: "Digital Accessibility & Inclusion"
+  slug: accessibility
+  status: draft
+  full_model: /domains/accessibility/full-model/
+  icon: "♿"
+  description: >
+    Only 23% of US federal websites meet basic accessibility requirements. Millions
+    of people with disabilities are effectively locked out of public services. This
+    model establishes accessibility as a right enforced through procurement, not a
+    courtesy applied after the fact.
+  core_tension: "Speed of procurement vs. the cost of exclusion"
+  key_standards:
+    - "WCAG 2.2 AA as mandatory minimum"
+    - "Accessibility as pass/fail in procurement (not advisory)"
+    - "Real user testing for high-impact services"
+    - "Civil society standing for enforcement complaints"
+  jurisdictions_count: 4
+
+- id: right-to-repair
+  taxonomy_title: "You Own It. You Should Be Able to Fix It."
+  official_name: "Right to Repair, Interoperability & E-Waste"
+  slug: right-to-repair
+  status: draft
+  full_model: /domains/right-to-repair/full-model/
+  icon: "🔧"
+  description: >
+    Manufacturers use software locks to prevent repair, force planned obsolescence,
+    and generate e-waste. The world's fastest growing waste stream. This model closes
+    the software loophole, requires spare parts and repair documentation, and holds
+    producers responsible for end-of-life.
+  core_tension: "IP protection vs. the right to fix what you own"
+  key_standards:
+    - "Prohibition on parts pairing restrictions"
+    - "5-year minimum software support obligation"
+    - "EPR for electronics waste"
+    - "Repairability score in public procurement"
+  jurisdictions_count: 5
+
+- id: open-source-in-government
+  taxonomy_title: "Public Money, Public Code"
+  official_name: "Open Source in Government"
+  slug: open-source-in-government
+  status: draft
+  full_model: /domains/open-source-in-government/full-model/
+  icon: "🔓"
+  description: >
+    When governments buy software with public money, the result belongs to the public.
+    Yet most publicly-funded software is never released, never reused, and creates
+    permanent dependency on a handful of vendors. This model requires open release,
+    prohibits lock-in, and establishes open source preference in procurement.
+  core_tension: "Procurement inertia vs. technological sovereignty"
+  key_standards:
+    - "Open source release within 60 days of deployment"
+    - "publiccode.yml metadata for all public software"
+    - "Open source preference in procurement with documented justification"
+    - "Prohibition on contractual lock-in clauses"
+  jurisdictions_count: 4
+
+- id: ai-adoption
+  taxonomy_title: "AI That Works For You, Not On You"
+  official_name: "AI Adoption & Governance"
+  slug: ai-adoption
+  status: draft
+  full_model: /domains/ai-adoption/full-model/
+  icon: "🤖"
+  description: >
+    Governments are adopting AI in healthcare, justice, social services, and hiring
+    — often without meaningful oversight. This model establishes what legitimate
+    public sector AI looks like: assessed for risk, transparent to affected people,
+    and contestable.
+  core_tension: "Efficiency vs. due process and human dignity"
+  key_standards:
+    - "Prohibited AI uses (real-time biometric surveillance, social scoring)"
+    - "Mandatory Algorithmic Impact Assessment before deployment"
+    - "Right to know AI was used and to request human review"
+    - "Mandatory AI Use Registry (public)"
+  jurisdictions_count: 5
+
+- id: algorithmic-accountability
+  taxonomy_title: "Who's Holding the Algorithm Accountable?"
+  official_name: "Algorithmic Accountability"
+  slug: algorithmic-accountability
+  status: draft
+  full_model: /domains/algorithmic-accountability/full-model/
+  icon: "📊"
+  description: >
+    Algorithms decide who gets hired, who gets a loan, who gets housing assistance,
+    and who gets flagged by police — often with no explanation and no appeal. This
+    model establishes independent bias auditing, individual rights to challenge, and
+    meaningful human review.
+  core_tension: "Operational efficiency vs. fairness and due process"
+  key_standards:
+    - "Mandatory independent bias audits with published results"
+    - "Right to human review that is genuine, not performative"
+    - "Prohibition on proxy variables that produce discriminatory outcomes"
+    - "Civil society standing for enforcement complaints"
+  jurisdictions_count: 5
+
+- id: web-sustainability
+  taxonomy_title: "A Greener Web"
+  official_name: "Web Sustainability"
+  slug: web-sustainability
+  status: in-development
+  full_model: /domains/web-sustainability/README/
+  icon: "🌱"
+  description: >
+    The internet's carbon footprint is roughly equivalent to aviation. Web
+    sustainability isn't just about data centers — it's about how software
+    is written, how long devices last, and how digital services are designed.
+    Policy levers exist; the legislative framework is still emerging.
+  core_tension: "Innovation and digital services vs. their material footprint"
+  key_standards:
+    - "W3C Web Sustainability Guidelines as procurement signal"
+    - "Green hosting requirements in public sector procurement"
+    - "Software longevity obligations"
+  jurisdictions_count: 0
+
+- id: smart-cities
+  taxonomy_title: "Your City Is Watching You"
+  official_name: "Smart Cities & Privacy"
+  slug: smart-cities
+  status: in-development
+  full_model:
+  icon: "🏙️"
+  description: >
+    Smart city technology — cameras, sensors, connected infrastructure — can
+    improve services. It can also enable mass surveillance without meaningful
+    consent. This domain provides model language for procurement limits, data
+    minimisation, and community consent mechanisms.
+  core_tension: "Service efficiency vs. civil liberties"
+  key_standards: []
+  jurisdictions_count: 0
+
+- id: digital-sovereignty
+  taxonomy_title: "Whose Internet Is It?"
+  official_name: "Digital Sovereignty"
+  slug: digital-sovereignty
+  status: in-development
+  full_model:
+  icon: "🌐"
+  description: >
+    Digital sovereignty means communities can understand, audit, and exit the digital
+    systems they depend on. It's not about building walls — it's about ensuring that
+    dependency is transparent, voluntary, and reversible.
+  core_tension: "Global platforms vs. local control and self-determination"
+  key_standards: []
+  jurisdictions_count: 0
+
+- id: children-technology
+  taxonomy_title: "Technology That's Safe for Kids"
+  official_name: "Children & Technology"
+  slug: children-technology
+  status: in-development
+  full_model:
+  icon: "👧"
+  description: >
+    Children are not small adults. They are among the most targeted groups in the
+    digital economy — for manipulation, surveillance, and algorithmic amplification
+    of harmful content. This domain draws on the UN CRC, UK Children's Code, and
+    COPPA 2.0.
+  core_tension: "Platform revenue models vs. children's rights and safety"
+  key_standards: []
+  jurisdictions_count: 0
+
+- id: freedom-of-expression
+  taxonomy_title: "Who Decides What You Can Say Online?"
+  official_name: "Freedom of Expression & Content Governance"
+  slug: freedom-of-expression
+  status: in-development
+  full_model:
+  icon: "🗣️"
+  description: >
+    Content moderation done poorly enables harm. Done poorly in the other direction,
+    it enables censorship. This is one of the most contested domains in digital policy.
+    This model surfaces the options and trade-offs honestly.
+  core_tension: "Harm prevention vs. free expression and democratic discourse"
+  key_standards: []
+  jurisdictions_count: 0
+
+- id: digital-public-infrastructure
+  taxonomy_title: "Digital Infrastructure for Everyone"
+  official_name: "Digital Public Infrastructure"
+  slug: digital-public-infrastructure
+  status: in-development
+  full_model:
+  icon: "🏗️"
+  description: >
+    Digital public infrastructure — identity systems, payment rails, data exchange
+    platforms — should work like roads and water systems: open, governed in the public
+    interest, accessible to all. The UNDP/ITU framework and the 50-in-5 campaign are
+    defining this emerging domain.
+  core_tension: "Efficiency of centralised platforms vs. openness and public governance"
+  key_standards: []
+  jurisdictions_count: 0

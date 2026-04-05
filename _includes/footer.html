@@ -1,0 +1,56 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer__inner">
+    <div>
+      <h3>Open Digital Policies</h3>
+      <p style="color:#a8c4b8; font-size:0.875rem; line-height:1.6;">
+        Model policy language for the digital age — built for advocates,
+        communities, and governments who want innovation without sacrificing
+        people or planet.
+      </p>
+    </div>
+
+    <div>
+      <h3>Policy Domains</h3>
+      <ul>
+        {% for domain in site.data.domains %}
+        {% if domain.status == 'draft' or domain.status == 'stable' %}
+        <li><a href="{{ site.baseurl }}{{ domain.full_model }}">{{ domain.taxonomy_title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="{{ site.baseurl }}/domains/">Explore all domains</a></li>
+        <li><a href="{{ site.baseurl }}/adoptions/">Adoptions tracker</a></li>
+        <li><a href="{{ site.baseurl }}/about/">About this project</a></li>
+        <li><a href="https://github.com/{{ site.github_repo }}/blob/{{ site.github_branch }}/CONTRIBUTING.md" rel="noopener">How to contribute</a></li>
+        <li><a href="https://github.com/{{ site.github_repo }}/blob/{{ site.github_branch }}/GLOSSARY.md" rel="noopener">Glossary</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Community</h3>
+      <ul>
+        <li><a href="https://github.com/{{ site.github_repo }}" rel="noopener">GitHub repository</a></li>
+        <li><a href="https://github.com/{{ site.github_repo }}/issues" rel="noopener">Open an issue</a></li>
+        <li><a href="https://github.com/{{ site.github_repo }}/issues/new?labels=new-domain" rel="noopener">Propose a domain</a></li>
+        <li><a href="https://github.com/{{ site.github_repo }}/issues/new?labels=adoption" rel="noopener">Report an adoption</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <span>
+      All content published under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>.
+      Not legal advice — requires adaptation by qualified legal practitioners.
+    </span>
+    <span>
+      Maintained by
+      <a href="https://github.com/{{ site.github_repo }}" rel="noopener">the ODP community</a>.
+    </span>
+  </div>
+</footer>

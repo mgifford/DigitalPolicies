@@ -1,0 +1,194 @@
+---
+layout: default
+title: Model policy language for the digital age
+description: >
+  Open Digital Policies provides openly licensed, community-maintained model
+  policy language that advocates, communities, and governments can adopt,
+  adapt, and improve.
+---
+
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">Open Digital Policies</p>
+    <h1 class="hero__title" id="hero-heading">Good digital policy is a public good.</h1>
+    <p class="hero__description">
+      Technology shapes our energy systems, our privacy, our access to public services,
+      and our relationship with government. Most digital policy is written behind closed
+      doors in language inaccessible to the communities most affected.
+      <strong>ODP changes that.</strong>
+    </p>
+    <div class="hero__actions">
+      <a href="{{ site.baseurl }}/domains/" class="btn btn--primary">Explore policy domains</a>
+      <a href="https://github.com/{{ site.github_repo }}" class="btn btn--secondary" rel="noopener">
+        View on GitHub ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Core commitments -->
+<section class="section" aria-labelledby="commitments-heading">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow">What we stand for</span>
+      <h2 class="section__title" id="commitments-heading">
+        We want innovation — but done right
+      </h2>
+    </header>
+    <div class="values-grid" role="list">
+      <div class="value-item" role="listitem">
+        <p class="value-item__title">⚡ AI without the power grab</p>
+        <p class="value-item__body">
+          We want AI — but not at the cost of clean water and reliable electricity
+          for the communities hosting data centers.
+        </p>
+      </div>
+      <div class="value-item" role="listitem">
+        <p class="value-item__title">🏙️ Smart cities without surveillance</p>
+        <p class="value-item__body">
+          We want smart cities — but not at the cost of our privacy and the right
+          to move through public space without being tracked.
+        </p>
+      </div>
+      <div class="value-item" role="listitem">
+        <p class="value-item__title">🔓 Public money, public code</p>
+        <p class="value-item__body">
+          Software built with taxpayer money should be available to all taxpayers —
+          not locked inside proprietary systems that charge for access.
+        </p>
+      </div>
+      <div class="value-item" role="listitem">
+        <p class="value-item__title">🔧 Own it. Fix it. Keep it.</p>
+        <p class="value-item__body">
+          Innovation shouldn't mean manufactured obsolescence. You should be able
+          to repair what you own, and software locks shouldn't stop you.
+        </p>
+      </div>
+      <div class="value-item" role="listitem">
+        <p class="value-item__title">♿ Access is a right</p>
+        <p class="value-item__body">
+          Digital public services must work for everyone — not just the majority.
+          Accessibility is a precondition for digital equity, not a bonus feature.
+        </p>
+      </div>
+      <div class="value-item" role="listitem">
+        <p class="value-item__title">📊 Algorithms need answers</p>
+        <p class="value-item__body">
+          When an algorithm affects your job, housing, or benefits, you have the
+          right to know why — and the right to challenge it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Domain explorer -->
+<section class="section section--alt" aria-labelledby="domains-heading">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow">Policy domains</span>
+      <h2 class="section__title" id="domains-heading">What matters to you?</h2>
+      <p class="section__description">
+        Each domain follows a four-pillar structure: <strong>Principles → Standards →
+        Implementation → Governance</strong> — with model legislative language, real-world
+        examples, and identified gaps.
+      </p>
+    </header>
+
+    <div class="domains-grid" role="list">
+      {% assign ready_domains = site.data.domains | where_exp: "d", "d.status == 'draft' or d.status == 'stable'" %}
+      {% for domain in ready_domains %}
+      <article class="domain-card" role="listitem">
+        <header class="domain-card__header">
+          <div>
+            <span class="domain-card__icon" aria-hidden="true">{{ domain.icon }}</span>
+          </div>
+          <span class="badge badge--{{ domain.status }}">{{ domain.status }}</span>
+        </header>
+        <h3 class="domain-card__title">{{ domain.taxonomy_title }}</h3>
+        <p class="domain-card__official-name">{{ domain.official_name }}</p>
+        <p class="domain-card__description">{{ domain.description }}</p>
+        <footer class="domain-card__footer">
+          <a href="{{ site.baseurl }}{{ domain.full_model }}" class="domain-card__link">
+            Read the model policy
+          </a>
+        </footer>
+      </article>
+      {% endfor %}
+    </div>
+
+    <p style="margin-top: 2rem; text-align: center;">
+      <a href="{{ site.baseurl }}/domains/" class="btn btn--outline">
+        View all domains including in-development →
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section" aria-labelledby="how-heading">
+  <div class="container">
+    <header class="section__header">
+      <span class="section__eyebrow">How to use this</span>
+      <h2 class="section__title" id="how-heading">From model to movement</h2>
+      <p class="section__description">
+        Policy models in this repository are not off-the-shelf ordinances to adopt
+        verbatim. They are starting points — carefully researched, ready to adapt.
+      </p>
+    </header>
+    <div class="steps">
+      <div class="step">
+        <div class="step__number" aria-hidden="true">1</div>
+        <h3 class="step__title">Read</h3>
+        <p class="step__description">
+          Find the policy domain that matters to your community. Read the Principles
+          section to understand what values are at stake and the Standards section
+          to see what enforceable language looks like.
+        </p>
+      </div>
+      <div class="step">
+        <div class="step__number" aria-hidden="true">2</div>
+        <h3 class="step__title">Adapt</h3>
+        <p class="step__description">
+          Model language needs to be adapted for your jurisdiction, legal system,
+          and political context. The real-world examples show how others have
+          done it. The gaps section shows what's still unresolved.
+        </p>
+      </div>
+      <div class="step">
+        <div class="step__number" aria-hidden="true">3</div>
+        <h3 class="step__title">Advocate</h3>
+        <p class="step__description">
+          Use the model to make the case to your elected representatives, your
+          municipality, or your institution's procurement team. Then add what
+          you learn back to this repository.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contribute CTA -->
+<section class="section section--alt" aria-labelledby="contribute-heading">
+  <div class="container" style="text-align: center; max-width: 680px;">
+    <span class="section__eyebrow">Open to everyone</span>
+    <h2 class="section__title" id="contribute-heading">This is your repository too</h2>
+    <p style="font-size: 1.125rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+      Good policy language belongs to all of us. If you know of a jurisdiction that
+      has enacted similar language, have expertise in a gap we've identified, or want
+      to translate a model into another language — your contribution is needed.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://github.com/{{ site.github_repo }}/issues/new?labels=gap&title=Gap+in+[domain]%3A+" class="btn btn--outline" rel="noopener">
+        Flag a gap
+      </a>
+      <a href="https://github.com/{{ site.github_repo }}/issues/new?labels=adoption&title=Adoption%3A+" class="btn btn--outline" rel="noopener">
+        Report an adoption
+      </a>
+      <a href="https://github.com/{{ site.github_repo }}/blob/{{ site.github_branch }}/CONTRIBUTING.md" class="btn btn--outline" rel="noopener">
+        How to contribute
+      </a>
+    </div>
+  </div>
+</section>
