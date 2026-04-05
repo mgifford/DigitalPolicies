@@ -8,7 +8,7 @@
 
 Digital technology shapes every layer of modern life: our energy systems, our privacy, our access to public services, our economic participation, and our relationship with government. Yet most digital policy is written behind closed doors, in language inaccessible to the communities most affected by it.
 
-**Open Digital Policies (ODP)** is a community-maintained library of model policy language that communities, municipalities, and governments can adopt, adapt, and advocate for. It is modelled on the [Open Climate Resilience Policies (OCRP)](https://ocrap.net) framework and shares its core belief: that good policy language should be a public good, openly available, versioned, and improvable by anyone.
+**Open Digital Policies (ODP)** is a community-maintained library of model policy language that communities, municipalities, and governments can adopt, adapt, and advocate for. Its core belief: that good policy language should be a public good, openly available, versioned, and improvable by anyone.
 
 ---
 
@@ -32,7 +32,7 @@ These values inform every policy model in this repository. They are non-negotiab
 
 ## How This Repository Works
 
-This project is inspired by and structurally mirrors OCRP, with improvements designed for the digital policy context.
+Each policy domain is structured consistently, so readers — whether a community organizer or a city solicitor — always know where to look for the content they need.
 
 ### Repository Structure
 
@@ -67,7 +67,7 @@ This project is inspired by and structurally mirrors OCRP, with improvements des
 
 ## The Four-Pillar Policy Model
 
-Every policy model in this repository follows the same four-pillar structure, directly mirroring OCRP's approach. This consistency means that readers — whether a community organizer or a city solicitor — always know where to look for the type of content they need.
+Every policy model in this repository follows the same four-pillar structure. This consistency means that readers — whether a community organizer or a city solicitor — always know where to look for the type of content they need.
 
 ### Pillar 1: Principles
 **The "why."** Core values, rights-based rationale, and equity considerations that underpin the policy. This section makes explicit what a jurisdiction is committing to, not just technically, but philosophically. It is the section most useful for advocacy and public consultation.
@@ -83,24 +83,24 @@ Every policy model in this repository follows the same four-pillar structure, di
 
 ---
 
-## Improvements Over OCRP
+## What's Included in Every Policy Model
 
-ODP builds on OCRP's framework with several additions suited to the digital policy context:
+Each policy model in ODP includes the following components, designed to support the full lifecycle from advocacy to adoption:
 
-| Feature | OCRP | ODP |
-|---|---|---|
-| Four-pillar structure | ✓ | ✓ |
-| GitHub-backed markdown | ✓ | ✓ |
-| Real-world examples | ✓ | ✓ |
-| Equity framing | ✓ | ✓ |
-| Policy template | – | ✓ |
-| Adoption tracker | – | ✓ |
-| Glossary | – | ✓ |
-| Multilingual translations | – | ✓ |
-| Contributing guide | – | ✓ |
-| Impact / sustainability framing | – | ✓ |
-| Accessibility standards built in | – | ✓ |
-| Cross-domain dependency mapping | – | ✓ |
+| Component | Purpose |
+|---|---|
+| Four-pillar structure | Principles → Standards → Implementation → Governance |
+| Model legislative language | In blockquotes — ready to adapt for local context |
+| Real-world examples | Enacted or proposed legislation by jurisdiction |
+| Equity considerations | Who is affected and how the policy addresses that |
+| Environmental framing | Material footprint of current practice and what changes |
+| Cross-domain dependency map | How this policy connects to adjacent domains |
+| Glossary | Key terms defined consistently across the project |
+| Contributing instructions | How to improve, translate, or extend each model |
+| Changelog | Version history with dates and summaries |
+| Policy template | Reusable blank structure for new domains |
+| Adoption tracker | Known adoptions of model language by jurisdiction |
+| Accessibility of documentation | Plain language, heading structure, open formats |
 
 ---
 
@@ -261,8 +261,6 @@ Anyone. Contributions are welcome from community advocates, legal practitioners,
 
 ## Related Projects & Inspirations
 
-- [Open Climate Resilience Policies (OCRP)](https://ocrap.net) — the direct structural inspiration for this project
-- [Cities4Forests](https://cities4forests.com) — urban forest policy framework underpinning OCRP
 - [Digital Public Goods Alliance](https://digitalpublicgoods.net) — registry of open source digital public goods
 - [Foundation for Public Code](https://publiccode.net) — standards for public code and policy-as-code
 - [Open Government Partnership](https://www.opengovpartnership.org) — government transparency and participation frameworks
