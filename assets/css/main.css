@@ -557,6 +557,10 @@ img { max-width: 100%; height: auto; }
 }
 .site-footer a:hover { color: #ffffff; }
 
+.site-footer__bottom a {
+  text-decoration: underline;
+}
+
 .site-footer ul {
   list-style: none;
   padding: 0;
@@ -719,7 +723,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .domain-card--in-development {
-  opacity: 0.72;
+  border-style: dashed;
 }
 
 .domain-card__header {

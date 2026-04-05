@@ -1,5 +1,5 @@
 ---
-layout: policy
+layout: domain-full
 title: "Web Sustainability — Model Policy"
 domain: web-sustainability
 ---

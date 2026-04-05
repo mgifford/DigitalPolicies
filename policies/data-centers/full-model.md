@@ -1,3 +1,5 @@
+---
+---
 # Data Centers & Environmental Sustainability — Model Policy
 
 > **Status:** `Draft`

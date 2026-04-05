@@ -14,7 +14,7 @@ layout: none
     "description": {{ domain.description | strip_newlines | strip | jsonify }},
     "status": {{ domain.status | jsonify }},
     "url": "{{ site.baseurl }}/domains/{{ domain.slug }}/",
-    "full_model_url": {%- if domain.full_model -%}{{ (site.baseurl | append: domain.full_model) | jsonify }}{%- else -%}null{%- endif -%},
+    "full_model_url": {%- if domain.full_model -%}{{ site.baseurl | append: domain.full_model | jsonify }}{%- else -%}null{%- endif -%},
     "body": {{ domain.key_standards | join: ". " | jsonify }}
   }
   {%- endfor -%},

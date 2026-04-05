@@ -1,3 +1,5 @@
+---
+---
 # Open Source in Government — Model Policy
 
 > **Status:** `Draft`
