@@ -1,0 +1,579 @@
+---
+layout: default
+title: Advocate Prompt Builder
+description: Build a policy-grounded prompt for your AI assistant — letters, testimony, talking points, and plain-language explainers.
+---
+
+<style>
+/* Prompt builder styles — scoped to this page */
+.builder-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .builder-layout { grid-template-columns: 1fr; }
+}
+
+.builder-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.builder-form h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+
+.builder-form > p {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 0.375rem;
+  color: var(--color-text);
+}
+
+.form-group .hint {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.375rem;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6em 0.85em;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(20, 84, 58, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group select { cursor: pointer; }
+
+.form-section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+/* Output panel */
+.builder-output {
+  position: sticky;
+  top: 5rem;
+}
+
+.output-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.output-card__header {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.output-card__header h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text-inverse);
+}
+
+.output-card__header p {
+  margin: 0;
+  font-size: 0.8125rem;
+  opacity: 0.8;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.45em 1em;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.copy-btn:hover { background: rgba(255,255,255,0.25); }
+.copy-btn:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+.copy-btn.copied {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.7);
+}
+
+.output-card__body {
+  padding: 1.5rem;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+#prompt-output {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.output-empty {
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+}
+
+.output-card__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+}
+
+/* Target AI links */
+.ai-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.ai-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3em 0.8em;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.ai-link:hover { border-color: var(--color-primary); color: var(--color-primary); }
+</style>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <nav aria-label="Breadcrumb" style="font-size: 0.875rem; margin-bottom: 1rem;">
+      <a href="{{ site.baseurl }}/tools/" style="color: var(--color-text-muted); text-decoration: none;">← Tools</a>
+    </nav>
+    <h1 class="page-header__title">Advocate Prompt Builder</h1>
+    <p class="page-header__description">
+      Fill in your context — the prompt builds on the right, ready to copy into
+      Claude, ChatGPT, Gemini, or any AI you prefer. Nothing is sent to us.
+    </p>
+  </div>
+</div>
+
+<div class="builder-layout">
+
+  <!-- Form -->
+  <div class="builder-form">
+    <h2>Your context</h2>
+    <p>The more specific you are, the more useful the generated prompt will be.</p>
+
+    <div class="form-group">
+      <label for="field-role">Your role</label>
+      <select id="field-role" name="role">
+        <option value="">— select your role —</option>
+        <option value="community advocate">Community advocate or organiser</option>
+        <option value="resident or citizen">Resident or citizen</option>
+        <option value="nonprofit or NGO staff">Nonprofit / NGO staff</option>
+        <option value="journalist or researcher">Journalist or researcher</option>
+        <option value="student">Student</option>
+        <option value="elected official or staff">Elected official or their staff</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="field-jurisdiction">Your jurisdiction
+        <span class="hint">City, region, or country — be as specific as you like</span>
+      </label>
+      <input type="text" id="field-jurisdiction" name="jurisdiction"
+             placeholder="e.g. Ottawa, Ontario; Wales; European Union" autocomplete="off">
+    </div>
+
+    <hr class="form-section-divider">
+
+    <div class="form-group">
+      <label for="field-domain">Policy domain</label>
+      <select id="field-domain" name="domain">
+        <option value="">— select a policy area —</option>
+        {% for domain in site.data.domains %}
+        <option value="{{ domain.id }}"
+                data-title="{{ domain.taxonomy_title }}"
+                data-official="{{ domain.official_name }}"
+                data-tension="{{ domain.core_tension }}"
+                data-description="{{ domain.description | strip_newlines | strip }}"
+                data-standards="{{ domain.key_standards | join: '|||' }}"
+                data-url="{{ site.url }}{{ site.baseurl }}{{ domain.full_model }}">
+          {{ domain.taxonomy_title }} — {{ domain.official_name }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-group" id="domain-context-group" style="display:none;">
+      <p id="domain-context-text"
+         style="font-size:0.875rem; background: var(--color-primary-pale); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 0.75rem 1rem; margin: 0; color: var(--color-text);">
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="field-task">What do you want to create?</label>
+      <select id="field-task" name="task">
+        <option value="">— select a task —</option>
+        <option value="a letter to an elected official">A letter to an elected official</option>
+        <option value="written testimony for a public hearing">Written testimony for a public hearing</option>
+        <option value="talking points for a council meeting or presentation">Talking points for a council meeting</option>
+        <option value="a plain-language explainer for my community">A plain-language explainer for my community</option>
+        <option value="a media pitch or press release">A media pitch or press release</option>
+        <option value="a social media thread or campaign message">A social media thread or campaign message</option>
+        <option value="a petition or open letter">A petition or open letter</option>
+        <option value="an FAQ about this policy issue">An FAQ about this policy issue</option>
+      </select>
+    </div>
+
+    <div class="form-group" id="audience-group" style="display:none;">
+      <label for="field-audience">Who is the audience?
+        <span class="hint">Optional — helps tailor tone and vocabulary</span>
+      </label>
+      <input type="text" id="field-audience" name="audience"
+             placeholder="e.g. city councillors, residents at a town hall, Twitter followers">
+    </div>
+
+    <div class="form-group">
+      <label for="field-tone">Tone</label>
+      <select id="field-tone" name="tone">
+        <option value="clear and accessible">Clear and accessible — plain language, avoid jargon</option>
+        <option value="formal and respectful">Formal and respectful — appropriate for official correspondence</option>
+        <option value="urgent and direct">Urgent and direct — this is a time-sensitive issue</option>
+        <option value="collaborative and solution-focused">Collaborative — acknowledge complexity, offer solutions</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="field-length">Approximate length</label>
+      <select id="field-length" name="length">
+        <option value="brief (under 300 words)">Brief — under 300 words</option>
+        <option value="medium (300–600 words)" selected>Medium — 300–600 words</option>
+        <option value="detailed (600–1000 words)">Detailed — 600–1000 words</option>
+      </select>
+    </div>
+
+    <hr class="form-section-divider">
+
+    <div class="form-group">
+      <label for="field-context">Your specific situation
+        <span class="hint">
+          What is the specific issue, decision, or opportunity you're responding to?
+          The more concrete, the better the prompt.
+        </span>
+      </label>
+      <textarea id="field-context" name="context" rows="4"
+                placeholder="e.g. My city is considering approving a permit for a 200MW data center in a residential neighbourhood with an existing water shortage. A public consultation is open until April 20."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="field-ask">The specific action you want your audience to take
+        <span class="hint">Optional but powerful — what is your 'ask'?</span>
+      </label>
+      <input type="text" id="field-ask" name="ask"
+             placeholder="e.g. Vote against the permit until a Community Impact Disclosure is completed">
+    </div>
+
+    <div class="form-group">
+      <label for="field-constraints">Any constraints or requirements
+        <span class="hint">Optional — anything the AI should know or avoid</span>
+      </label>
+      <input type="text" id="field-constraints" name="constraints"
+             placeholder="e.g. Avoid technical jargon; must be under 2 pages; include a personal story opening">
+    </div>
+
+  </div>
+
+  <!-- Output panel -->
+  <div class="builder-output" role="region" aria-label="Generated prompt" aria-live="polite">
+    <div class="output-card">
+      <div class="output-card__header">
+        <div>
+          <h2>Your prompt</h2>
+          <p>Copy and paste into your preferred AI tool</p>
+        </div>
+        <button class="copy-btn" id="copy-btn"
+                onclick="copyPrompt()"
+                aria-label="Copy prompt to clipboard">
+          📋 Copy prompt
+        </button>
+      </div>
+
+      <div class="output-card__body">
+        <pre id="prompt-output"><span class="output-empty">Fill in the form on the left and your prompt will appear here, ready to copy.</span></pre>
+      </div>
+
+      <div class="output-card__footer">
+        <p style="margin: 0 0 0.5rem;">Take this prompt to:</p>
+        <div class="ai-links" role="list">
+          <a href="https://claude.ai" class="ai-link" rel="noopener" target="_blank" role="listitem">Claude ↗</a>
+          <a href="https://chat.openai.com" class="ai-link" rel="noopener" target="_blank" role="listitem">ChatGPT ↗</a>
+          <a href="https://gemini.google.com" class="ai-link" rel="noopener" target="_blank" role="listitem">Gemini ↗</a>
+          <a href="https://mistral.ai" class="ai-link" rel="noopener" target="_blank" role="listitem">Mistral ↗</a>
+          <a href="https://huggingface.co/chat" class="ai-link" rel="noopener" target="_blank" role="listitem">HuggingChat ↗</a>
+        </div>
+        <p style="margin: 0.75rem 0 0; font-size: 0.75rem;">
+          ℹ️ Nothing you enter is sent to Open Digital Policies — this tool runs entirely in your browser.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Domain data from Jekyll
+const domains = {
+  {% for domain in site.data.domains %}
+  "{{ domain.id }}": {
+    title: {{ domain.taxonomy_title | jsonify }},
+    official: {{ domain.official_name | jsonify }},
+    description: {{ domain.description | strip_newlines | strip | jsonify }},
+    tension: {{ domain.core_tension | jsonify }},
+    standards: [{% for std in domain.key_standards %}{{ std | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+    url: "{{ site.url }}{{ site.baseurl }}{{ domain.full_model }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+};
+
+// Field references
+const fields = {
+  role:        () => document.getElementById('field-role').value,
+  jurisdiction:() => document.getElementById('field-jurisdiction').value.trim(),
+  domain:      () => document.getElementById('field-domain').value,
+  task:        () => document.getElementById('field-task').value,
+  audience:    () => document.getElementById('field-audience').value.trim(),
+  tone:        () => document.getElementById('field-tone').value,
+  length:      () => document.getElementById('field-length').value,
+  context:     () => document.getElementById('field-context').value.trim(),
+  ask:         () => document.getElementById('field-ask').value.trim(),
+  constraints: () => document.getElementById('field-constraints').value.trim()
+};
+
+function buildPrompt() {
+  const role         = fields.role();
+  const jurisdiction = fields.jurisdiction();
+  const domainId     = fields.domain();
+  const task         = fields.task();
+  const audience     = fields.audience();
+  const tone         = fields.tone();
+  const length       = fields.length();
+  const context      = fields.context();
+  const ask          = fields.ask();
+  const constraints  = fields.constraints();
+
+  // Need at minimum role or task to generate anything
+  if (!role && !task && !domainId) return null;
+
+  const domain = domainId ? domains[domainId] : null;
+
+  let lines = [];
+
+  // --- Opening: who am I and what do I need ---
+  let intro = 'I need your help drafting';
+  if (task) intro += ' ' + task;
+  if (role) intro += '.\n\nI am a ' + role;
+  if (jurisdiction) intro += ' based in ' + jurisdiction;
+  intro += '.';
+  lines.push(intro);
+
+  // --- Specific situation ---
+  if (context) {
+    lines.push('The specific situation I am responding to:\n' + context);
+  }
+
+  // --- The ask ---
+  if (ask) {
+    lines.push('The specific action I want my audience to take:\n' + ask);
+  }
+
+  // --- Policy domain context ---
+  if (domain) {
+    let domainSection = '--- POLICY CONTEXT ---\n';
+    domainSection += 'This relates to the policy domain: ' + domain.official + ' ("' + domain.title + '")\n\n';
+    domainSection += 'The core tension this policy navigates: ' + domain.tension + '\n\n';
+
+    if (domain.standards && domain.standards.length > 0) {
+      domainSection += 'Key model policy standards in this area:\n';
+      domain.standards.forEach((std, i) => {
+        domainSection += (i + 1) + '. ' + std + '\n';
+      });
+    }
+
+    if (domain.url && domain.url !== '{{ site.url }}{{ site.baseurl }}') {
+      domainSection += '\nFull model policy reference: ' + domain.url;
+    }
+
+    lines.push(domainSection);
+  }
+
+  // --- Output requirements ---
+  let requirements = '--- WHAT I NEED ---\n';
+  requirements += 'Please write ' + (task || 'a policy communication');
+
+  if (audience) requirements += ' addressed to: ' + audience;
+  requirements += '.';
+  requirements += '\n\nRequirements:';
+  requirements += '\n• Tone: ' + tone;
+  requirements += '\n• Length: ' + length;
+  if (jurisdiction) requirements += '\n• Relevant to: ' + jurisdiction + ' (adapt examples and references to this context where possible)';
+  if (domain) requirements += '\n• Ground the content in the policy standards listed above — cite real-world examples where helpful';
+  if (constraints) requirements += '\n• Additional constraints: ' + constraints;
+
+  lines.push(requirements);
+
+  // --- Attribution and caveat ---
+  let footer = '--- IMPORTANT NOTES ---\n';
+  footer += 'Policy context is drawn from Open Digital Policies (https://openpolicy.dev), a community-maintained library of model policy language published under CC BY 4.0.';
+  footer += '\nThis material is for advocacy and educational purposes. Any policy language used in formal legal or legislative processes should be reviewed by a qualified legal practitioner.';
+  lines.push(footer);
+
+  return lines.join('\n\n');
+}
+
+function updatePrompt() {
+  const output = document.getElementById('prompt-output');
+  const prompt = buildPrompt();
+
+  if (prompt) {
+    output.textContent = prompt;
+    output.classList.remove('output-empty');
+  } else {
+    output.innerHTML = '<span class="output-empty">Fill in the form on the left and your prompt will appear here, ready to copy.</span>';
+  }
+
+  // Update domain context hint
+  const domainId = fields.domain();
+  const domainGroup = document.getElementById('domain-context-group');
+  const domainText = document.getElementById('domain-context-text');
+  if (domainId && domains[domainId]) {
+    domainGroup.style.display = 'block';
+    domainText.textContent = '💡 ' + domains[domainId].description;
+  } else {
+    domainGroup.style.display = 'none';
+  }
+
+  // Show/hide audience field based on task
+  const task = fields.task();
+  const audienceGroup = document.getElementById('audience-group');
+  audienceGroup.style.display = task ? 'block' : 'none';
+}
+
+function copyPrompt() {
+  const output = document.getElementById('prompt-output');
+  const btn = document.getElementById('copy-btn');
+  const prompt = output.textContent;
+
+  if (!prompt || prompt.includes('Fill in the form')) {
+    btn.textContent = '⚠️ Nothing to copy yet';
+    setTimeout(() => { btn.innerHTML = '📋 Copy prompt'; }, 2000);
+    return;
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(prompt).then(() => {
+      btn.innerHTML = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = '📋 Copy prompt';
+        btn.classList.remove('copied');
+      }, 2500);
+    }).catch(() => fallbackCopy(prompt, btn));
+  } else {
+    fallbackCopy(prompt, btn);
+  }
+}
+
+function fallbackCopy(text, btn) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    btn.innerHTML = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.innerHTML = '📋 Copy prompt';
+      btn.classList.remove('copied');
+    }, 2500);
+  } catch(e) {
+    btn.innerHTML = '⚠️ Copy failed — select text manually';
+  }
+  document.body.removeChild(ta);
+}
+
+// Wire up all inputs
+document.querySelectorAll('input, select, textarea').forEach(el => {
+  el.addEventListener('input', updatePrompt);
+  el.addEventListener('change', updatePrompt);
+});
+
+// Initial render
+updatePrompt();
+</script>

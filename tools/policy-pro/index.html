@@ -1,0 +1,540 @@
+---
+layout: default
+title: Policy Professional Prompt Builder
+description: Build a technically precise prompt for procurement drafting, gap analysis, policy adaptation, and decision-maker briefings.
+---
+
+<style>
+/* Scoped to this page — same base as advocate builder */
+.builder-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+@media (max-width: 860px) {
+  .builder-layout { grid-template-columns: 1fr; }
+}
+
+.builder-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.builder-form h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: var(--color-accent);
+}
+.builder-form > p {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.form-group { margin-bottom: 1.5rem; }
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 0.375rem;
+  color: var(--color-text);
+}
+.form-group .hint {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.375rem;
+}
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6em 0.85em;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(184, 76, 14, 0.12);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group select { cursor: pointer; }
+
+/* Pillar checkboxes */
+.pillar-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.pillar-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+.pillar-option:has(input:checked) {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+.pillar-option input { margin: 0; flex-shrink: 0; }
+.pillar-option span { line-height: 1.3; }
+.pillar-option strong { display: block; font-size: 0.8125rem; }
+
+.form-section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+/* Output */
+.builder-output { position: sticky; top: 5rem; }
+.output-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.output-card__header {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.output-card__header h2 { margin: 0; font-size: 1rem; color: var(--color-text-inverse); }
+.output-card__header p { margin: 0; font-size: 0.8125rem; opacity: 0.8; }
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.45em 1em;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.copy-btn:hover { background: rgba(255,255,255,0.25); }
+.copy-btn:focus-visible { outline: 3px solid white; outline-offset: 2px; }
+.copy-btn.copied { background: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.7); }
+
+.output-card__body {
+  padding: 1.5rem;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+#prompt-output {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  font-family: var(--font-mono);
+}
+.output-empty {
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+}
+.output-card__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+}
+.ai-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.ai-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3em 0.8em;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.ai-link:hover { border-color: var(--color-accent); color: var(--color-accent); }
+</style>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <nav aria-label="Breadcrumb" style="font-size: 0.875rem; margin-bottom: 1rem;">
+      <a href="{{ site.baseurl }}/tools/" style="color: var(--color-text-muted); text-decoration: none;">← Tools</a>
+    </nav>
+    <h1 class="page-header__title">Policy Professional Builder</h1>
+    <p class="page-header__description">
+      For procurement officers, government staff, and legal practitioners. Builds a technically
+      precise prompt grounded in model policy language — paste into your preferred AI tool.
+      Nothing you enter is sent to us.
+    </p>
+  </div>
+</div>
+
+<div class="builder-layout">
+
+  <!-- Form -->
+  <div class="builder-form">
+    <h2>Your professional context</h2>
+    <p>Specify your role and jurisdiction — the prompt will calibrate accordingly.</p>
+
+    <div class="form-group">
+      <label for="field-role">Your role</label>
+      <select id="field-role" name="role">
+        <option value="">— select your role —</option>
+        <option value="procurement officer">Procurement officer</option>
+        <option value="government policy analyst">Government policy analyst</option>
+        <option value="legal practitioner or legislative drafter">Legal practitioner / legislative drafter</option>
+        <option value="CIO or technology leader">CIO or technology leader</option>
+        <option value="regulator or oversight body staff">Regulator / oversight body staff</option>
+        <option value="international development practitioner">International development practitioner</option>
+        <option value="academic researcher">Academic researcher</option>
+        <option value="civil society policy expert">Civil society policy expert</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="field-jurisdiction-level">Jurisdiction level</label>
+      <select id="field-jurisdiction-level" name="jurisdiction_level">
+        <option value="">— select level —</option>
+        <option value="municipal or local government">Municipal / local government</option>
+        <option value="regional, state, or provincial government">Regional / state / provincial</option>
+        <option value="national government">National government</option>
+        <option value="supranational (EU or similar)">Supranational (EU or similar)</option>
+        <option value="public sector procurement (any level)">Public sector procurement (any level)</option>
+        <option value="regulated private sector">Regulated private sector</option>
+        <option value="international or development context">International / development context</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="field-jurisdiction-name">Specific jurisdiction or context
+        <span class="hint">Optional but helps tailor legal references</span>
+      </label>
+      <input type="text" id="field-jurisdiction-name" name="jurisdiction_name"
+             placeholder="e.g. City of Toronto; New South Wales; EU member state">
+    </div>
+
+    <hr class="form-section-divider">
+
+    <div class="form-group">
+      <label for="field-domain">Policy domain</label>
+      <select id="field-domain" name="domain">
+        <option value="">— select a policy area —</option>
+        {% for domain in site.data.domains %}
+        <option value="{{ domain.id }}"
+                data-title="{{ domain.taxonomy_title }}"
+                data-official="{{ domain.official_name }}"
+                data-tension="{{ domain.core_tension }}"
+                data-description="{{ domain.description | strip_newlines | strip }}"
+                data-standards="{{ domain.key_standards | join: '|||' }}"
+                data-url="{{ site.url }}{{ site.baseurl }}{{ domain.full_model }}">
+          {{ domain.official_name }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Policy pillars to focus on
+        <span class="hint">Select all that apply</span>
+      </label>
+      <div class="pillar-options">
+        <label class="pillar-option">
+          <input type="checkbox" name="pillars" value="Principles (the why — values and rights-based rationale)">
+          <span><strong>Principles</strong>The why — values, rights, equity commitments</span>
+        </label>
+        <label class="pillar-option">
+          <input type="checkbox" name="pillars" value="Standards (the what — measurable, enforceable requirements)" checked>
+          <span><strong>Standards</strong>The what — specific, enforceable requirements</span>
+        </label>
+        <label class="pillar-option">
+          <input type="checkbox" name="pillars" value="Implementation (the how — procurement, timelines, enforcement)" checked>
+          <span><strong>Implementation</strong>The how — procurement, timelines, enforcement</span>
+        </label>
+        <label class="pillar-option">
+          <input type="checkbox" name="pillars" value="Governance (the who — oversight, community representation, audit)">
+          <span><strong>Governance</strong>The who — oversight, community voice, audit</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="field-task">What do you need help with?</label>
+      <select id="field-task" name="task">
+        <option value="">— select a task —</option>
+        <option value="drafting procurement clause language">Drafting procurement clause language</option>
+        <option value="adapting model policy language for our legal context">Adapting model language for our legal context</option>
+        <option value="conducting a gap analysis between our existing policy and the model">Gap analysis — existing policy vs. the model</option>
+        <option value="writing a policy brief for decision-makers">Writing a policy brief for decision-makers</option>
+        <option value="developing an implementation roadmap and timeline">Developing an implementation roadmap and timeline</option>
+        <option value="drafting compliance and reporting requirements">Drafting compliance and reporting requirements</option>
+        <option value="reviewing RFP or tender language against the model">Reviewing RFP / tender language against the model</option>
+        <option value="preparing for a legislative committee submission">Preparing a legislative committee submission</option>
+        <option value="identifying enforcement mechanisms that have worked">Identifying enforcement mechanisms that have worked</option>
+      </select>
+    </div>
+
+    <hr class="form-section-divider">
+
+    <div class="form-group">
+      <label for="field-existing">Existing policy or contract language to compare
+        <span class="hint">Optional — paste your current language for a gap analysis or comparison</span>
+      </label>
+      <textarea id="field-existing" name="existing" rows="5"
+                placeholder="Paste existing procurement clause, policy section, or regulatory text here…"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="field-constraints">Constraints, context, or specific focus
+        <span class="hint">What should the AI know about your context? What should it avoid?</span>
+      </label>
+      <textarea id="field-constraints" name="constraints" rows="3"
+                placeholder="e.g. Our jurisdiction uses civil law rather than common law; we cannot mandate specific technologies by name; the committee has 6 weeks to produce recommendations; focus on SME compliance burden"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="field-output-format">Preferred output format</label>
+      <select id="field-output-format" name="output_format">
+        <option value="structured document with headings and sections">Structured document with headings and sections</option>
+        <option value="annotated draft with rationale for each clause">Annotated draft — clause + rationale side by side</option>
+        <option value="bullet-point summary for non-technical decision-makers">Bullet-point summary for non-technical decision-makers</option>
+        <option value="comparison table (current vs. model vs. recommended)">Comparison table: current / model / recommended</option>
+        <option value="legislative language in formal drafting style">Legislative language in formal drafting style</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- Output panel -->
+  <div class="builder-output" role="region" aria-label="Generated prompt" aria-live="polite">
+    <div class="output-card">
+      <div class="output-card__header">
+        <div>
+          <h2>Your prompt</h2>
+          <p>Copy and paste into your preferred AI tool</p>
+        </div>
+        <button class="copy-btn" id="copy-btn"
+                onclick="copyPrompt()"
+                aria-label="Copy prompt to clipboard">
+          📋 Copy prompt
+        </button>
+      </div>
+
+      <div class="output-card__body">
+        <pre id="prompt-output"><span class="output-empty">Fill in the form on the left and your prompt will appear here, ready to copy.</span></pre>
+      </div>
+
+      <div class="output-card__footer">
+        <p style="margin: 0 0 0.5rem;">Take this prompt to:</p>
+        <div class="ai-links" role="list">
+          <a href="https://claude.ai" class="ai-link" rel="noopener" target="_blank" role="listitem">Claude ↗</a>
+          <a href="https://chat.openai.com" class="ai-link" rel="noopener" target="_blank" role="listitem">ChatGPT ↗</a>
+          <a href="https://gemini.google.com" class="ai-link" rel="noopener" target="_blank" role="listitem">Gemini ↗</a>
+          <a href="https://mistral.ai" class="ai-link" rel="noopener" target="_blank" role="listitem">Mistral ↗</a>
+          <a href="https://huggingface.co/chat" class="ai-link" rel="noopener" target="_blank" role="listitem">HuggingChat ↗</a>
+        </div>
+        <p style="margin: 0.75rem 0 0; font-size: 0.75rem;">
+          ℹ️ Nothing you enter is sent to Open Digital Policies — this tool runs entirely in your browser.
+        </p>
+        <p style="margin: 0.5rem 0 0; font-size: 0.75rem;">
+          ⚖️ All outputs require review by a qualified legal practitioner before formal adoption.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const domains = {
+  {% for domain in site.data.domains %}
+  "{{ domain.id }}": {
+    title: {{ domain.taxonomy_title | jsonify }},
+    official: {{ domain.official_name | jsonify }},
+    description: {{ domain.description | strip_newlines | strip | jsonify }},
+    tension: {{ domain.core_tension | jsonify }},
+    standards: [{% for std in domain.key_standards %}{{ std | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+    url: "{{ site.url }}{{ site.baseurl }}{{ domain.full_model }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+};
+
+function getCheckedPillars() {
+  return Array.from(document.querySelectorAll('input[name="pillars"]:checked'))
+              .map(el => el.value);
+}
+
+function buildPrompt() {
+  const role          = document.getElementById('field-role').value;
+  const level         = document.getElementById('field-jurisdiction-level').value;
+  const jurisdiction  = document.getElementById('field-jurisdiction-name').value.trim();
+  const domainId      = document.getElementById('field-domain').value;
+  const task          = document.getElementById('field-task').value;
+  const pillars       = getCheckedPillars();
+  const existing      = document.getElementById('field-existing').value.trim();
+  const constraints   = document.getElementById('field-constraints').value.trim();
+  const outputFormat  = document.getElementById('field-output-format').value;
+
+  if (!role && !task && !domainId) return null;
+
+  const domain = domainId ? domains[domainId] : null;
+  let lines = [];
+
+  // --- Professional context ---
+  let intro = 'I am a ' + (role || 'policy professional');
+  if (level) intro += ' working at the ' + level + ' level';
+  if (jurisdiction) intro += ' in ' + jurisdiction;
+  intro += '.';
+  if (task) intro += '\n\nI need your help with: ' + task + '.';
+  lines.push(intro);
+
+  // --- Policy domain ---
+  if (domain) {
+    let domainBlock = '--- POLICY DOMAIN ---\n';
+    domainBlock += 'Domain: ' + domain.official + ' ("' + domain.title + '")\n\n';
+    domainBlock += 'Core tension this policy must navigate:\n' + domain.tension + '\n\n';
+
+    if (domain.standards && domain.standards.length > 0) {
+      domainBlock += 'Key model policy standards:\n';
+      domain.standards.forEach((std, i) => {
+        domainBlock += (i + 1) + '. ' + std + '\n';
+      });
+    }
+
+    if (domain.url && !domain.url.includes('undefined')) {
+      domainBlock += '\nFull model policy reference: ' + domain.url;
+    }
+    lines.push(domainBlock);
+  }
+
+  // --- Pillar focus ---
+  if (pillars.length > 0) {
+    lines.push('Focus areas (policy pillars):\n' + pillars.map(p => '• ' + p).join('\n'));
+  }
+
+  // --- Existing policy (if provided) ---
+  if (existing) {
+    lines.push('--- EXISTING POLICY / CONTRACT LANGUAGE TO ANALYSE ---\n' + existing);
+  }
+
+  // --- Requirements ---
+  let req = '--- OUTPUT REQUIREMENTS ---\n';
+  if (task) req += 'Task: ' + task + '\n';
+  if (level) req += 'Jurisdiction level: ' + level + '\n';
+  if (jurisdiction) req += 'Specific context: ' + jurisdiction + '\n';
+  req += 'Output format: ' + outputFormat + '\n';
+  if (constraints) req += 'Constraints and context:\n' + constraints + '\n';
+
+  req += '\nPlease ensure the output:\n';
+  req += '• Uses specific, enforceable language (not just principles or aspirations)\n';
+  req += '• Cites enacted real-world precedents where relevant\n';
+  req += '• Flags areas that require local legal expertise or adaptation for ' + (jurisdiction || 'this jurisdiction') + '\n';
+  if (existing) req += '• Compares or integrates with the existing language provided above\n';
+  req += '• Identifies any significant gaps relative to the model policy standards\n';
+  if (level && level.includes('procure')) {
+    req += '• Provides language suitable for insertion into RFP/tender documents or contracts\n';
+  }
+  lines.push(req);
+
+  // --- Legal caveat ---
+  let footer = '--- IMPORTANT ---\n';
+  footer += 'Policy context is drawn from Open Digital Policies (https://openpolicy.dev), a community-maintained model policy library published under CC BY 4.0.\n';
+  footer += 'All outputs are for professional review purposes. Language for formal adoption requires review and adaptation by qualified legal practitioners in the relevant jurisdiction.';
+  lines.push(footer);
+
+  return lines.join('\n\n');
+}
+
+function updatePrompt() {
+  const output = document.getElementById('prompt-output');
+  const prompt = buildPrompt();
+
+  if (prompt) {
+    output.textContent = prompt;
+    output.classList.remove('output-empty');
+  } else {
+    output.innerHTML = '<span class="output-empty">Fill in the form on the left and your prompt will appear here, ready to copy.</span>';
+  }
+}
+
+function copyPrompt() {
+  const output = document.getElementById('prompt-output');
+  const btn    = document.getElementById('copy-btn');
+  const text   = output.textContent;
+
+  if (!text || text.includes('Fill in the form')) {
+    btn.textContent = '⚠️ Nothing to copy yet';
+    setTimeout(() => { btn.innerHTML = '📋 Copy prompt'; }, 2000);
+    return;
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      btn.innerHTML = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.innerHTML = '📋 Copy prompt'; btn.classList.remove('copied'); }, 2500);
+    }).catch(() => fallbackCopy(text, btn));
+  } else {
+    fallbackCopy(text, btn);
+  }
+}
+
+function fallbackCopy(text, btn) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;opacity:0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    btn.innerHTML = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.innerHTML = '📋 Copy prompt'; btn.classList.remove('copied'); }, 2500);
+  } catch(e) {
+    btn.innerHTML = '⚠️ Select text manually';
+  }
+  document.body.removeChild(ta);
+}
+
+document.querySelectorAll('input, select, textarea').forEach(el => {
+  el.addEventListener('input', updatePrompt);
+  el.addEventListener('change', updatePrompt);
+});
+
+updatePrompt();
+</script>
