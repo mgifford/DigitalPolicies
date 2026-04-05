@@ -4,14 +4,17 @@
       ODP
       <span>Open Digital Policies</span>
     </a>
-    <ul class="site-nav__links" role="list">
+
+    <ul class="site-nav__links" id="site-nav-links" role="list">
       <li><a href="{{ site.baseurl }}/domains/" {% if page.url contains '/domains/' %}aria-current="page"{% endif %}>Explore Policies</a></li>
       <li><a href="{{ site.baseurl }}/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
       <li><a href="{{ site.baseurl }}/adoptions/" {% if page.url == '/adoptions/' %}aria-current="page"{% endif %}>Adoptions</a></li>
       <li><a href="{{ site.baseurl }}/tools/" {% if page.url contains '/tools/' %}aria-current="page"{% endif %}>Tools</a></li>
-      <li><a href="https://github.com/{{ site.github_repo }}" rel="noopener" aria-label="GitHub repository (opens in new window)">GitHub ↗</a></li>
+      <li><a href="https://github.com/{{ site.github_repo }}" rel="noopener" aria-label="GitHub repository (opens in new window)">GitHub<span aria-hidden="true"> ↗</span></a></li>
     </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" type="button">
+
+    <div class="site-nav__controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" type="button">
       <!-- Sun icon (shown in dark mode — click to go light) -->
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -32,6 +35,43 @@
            aria-hidden="true" focusable="false">
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
       </svg>
-    </button>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="site-nav-links"
+              aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true" focusable="false">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
   </div>
+
+  <script>
+  (function() {
+    var toggle = document.getElementById('nav-toggle');
+    var links  = document.getElementById('site-nav-links');
+    if (!toggle || !links) return;
+
+    toggle.addEventListener('click', function() {
+      var isOpen = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && links.classList.contains('is-open')) {
+        links.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+        toggle.focus();
+      }
+    });
+  }());
+  </script>
 </nav>

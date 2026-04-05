@@ -111,7 +111,7 @@ description: >
         <p class="domain-card__description">{{ domain.description }}</p>
         <footer class="domain-card__footer">
           <a href="{{ site.baseurl }}{{ domain.full_model }}" class="domain-card__link">
-            Read the model policy
+            Read the model policy<span class="sr-only"> — {{ domain.taxonomy_title }}</span>
           </a>
         </footer>
       </article>

@@ -24,7 +24,7 @@ description: Browse all policy domains in Open Digital Policies — from data ce
       <div class="jurisdiction-prompt__text">
         <strong>Showing policies relevant to <span id="jurisdiction-name">your region</span></strong>
         <p>
-          <button id="jurisdiction-btn" style="background:none;border:none;padding:0;color:var(--color-primary);cursor:pointer;text-decoration:underline;font-size:0.875rem;">
+          <button id="jurisdiction-btn" class="btn-inline" style="font-size:0.875rem;">
             Allow location to see what's enacted near you
           </button>
         </p>
@@ -59,7 +59,7 @@ description: Browse all policy domains in Open Digital Policies — from data ce
         <footer class="domain-card__footer">
           {% if domain.full_model %}
           <a href="{{ site.baseurl }}{{ domain.full_model }}" class="domain-card__link">
-            Read the model policy
+            Read the model policy<span class="sr-only"> — {{ domain.taxonomy_title }}</span>
           </a>
           {% endif %}
           {% if domain.jurisdictions_count > 0 %}
@@ -93,7 +93,7 @@ description: Browse all policy domains in Open Digital Policies — from data ce
         <footer class="domain-card__footer">
           <a href="https://github.com/{{ site.github_repo }}/issues/new?labels=new-domain&title={{ domain.official_name | uri_escape }}"
              class="domain-card__link" rel="noopener">
-            Help build this domain
+            Help build this domain<span class="sr-only"> — {{ domain.taxonomy_title }}</span>
           </a>
         </footer>
       </article>

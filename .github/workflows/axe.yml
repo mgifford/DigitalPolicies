@@ -1,0 +1,76 @@
+name: Accessibility (axe-core)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  axe:
+    name: Run axe-core accessibility checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --baseurl ""
+        env:
+          JEKYLL_ENV: production
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install axe-cli and serve
+        run: npm install -g @axe-core/cli serve
+
+      - name: Serve built site and run axe
+        run: |
+          # Start a local server in the background
+          serve _site --listen 4001 &
+          SERVER_PID=$!
+          sleep 3
+
+          # Pages to test (light mode = default)
+          PAGES=(
+            "/"
+            "/domains/"
+            "/domains/data-centers/full-model/"
+            "/domains/accessibility/full-model/"
+            "/domains/ai-adoption/full-model/"
+            "/domains/algorithmic-accountability/full-model/"
+            "/domains/open-source-in-government/full-model/"
+            "/about/"
+            "/tools/"
+            "/tools/advocate/"
+            "/tools/policy-pro/"
+          )
+
+          FAILED=0
+          for PAGE in "${PAGES[@]}"; do
+            echo "::group::Testing http://localhost:4001${PAGE}"
+            axe "http://localhost:4001${PAGE}" \
+              --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa \
+              --reporter cli || FAILED=1
+            echo "::endgroup::"
+          done
+
+          kill $SERVER_PID
+          exit $FAILED
+
+      - name: Upload axe results on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-results
+          path: axe-results/
+          retention-days: 7

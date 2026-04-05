@@ -68,9 +68,10 @@ description: Build a technically precise prompt for procurement drafting, gap an
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  outline: none;
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 1px;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(184, 76, 14, 0.12);
+  box-shadow: 0 0 0 5px var(--color-focus-ring-shadow);
 }
 .form-group textarea { resize: vertical; min-height: 100px; }
 .form-group select { cursor: pointer; }
@@ -270,10 +271,10 @@ description: Build a technically precise prompt for procurement drafting, gap an
       </select>
     </div>
 
-    <div class="form-group">
-      <label>Policy pillars to focus on
+    <fieldset class="form-group">
+      <legend>Policy pillars to focus on
         <span class="hint">Select all that apply</span>
-      </label>
+      </legend>
       <div class="pillar-options">
         <label class="pillar-option">
           <input type="checkbox" name="pillars" value="Principles (the why — values and rights-based rationale)">
@@ -292,7 +293,7 @@ description: Build a technically precise prompt for procurement drafting, gap an
           <span><strong>Governance</strong>The who — oversight, community voice, audit</span>
         </label>
       </div>
-    </div>
+    </fieldset>
 
     <div class="form-group">
       <label for="field-task">What do you need help with?</label>
@@ -351,13 +352,15 @@ description: Build a technically precise prompt for procurement drafting, gap an
         </div>
         <button class="copy-btn" id="copy-btn"
                 onclick="copyPrompt()"
-                aria-label="Copy prompt to clipboard">
+                aria-label="Copy prompt to clipboard"
+                aria-describedby="copy-status">
           📋 Copy prompt
         </button>
       </div>
 
+      <div role="status" id="copy-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
       <div class="output-card__body">
-        <pre id="prompt-output"><span class="output-empty">Fill in the form on the left and your prompt will appear here, ready to copy.</span></pre>
+        <pre id="prompt-output" tabindex="0"><span class="output-empty">Fill in the form on the left and your prompt will appear here, ready to copy.</span></pre>
       </div>
 
       <div class="output-card__footer">
