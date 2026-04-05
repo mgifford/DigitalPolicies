@@ -2,7 +2,7 @@
 
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
-> **Related domains:** [Smart Cities & Privacy](../smart-cities-privacy/), [AI Adoption](../ai-adoption/), [Algorithmic Accountability](../algorithmic-accountability/)
+> **Related domains:** Smart Cities & Privacy (coming soon), [AI Adoption](../ai-adoption/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/)
 > **Key sources:** EU Web Accessibility Directive (WAD), EU European Accessibility Act (EAA), US Section 508, US ADA Title II, W3C WCAG, EN 301 549
 
 ---

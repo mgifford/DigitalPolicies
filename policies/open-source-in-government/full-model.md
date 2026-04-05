@@ -3,7 +3,7 @@
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
 > **Maintainers:** Open Digital Policies community
-> **Related domains:** [Digital Sovereignty](../digital-sovereignty/), [Digital Accessibility](../accessibility/), [Algorithmic Accountability](../algorithmic-accountability/), [Digital Public Infrastructure](../digital-public-infrastructure/)
+> **Related domains:** Digital Sovereignty (coming soon), [Digital Accessibility](../accessibility/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/), Digital Public Infrastructure (coming soon)
 
 ---
 
@@ -57,13 +57,13 @@ Open source procurement must not become a barrier to participation. Small jurisd
 
 - **Small and rural municipalities** — Large proprietary vendors disproportionately serve large urban clients; small jurisdictions often end up with worse systems at higher per-capita cost. Shared open source infrastructure reduces this disparity.
 - **Global South governments** — Proprietary software licensing costs represent a significant proportion of ICT budgets in lower-income countries. Open source reduces licensing costs and enables local adaptation, but Global South governments often lack the capacity to navigate open source procurement without support. Digital Public Goods frameworks (UNDP, DPGA, UNICEF) are partially addressing this.
-- **Disabled users** — Government software procured without accessibility requirements, often through opaque proprietary procurement, has historically produced inaccessible services. Open source software subject to public scrutiny is more likely to surface accessibility failures. See [Digital Accessibility model](../accessibility/full-model.md).
+- **Disabled users** — Government software procured without accessibility requirements, often through opaque proprietary procurement, has historically produced inaccessible services. Open source software subject to public scrutiny is more likely to surface accessibility failures. See [Digital Accessibility model](../accessibility/full-model/).
 - **Workers and public sector unions** — Open source adoption that creates new technical dependencies without training and workforce investment can harm workers. Policy must include capacity-building obligations.
 - **Civil society and journalists** — Proprietary government software cannot be independently audited. Open code enables investigative journalism, academic research, and civil society oversight of government systems.
 
 ### Environmental Considerations
 
-Proprietary software lock-in drives unnecessary hardware refresh cycles, as vendors bundle obsolescence into licensing models. Open source software is significantly more likely to support older hardware and longer device lifetimes, reducing e-waste. Shared open source infrastructure also reduces the duplicate energy expenditure of each agency running separate instances of equivalent systems. See [Right to Repair](../right-to-repair/full-model.md) and [Data Centers](../data-centers/full-model.md) for complementary standards.
+Proprietary software lock-in drives unnecessary hardware refresh cycles, as vendors bundle obsolescence into licensing models. Open source software is significantly more likely to support older hardware and longer device lifetimes, reducing e-waste. Shared open source infrastructure also reduces the duplicate energy expenditure of each agency running separate instances of equivalent systems. See [Right to Repair](../right-to-repair/full-model/) and [Data Centers](../data-centers/full-model/) for complementary standards.
 
 ---
 
@@ -298,12 +298,12 @@ Proprietary software lock-in drives unnecessary hardware refresh cycles, as vend
 
 | Related Domain | Relationship |
 |---|---|
-| [Digital Sovereignty](../digital-sovereignty/) | Open source is a primary mechanism for digital sovereignty; the two models should be read together |
-| [Digital Accessibility](../accessibility/full-model.md) | Procurement reform applies to both; open source does not guarantee accessibility, and accessibility requirements must be explicit in open source as in proprietary procurement |
-| [Algorithmic Accountability](../algorithmic-accountability/) | Open source release of AI/algorithmic systems used in government decisions is a transparency mechanism; but open weights ≠ explainability |
-| [Data Centers](../data-centers/full-model.md) | Open source software tends to support hardware longevity; software longevity policies complement hardware longevity policies |
-| [Right to Repair](../right-to-repair/full-model.md) | Software repairability (ability to maintain, modify, and extend) is the software analogue of hardware repairability; the prohibition on parts pairing has a direct software equivalent in device-locked firmware |
-| [Digital Public Infrastructure](../digital-public-infrastructure/) | DPI is built on open source; the two models define complementary obligations for governments building shared digital infrastructure |
+| Digital Sovereignty (coming soon) | Open source is a primary mechanism for digital sovereignty; the two models should be read together |
+| [Digital Accessibility](../accessibility/full-model/) | Procurement reform applies to both; open source does not guarantee accessibility, and accessibility requirements must be explicit in open source as in proprietary procurement |
+| [Algorithmic Accountability](../algorithmic-accountability/full-model/) | Open source release of AI/algorithmic systems used in government decisions is a transparency mechanism; but open weights ≠ explainability |
+| [Data Centers](../data-centers/full-model/) | Open source software tends to support hardware longevity; software longevity policies complement hardware longevity policies |
+| [Right to Repair](../right-to-repair/full-model/) | Software repairability (ability to maintain, modify, and extend) is the software analogue of hardware repairability; the prohibition on parts pairing has a direct software equivalent in device-locked firmware |
+| Digital Public Infrastructure (coming soon) | DPI is built on open source; the two models define complementary obligations for governments building shared digital infrastructure |
 
 ---
 

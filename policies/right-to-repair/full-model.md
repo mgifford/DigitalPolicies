@@ -2,7 +2,7 @@
 
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
-> **Related domains:** [Data Centers & Environmental Sustainability](../data-centers/), [Digital Sovereignty](../digital-sovereignty/), [Open Source in Government](../open-source/), [Algorithmic Accountability](../algorithmic-accountability/)
+> **Related domains:** [Data Centers & Environmental Sustainability](../data-centers/full-model/), Digital Sovereignty (coming soon), [Open Source in Government](../open-source-in-government/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/)
 > **Key sources:** EU Right to Repair Directive (2024), Canada Bill C-244 (2024), US Right to Repair state laws, EU Digital Markets Act (interoperability), FSFE Device Neutrality, EFF analysis
 
 ---

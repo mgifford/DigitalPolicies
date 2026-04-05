@@ -3,7 +3,7 @@
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
 > **Maintainers:** Open Digital Policies community
-> **Related domains:** [AI Adoption & Governance](../ai-adoption/), [Digital Accessibility](../accessibility/), [Children & Technology](../children-technology/)
+> **Related domains:** [AI Adoption & Governance](../ai-adoption/full-model/), [Digital Accessibility](../accessibility/full-model/), Children & Technology (coming soon)
 
 ---
 
@@ -66,7 +66,7 @@ Communities that have historically faced discrimination — through credit redli
 
 ### Environmental Considerations
 
-The environmental footprint of algorithmic decision-making is primarily in model training (a one-time cost) and inference (ongoing at scale). Large-scale algorithmic decision-making run as cloud services requires data center infrastructure subject to the standards in the [Data Centers model](../data-centers/full-model.md). Algorithmic accountability policy should not inadvertently incentivise more compute-intensive approaches when simpler, more interpretable models would serve accountability goals as well.
+The environmental footprint of algorithmic decision-making is primarily in model training (a one-time cost) and inference (ongoing at scale). Large-scale algorithmic decision-making run as cloud services requires data center infrastructure subject to the standards in the [Data Centers model](../data-centers/full-model/). Algorithmic accountability policy should not inadvertently incentivise more compute-intensive approaches when simpler, more interpretable models would serve accountability goals as well.
 
 ---
 
@@ -318,11 +318,11 @@ The environmental footprint of algorithmic decision-making is primarily in model
 
 | Related Domain | Relationship |
 |---|---|
-| [AI Adoption & Governance](../ai-adoption/full-model.md) | AI Adoption sets the framework; Algorithmic Accountability provides sector-specific enforcement and audit standards |
-| [Digital Accessibility](../accessibility/full-model.md) | Algorithmic systems that affect disabled people must meet accessibility standards and must not discriminate on the basis of disability-related presentation |
-| [Children & Technology](../children-technology/) | Algorithmic systems used in educational settings require the heightened protections of that domain |
-| [Data Centers](../data-centers/full-model.md) | Large-scale algorithmic processing requires energy-efficient infrastructure |
-| [Freedom of Expression](../freedom-of-expression/) | Content moderation algorithms are a key application of algorithmic accountability standards |
+| [AI Adoption & Governance](../ai-adoption/full-model/) | AI Adoption sets the framework; Algorithmic Accountability provides sector-specific enforcement and audit standards |
+| [Digital Accessibility](../accessibility/full-model/) | Algorithmic systems that affect disabled people must meet accessibility standards and must not discriminate on the basis of disability-related presentation |
+| Children & Technology (coming soon) | Algorithmic systems used in educational settings require the heightened protections of that domain |
+| [Data Centers](../data-centers/full-model/) | Large-scale algorithmic processing requires energy-efficient infrastructure |
+| Freedom of Expression (coming soon) | Content moderation algorithms are a key application of algorithmic accountability standards |
 
 ---
 

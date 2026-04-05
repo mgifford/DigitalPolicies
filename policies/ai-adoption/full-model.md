@@ -3,7 +3,7 @@
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
 > **Maintainers:** Open Digital Policies community
-> **Related domains:** [Algorithmic Accountability](../algorithmic-accountability/), [Data Centers](../data-centers/), [Open Source in Government](../open-source-in-government/), [Digital Sovereignty](../digital-sovereignty/)
+> **Related domains:** [Algorithmic Accountability](../algorithmic-accountability/full-model/), [Data Centers](../data-centers/full-model/), [Open Source in Government](../open-source-in-government/full-model/), Digital Sovereignty (coming soon)
 
 ---
 
@@ -63,7 +63,7 @@ Some AI applications are incompatible with human rights and should not be adopte
 
 ### Environmental Considerations
 
-AI model training is among the most energy-intensive computing tasks. Inference (running a deployed model) varies enormously by model size and architecture — a small, purpose-specific model may use a fraction of the energy of a general-purpose large language model. AI adoption policy must require disclosure of operational energy consumption, preference for energy-efficient model selection, and integration with data center energy policy (see [Data Centers model](../data-centers/full-model.md)).
+AI model training is among the most energy-intensive computing tasks. Inference (running a deployed model) varies enormously by model size and architecture — a small, purpose-specific model may use a fraction of the energy of a general-purpose large language model. AI adoption policy must require disclosure of operational energy consumption, preference for energy-efficient model selection, and integration with data center energy policy (see [Data Centers model](../data-centers/full-model/)).
 
 ---
 
@@ -184,7 +184,7 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 > **Aspirational Standard 2: Shared AI Infrastructure**
 > Jurisdictions should explore shared, interoperable AI infrastructure for common government functions (document processing, translation, accessibility tooling, question-answering over public information) rather than each jurisdiction procuring separately. Shared infrastructure reduces costs, enables shared governance, and avoids vendor capture through coordination.
 
-*Rationale: The Digital Public Infrastructure model (see [DPI domain](../digital-public-infrastructure/)) applies directly to government AI. Common functions do not need to be solved independently by every municipality.*
+*Rationale: The Digital Public Infrastructure model (see Digital Public Infrastructure domain (coming soon)) applies directly to government AI. Common functions do not need to be solved independently by every municipality.*
 
 ---
 
@@ -325,12 +325,12 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 
 | Related Domain | Relationship |
 |---|---|
-| [Algorithmic Accountability](../algorithmic-accountability/full-model.md) | AI Adoption sets the governance framework; Algorithmic Accountability provides the enforcement and audit mechanisms for specific high-impact use cases |
-| [Data Centers](../data-centers/full-model.md) | AI compute requires energy; AI adoption decisions must account for energy and water cost |
-| [Digital Accessibility](../accessibility/full-model.md) | AI-assisted public services must meet accessibility standards; AI tools should not create new access barriers |
-| [Open Source in Government](../open-source-in-government/full-model.md) | Open and auditable AI systems are preferable for government use; procurement restrictions apply similarly |
-| [Digital Sovereignty](../digital-sovereignty/) | AI systems from a small number of global vendors create sovereignty risks analogous to other forms of digital dependency |
-| [Children & Technology](../children-technology/) | AI systems used in educational contexts or affecting children require the heightened protections of that domain |
+| [Algorithmic Accountability](../algorithmic-accountability/full-model/) | AI Adoption sets the governance framework; Algorithmic Accountability provides the enforcement and audit mechanisms for specific high-impact use cases |
+| [Data Centers](../data-centers/full-model/) | AI compute requires energy; AI adoption decisions must account for energy and water cost |
+| [Digital Accessibility](../accessibility/full-model/) | AI-assisted public services must meet accessibility standards; AI tools should not create new access barriers |
+| [Open Source in Government](../open-source-in-government/full-model/) | Open and auditable AI systems are preferable for government use; procurement restrictions apply similarly |
+| Digital Sovereignty (coming soon) | AI systems from a small number of global vendors create sovereignty risks analogous to other forms of digital dependency |
+| Children & Technology (coming soon) | AI systems used in educational contexts or affecting children require the heightened protections of that domain |
 
 ---
 
