@@ -12,6 +12,14 @@ author:
   name: Open Digital Policies community
   url: https://github.com/mgifford/DigitalPolicies
 
+# Social / SEO
+twitter:
+  username: mgifford
+  card: summary_large_image
+
+# Default social image — referenced by jekyll-seo-tag for og:image
+logo: /DigitalPolicies/assets/img/og-image.png
+
 # GitHub repository (used for edit links)
 github_repo: mgifford/DigitalPolicies
 github_branch: main
@@ -29,6 +37,7 @@ highlighter: rouge
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
 
 # Process the policies/ directory as a Jekyll collection
 # Jekyll 4.x supports collections without the underscore prefix
@@ -45,6 +54,8 @@ defaults:
     values:
       layout: domain-full
       render_with_liquid: false
+      # og:image inherits site.logo; individual pages can override with image: front matter
+      image: /DigitalPolicies/assets/img/og-image.png
 
 # Files/directories to exclude from Jekyll processing
 exclude:

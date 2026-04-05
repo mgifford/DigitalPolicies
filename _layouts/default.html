@@ -13,9 +13,33 @@
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Open Digital Policies — model policy language for the digital age">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@mgifford">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Open Digital Policies — model policy language for the digital age">
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+
+  <!-- Sitemap discovery -->
+  <link rel="sitemap" type="application/xml" href="{{ site.baseurl }}/sitemap.xml">
+
+  <!-- Meta keywords — supplementary signal for secondary search engines and AI crawlers -->
+  <meta name="keywords" content="digital policy, model policy language, open government, digital rights, data center policy, AI governance, digital accessibility, right to repair, open source government, algorithmic accountability, web sustainability, digital sovereignty, community advocacy">
+
+  <!-- Authorship and licence -->
+  <meta name="author" content="Open Digital Policies community">
+  <meta name="license" content="https://creativecommons.org/licenses/by/4.0/">
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
@@ -34,6 +58,62 @@
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
 
   {% seo %}
+
+  <!-- Schema.org structured data — WebSite + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+        "url": "{{ site.url }}{{ site.baseurl }}/",
+        "name": "{{ site.title }}",
+        "description": {{ site.description | strip_newlines | strip | jsonify }},
+        "publisher": { "@id": "{{ site.url }}{{ site.baseurl }}/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "{{ site.url }}{{ site.baseurl }}/search/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "{{ site.url }}{{ site.baseurl }}/#organization",
+        "name": "Open Digital Policies",
+        "url": "{{ site.url }}{{ site.baseurl }}/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.baseurl }}/assets/img/og-image.png",
+          "width": 1200,
+          "height": 630
+        },
+        "sameAs": [
+          "https://github.com/mgifford/DigitalPolicies"
+        ]
+      }{% if page.layout == "domain-full" or page.layout == "default" %},
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ site.url }}{{ site.baseurl }}/"
+          }{% if page.url != "/" and page.url != "" %},{
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ page.title | default: site.title | jsonify }},
+            "item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}"
+          }{% endif %}
+        ]
+      }{% endif %}
+    ]
+  }
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>

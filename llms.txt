@@ -1,0 +1,97 @@
+# Open Digital Policies (ODP)
+
+> Open Digital Policies is a community-maintained library of model policy language for the digital age. It provides openly licensed, legally-grounded model policy text that advocates, communities, and governments can adopt, adapt, and use. It covers eight policy domains including AI governance, data center sustainability, digital accessibility, right to repair, open source in government, algorithmic accountability, web sustainability, and digital sovereignty. All content is published under Creative Commons Attribution 4.0 (CC BY 4.0).
+
+## About this project
+
+Open Digital Policies was created to make good digital policy language a public good. Most digital policy is written behind closed doors in language inaccessible to the communities most affected. ODP addresses this by publishing model policy language grounded in enacted legislation, developed openly, and maintained by a community of policy professionals, technologists, digital rights advocates, and accessibility practitioners.
+
+The project is inspired by the Open Climate Resilience Policies (OCRAP) project and applies the same community-maintained model language approach to the digital domain.
+
+Each policy domain follows a consistent four-pillar structure: Principles → Standards → Implementation → Governance.
+
+## Policy domains and model language
+
+### Data Centers & Environmental Sustainability
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/data-centers/full-model/
+Covers: PUE efficiency standards, community benefit requirements, renewable energy additionality, water usage, fossil fuel prohibition, grid resilience, democratic siting, pre-permit community disclosure, quarterly operational reporting.
+Key standards: PUE ≤ 1.2 for new facilities, no onsite fossil fuel generation for operational load, renewable energy additionality documentation, community impact disclosure before permit.
+Enacted references: Ireland Data Centre Planning Guidelines (2022), Virginia SB 1398 (2024), EU Energy Efficiency Directive (2023).
+
+### Digital Accessibility & Inclusion
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/accessibility/full-model/
+Covers: WCAG 2.2 AA as mandatory minimum, accessibility in procurement as pass/fail criterion, real user testing for high-impact services, civil society standing for enforcement.
+Key standards: WCAG 2.2 AA required for all public digital services, accessibility testing before contract award, real user testing with disabled people for high-impact services.
+Enacted references: EU Web Accessibility Directive (WAD), EU European Accessibility Act (EAA), US Section 508, US ADA Title II, EN 301 549.
+
+### Right to Repair, Interoperability & E-Waste
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/right-to-repair/full-model/
+Covers: Right to access repair information, software repair copyright exception, prohibition on parts pairing, interoperability by design, device neutrality, repairability scores in procurement, extended producer responsibility for e-waste.
+Key standards: 5-year minimum software support, parts pairing prohibition, open APIs for large platforms, repairability scoring in public procurement.
+Enacted references: EU Right to Repair Directive (2024/1799), Canada Bill C-244 (2024), France Repairability Index (2021), EU Digital Markets Act (2022), Minnesota agricultural right to repair (2023).
+
+### Open Source in Government
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/open-source-in-government/full-model/
+Covers: Public money public code principle, mandatory open source release of publicly-funded software, open source preference in procurement, prohibition on lock-in clauses, publiccode.yml metadata.
+Key standards: Open source release within 60 days of deployment, publiccode.yml for all public software, open source preference with documented justification required for exceptions.
+Enacted references: France Loi pour une République Numérique (2016), Germany open source policy, EU EUPL licence, Swiss federal administration open source obligation (2024).
+
+### AI Adoption & Governance
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/ai-adoption/full-model/
+Covers: Prohibited AI uses (real-time biometric surveillance, social scoring), mandatory Algorithmic Impact Assessment before deployment, right to know AI was used, right to human review, mandatory public AI Use Registry.
+Key standards: Prohibited high-risk AI systems, Algorithmic Impact Assessment required before deployment, public AI Use Registry, right to meaningful human review.
+Enacted references: EU AI Act (2024), Canada Directive on Automated Decision-Making, NYC Local Law 144 (2021), EU GDPR Article 22.
+
+### Algorithmic Accountability
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/algorithmic-accountability/full-model/
+Covers: Mandatory independent bias audits with published results, right to human review, prohibition on proxy variables producing discriminatory outcomes, civil society standing for enforcement.
+Key standards: Independent bias audits with published results, prohibition on discriminatory proxy variables, civil society enforcement standing.
+Enacted references: EU AI Act (2024), NYC Local Law 144 (bias audits for automated employment decisions), Illinois AI Video Interview Act.
+
+### Web Sustainability
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/web-sustainability/full-model/
+Covers: Green hosting requirements (PUE ≤ 1.4, verified renewables), digital carbon reporting for public services, page weight baselines (1 MB median for informational pages), software longevity requirements, W3C Web Sustainability Guidelines (WSG) alignment in procurement, dark pattern prohibition.
+Key standards: Green hosting with PUE ≤ 1.4, annual digital carbon reports for services with 10k+ monthly visitors, median page weight ≤ 1 MB, 5-year software longevity commitment.
+Key reference: W3C Web Sustainability Guidelines (WSG 1.0, 2025 Draft Note).
+
+### Digital Sovereignty
+Full model policy: https://mgifford.github.io/DigitalPolicies/domains/digital-sovereignty/full-model/
+Covers: Digital dependency inventories, open standards requirements, exit rights in contracts, source code access for critical systems, data residency and jurisdiction transparency, digital sovereignty impact assessments, federated identity preference.
+Key standards: Digital dependency inventory for all government departments, open standards mandatory for all new public digital infrastructure, exit rights including 90-day data portability in open formats, source code escrow for critical systems.
+Enacted references: EU Data Act (2024), EU Cyber Resilience Act (2024), France Loi pour une République Numérique, Switzerland open source obligation (2024), Estonia X-Road, Barcelona Digital Sovereignty initiative.
+
+## Tools
+
+Advocate Prompt Builder: https://mgifford.github.io/DigitalPolicies/tools/advocate/
+For community advocates, residents, and campaigners. Generates prompts grounded in model policy language for letters to elected officials, public comment testimony, talking points, and plain-language explainers.
+
+Policy Pro Prompt Builder: https://mgifford.github.io/DigitalPolicies/tools/policy-pro/
+For policy professionals, researchers, and lawyers. Generates prompts for policy memo drafting, legislative gap analysis, jurisdiction comparison, and regulatory drafting.
+
+## Real-world adoptions
+
+Jurisdictions and organisations that have enacted or cited similar language: https://mgifford.github.io/DigitalPolicies/adoptions/
+Includes examples from Canada, EU, France, Ireland, Germany, Switzerland, Estonia, India, Spain, UK, and US states.
+
+## Key documents
+
+Framework and governance: https://mgifford.github.io/DigitalPolicies/about/
+Contribution guide: https://github.com/mgifford/DigitalPolicies/blob/main/CONTRIBUTING.md
+Source repository: https://github.com/mgifford/DigitalPolicies
+
+## Guiding values
+
+- People before infrastructure: technology serves human needs, not the reverse
+- Planet as a stakeholder: digital infrastructure has a material footprint
+- Sovereignty by default: communities should be able to understand, audit, and exit digital systems they depend on
+- Openness as a public good: open standards, open source, and open data enable democratic accountability
+- Access is a right: digital public services must work for everyone
+- Safety and innovation together: the false choice between them is a lobbying strategy
+
+## License and reuse
+
+All policy models and documentation are published under Creative Commons Attribution 4.0 International (CC BY 4.0). You are free to share and adapt this material for any purpose, including commercial use, provided you give appropriate credit. Code is published under the MIT License.
+
+## About the maintainer
+
+Maintained by Mike Gifford (https://github.com/mgifford), Drupal Core Accessibility Maintainer and digital policy advocate, with contributions from the global digital rights community.

@@ -12,6 +12,79 @@ layout: default
   {% endif %}
 {% endfor %}
 
+{% if domain %}
+<!-- Schema.org — CreativeWork (policy document) + BreadcrumbList override for domain pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "@id": "{{ site.url }}{{ site.baseurl }}/domains/{{ domain.slug }}/full-model/#document",
+      "name": "{{ domain.official_name }} — Model Policy",
+      "headline": {{ domain.taxonomy_title | jsonify }},
+      "description": {{ domain.description | strip_newlines | strip | jsonify }},
+      "url": "{{ site.url }}{{ site.baseurl }}/domains/{{ domain.slug }}/full-model/",
+      "dateModified": "2026-04-04",
+      "inLanguage": "en",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "{{ site.url }}{{ site.baseurl }}/#organization",
+        "name": "Open Digital Policies"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Open Digital Policies community",
+        "url": "https://github.com/mgifford/DigitalPolicies"
+      },
+      "keywords": [
+        "digital policy",
+        "model policy language",
+        "open government",
+        "digital rights",
+        {{ domain.official_name | jsonify }},
+        {{ domain.taxonomy_title | jsonify }}
+      ],
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}{{ site.baseurl }}/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}{{ site.baseurl }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Policy Domains",
+          "item": "{{ site.url }}{{ site.baseurl }}/domains/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ domain.official_name | jsonify }},
+          "item": "{{ site.url }}{{ site.baseurl }}/domains/{{ domain.slug }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Full Model Policy",
+          "item": "{{ site.url }}{{ site.baseurl }}/domains/{{ domain.slug }}/full-model/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+{% endif %}
+
 <div class="domain-header">
   <div class="domain-header__inner">
     <a href="{{ site.baseurl }}/domains/" class="domain-header__back">← All policy domains</a>

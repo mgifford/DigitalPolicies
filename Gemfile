@@ -6,6 +6,7 @@ gem "jekyll", "~> 4.3"
 group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-sitemap"
 end
 
 # Link checking — used in CI after build; not required locally
