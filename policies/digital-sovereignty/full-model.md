@@ -1,5 +1,5 @@
 ---
-layout: policy
+layout: domain-full
 title: "Digital Sovereignty — Model Policy"
 domain: digital-sovereignty
 ---

@@ -1,3 +1,5 @@
+---
+---
 # AI Adoption & Governance — Model Policy
 
 > **Status:** `Draft`
