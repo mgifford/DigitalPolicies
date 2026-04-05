@@ -39,9 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Process the policies/ directory as a Jekyll collection
-# Jekyll 4.x supports collections without the underscore prefix
-collections_dir: .
+# Process the _policies/ directory as a Jekyll collection
 collections:
   policies:
     output: true
