@@ -1,12 +1,15 @@
-name: Accessibility (axe-core)
+name: Accessibility (Playwright + axe-core)
 
+# PR gate: runs on every pull request against main.
+# Desktop, light mode — fast baseline check before merge.
+# The full light/dark × mobile/desktop matrix runs every 5 commits via axe-full.yml.
 on:
   pull_request:
     branches: [main]
 
 jobs:
   axe:
-    name: Run axe-core accessibility checks
+    name: axe-core accessibility check
     runs-on: ubuntu-latest
 
     steps:
@@ -27,62 +30,34 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: 'npm'
 
-      - name: Install axe-cli and serve
-        run: npm install -g @axe-core/cli serve
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Install matching Chrome and ChromeDriver
-        run: npx browser-driver-manager install chrome
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
 
-      - name: Serve built site and run axe
+      - name: Serve built site
         run: |
+          npm install -g serve
           serve _site --listen 4001 &
-          SERVER_PID=$!
-          sleep 3
+          npx wait-on http://localhost:4001 --timeout 30000
 
-          mkdir -p axe-results
-
-          PAGES=(
-            "/"
-            "/domains/"
-            "/domains/data-centers/full-model/"
-            "/domains/accessibility/full-model/"
-            "/domains/ai-adoption/full-model/"
-            "/domains/algorithmic-accountability/full-model/"
-            "/domains/open-source-in-government/full-model/"
-            "/domains/web-sustainability/full-model/"
-            "/domains/digital-sovereignty/full-model/"
-            "/domains/smart-cities/full-model/"
-            "/domains/children-technology/full-model/"
-            "/domains/freedom-of-expression/full-model/"
-            "/domains/digital-public-infrastructure/full-model/"
-            "/about/"
-            "/adoptions/"
-            "/search/"
-            "/tools/"
-            "/tools/advocate/"
-            "/tools/policy-pro/"
-          )
-
-          FAILED=0
-          for PAGE in "${PAGES[@]}"; do
-            SLUG=$(echo "$PAGE" | sed 's|/|_|g' | sed 's|^_||' | sed 's|_$||')
-            SLUG="${SLUG:-home}"
-            echo "::group::Testing http://localhost:4001${PAGE}"
-            axe "http://localhost:4001${PAGE}" \
-              --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa \
-              --exit \
-              --save "axe-results/${SLUG}.json" || FAILED=1
-            echo "::endgroup::"
-          done
-
-          kill $SERVER_PID
-          exit $FAILED
+      - name: Run axe (desktop, light)
+        env:
+          A11Y_THEME: light
+          BASE_URL: http://localhost:4001
+        run: |
+          mkdir -p playwright-results
+          npx playwright test --project=desktop --reporter=list,json
 
       - name: Upload axe results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: axe-results
-          path: axe-results/
+          name: axe-results-pr
+          path: |
+            playwright-results/
+            test-results/
           retention-days: 14

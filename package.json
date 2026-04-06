@@ -1,0 +1,15 @@
+{
+  "name": "digital-policies",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright + axe-core accessibility testing for the Open Digital Policies site",
+  "scripts": {
+    "test:a11y": "playwright test",
+    "test:a11y:local": "playwright test --project=desktop",
+    "test:a11y:update": "playwright test --update-snapshots"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.49.0"
+  }
+}
