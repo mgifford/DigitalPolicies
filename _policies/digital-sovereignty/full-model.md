@@ -223,7 +223,7 @@ A national government is considering a digital identity system. Under this polic
 
 ---
 
-## Real-World Adoptions
+## Real-World Examples
 
 | Jurisdiction | Measure | Status |
 |---|---|---|
@@ -236,6 +236,17 @@ A national government is considering a digital identity system. Under this polic
 | European Union | European Cloud Certification Scheme (EUCS) — sovereignty-aware cloud certification | In development |
 | Switzerland | Open Source Software obligation for federal administration (2024) | Enacted |
 | India | Digital Public Infrastructure (DPI) framework — open stack national digital infrastructure | Operational |
+
+---
+
+## Gaps and Known Weaknesses
+
+- **The definition of sovereignty is contested** — Digital sovereignty means different things to different actors: protecting citizen data from foreign access, reducing vendor dependency, building national technology champions, or asserting state control over information flows (including repressive censorship). This model aligns with the first two meanings; it does not endorse the latter two. The contested nature of the term requires careful use.
+- **Global cloud consolidation** — The hyperscaler market (AWS, Azure, Google Cloud) is highly consolidated. Requiring data residency in a national cloud when national cloud alternatives do not exist forces a choice between sovereignty and operational capability. Sovereign cloud alternatives (Gaia-X, regional providers) are developing but not yet competitive in all service categories.
+- **Open source is not automatically sovereign** — Open source software whose development is controlled by a single US-based foundation or company creates a different but real form of dependency. True sovereignty requires influence over governance, not just access to code.
+- **Small states face structural disadvantages** — The sovereignty tools available to the EU (market scale, regulatory power, Gaia-X) are not available to small states. Shared regional sovereignty frameworks are underdeveloped.
+- **Supply chain sovereignty** — Even fully open source software running on nationally owned servers depends on hardware supply chains dominated by a handful of manufacturers. Hardware-level sovereignty is beyond the scope of this model but is a genuine gap.
+- **Indigenous data sovereignty** — The sovereignty frameworks developed by and for indigenous communities (CARE Principles, OCAP, Te Mana Raraunga) are separate from state digital sovereignty frameworks but often in tension with them. This model does not adequately address that relationship.
 
 ---
 

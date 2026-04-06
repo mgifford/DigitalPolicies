@@ -232,7 +232,7 @@ A city of 200,000 people procures a new website platform. The contract is below 
 
 ---
 
-## Real-World Adoptions
+## Real-World Examples
 
 No jurisdiction has yet enacted comprehensive web sustainability legislation. The following represent the leading edge of practice:
 
@@ -244,6 +244,17 @@ No jurisdiction has yet enacted comprehensive web sustainability legislation. Th
 | UK | Government Digital Service — GDS sustainability guidance for gov.uk services | Guidance only |
 | European Union | Ecodesign for Sustainable Products Regulation — extension to software under consultation | Proposed |
 | W3C | Web Sustainability Guidelines (WSG 1.0) | Draft Note (2025) |
+
+---
+
+## Gaps and Known Weaknesses
+
+- **No binding standard yet** — No jurisdiction has enacted comprehensive web sustainability legislation. All current frameworks are voluntary, guidance-only, or sector-specific. The W3C WSG is a Draft Note, not a Recommendation — it has not yet gone through the full W3C standards process.
+- **Measurement methodology not yet standardised** — Multiple competing methodologies exist (Sustainable Web Design model, CO2.js, Scope 3 IT emissions) and produce different estimates for the same service. Policy cannot mandate a specific methodology without risking obsolescence; yet without a common methodology, cross-service comparison is difficult.
+- **Embodied carbon is largely unaddressed** — The carbon cost of manufacturing devices, servers, and network hardware (embodied carbon) often exceeds operational carbon over a product's lifetime. This policy focuses primarily on operational energy and software longevity; a fuller treatment of embodied carbon requires supply chain disclosure standards not yet available.
+- **Third-party script accountability gap** — Public digital services embed third-party scripts (analytics, maps, video players) whose carbon footprint is outside the procuring authority's direct control. The third-party minimisation standard addresses this partially but does not resolve accountability for third-party emissions.
+- **Private sector coverage** — This model applies to public sector digital services. Private sector websites and applications — which account for the majority of web traffic — are outside scope. A fuller treatment would address private sector obligations, particularly for high-traffic commercial services.
+- **AI-generated content footprint** — The growing use of AI for content generation, image creation, and on-page AI assistants introduces new energy costs not yet addressed by existing web sustainability frameworks.
 
 ---
 
