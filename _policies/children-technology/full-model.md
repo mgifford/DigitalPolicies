@@ -5,7 +5,7 @@
 > **Status:** `Draft`
 > **Last updated:** 2026-04-05
 > **Maintainers:** Open Digital Policies community
-> **Related domains:** [AI Adoption](../ai-adoption/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/), [Digital Accessibility](../accessibility/full-model/), [Smart Cities & Privacy](../smart-cities/full-model/)
+> **Related domains:** [AI Adoption](../../ai-adoption/full-model/), [Algorithmic Accountability](../../algorithmic-accountability/full-model/), [Digital Accessibility](../../accessibility/full-model/), [Smart Cities & Privacy](../../smart-cities/full-model/)
 > **Key sources:** UN Convention on the Rights of the Child (UNCRC), UK Children's Code (Age Appropriate Design Code), US COPPA, EU DSA, US KOSA (proposed)
 
 ---
@@ -70,7 +70,7 @@ Children from low-income households, children with disabilities, children in rur
 
 ### Environmental Considerations
 
-Devices marketed to children — tablets, laptops, educational technology hardware — are often designed with short product lives and limited repairability, generating e-waste at scale. Educational technology procurement should include device longevity requirements. See [Right to Repair model](../right-to-repair/full-model/).
+Devices marketed to children — tablets, laptops, educational technology hardware — are often designed with short product lives and limited repairability, generating e-waste at scale. Educational technology procurement should include device longevity requirements. See [Right to Repair model](../../right-to-repair/full-model/).
 
 ---
 
@@ -169,7 +169,7 @@ Devices marketed to children — tablets, laptops, educational technology hardwa
 >
 > (d) Apply additional filtering for content promoting self-harm, suicide, eating disorders, and targeted harassment when serving users identified as minors;
 >
-> (e) Be subject to audit under the [Algorithmic Accountability framework](../algorithmic-accountability/full-model/).
+> (e) Be subject to audit under the [Algorithmic Accountability framework](../../algorithmic-accountability/full-model/).
 
 ---
 
@@ -299,11 +299,11 @@ Devices marketed to children — tablets, laptops, educational technology hardwa
 
 | Related Domain | Relationship |
 |---|---|
-| [AI Adoption](../ai-adoption/full-model/) | AI systems in educational settings and content recommendation for children require heightened governance |
-| [Algorithmic Accountability](../algorithmic-accountability/full-model/) | Algorithms amplifying harmful content to minors require independent audit and bias assessment |
-| [Digital Accessibility](../accessibility/full-model/) | Children's technology must be accessible to children with disabilities |
-| [Smart Cities & Privacy](../smart-cities/full-model/) | Smart city surveillance affects children in public spaces; biometric data in schools |
-| [Right to Repair](../right-to-repair/full-model/) | Educational technology hardware longevity; device repairability in schools |
+| [AI Adoption](../../ai-adoption/full-model/) | AI systems in educational settings and content recommendation for children require heightened governance |
+| [Algorithmic Accountability](../../algorithmic-accountability/full-model/) | Algorithms amplifying harmful content to minors require independent audit and bias assessment |
+| [Digital Accessibility](../../accessibility/full-model/) | Children's technology must be accessible to children with disabilities |
+| [Smart Cities & Privacy](../../smart-cities/full-model/) | Smart city surveillance affects children in public spaces; biometric data in schools |
+| [Right to Repair](../../right-to-repair/full-model/) | Educational technology hardware longevity; device repairability in schools |
 
 ---
 

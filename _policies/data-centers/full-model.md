@@ -4,7 +4,7 @@
 
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
-> **Related domains:** [AI Adoption](../ai-adoption/full-model/), Digital Sovereignty (coming soon), [Open Source in Government](../open-source-in-government/full-model/)
+> **Related domains:** [AI Adoption](../../ai-adoption/full-model/), [Digital Sovereignty](../../digital-sovereignty/full-model/), [Open Source in Government](../../open-source-in-government/full-model/)
 
 ---
 

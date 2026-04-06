@@ -5,7 +5,7 @@
 > **Status:** `Draft`
 > **Last updated:** 2026-04-05
 > **Maintainers:** Open Digital Policies community
-> **Related domains:** [Open Source in Government](../open-source-in-government/full-model/), [Digital Sovereignty](../digital-sovereignty/full-model/), [Digital Accessibility](../accessibility/full-model/), [AI Adoption](../ai-adoption/full-model/)
+> **Related domains:** [Open Source in Government](../../open-source-in-government/full-model/), [Digital Sovereignty](../../digital-sovereignty/full-model/), [Digital Accessibility](../../accessibility/full-model/), [AI Adoption](../../ai-adoption/full-model/)
 > **Key sources:** UNDP/ITU Digital Public Infrastructure Framework, 50-in-5 Campaign, World Bank DPI Assessment, India's India Stack, Estonia's X-Road
 
 ---
@@ -64,14 +64,14 @@ Much DPI is built with international development funding from institutions with 
 
 - **People without smartphones** — An estimated 3 billion people globally lack smartphone access. DPI that requires smartphones for identity verification, payment, or service access excludes them. Feature phone (USSD) and in-person channel parity is essential.
 - **Women** — In many contexts, women have lower rates of document ownership, formal financial account access, and digital literacy. DPI can accelerate inclusion of women — or replicate existing exclusions at scale. Gender equity must be a primary design requirement.
-- **People with disabilities** — DPI must be accessible by design from day one. Retrofitting accessibility into DPI systems is expensive and often incomplete. See [Digital Accessibility model](../accessibility/full-model/).
+- **People with disabilities** — DPI must be accessible by design from day one. Retrofitting accessibility into DPI systems is expensive and often incomplete. See [Digital Accessibility model](../../accessibility/full-model/).
 - **Rural and remote populations** — DPI requiring high-speed internet connectivity does not serve populations in areas with poor connectivity. Offline-capable design, agent networks, and connectivity investment must accompany DPI deployment.
 - **Migrants and stateless people** — People without formal documentation from a nation-state are often excluded from digital identity systems by design. DPI governance must address this exclusion explicitly.
 - **Indigenous communities** — Digital identity and data exchange systems may intersect with indigenous data sovereignty frameworks. UNDRIP (UN Declaration on the Rights of Indigenous Peoples) and indigenous data sovereignty principles must inform DPI governance in contexts with significant indigenous populations.
 
 ### Environmental Considerations
 
-At national scale, DPI operates on infrastructure with significant energy and hardware footprints. DPI design must account for: operational energy efficiency; hardware longevity (avoiding unnecessary upgrade cycles in terminal devices); and the energy intensity of identity and authentication systems. Centralised data systems require data center governance aligned with the [Data Centers model](../data-centers/full-model/).
+At national scale, DPI operates on infrastructure with significant energy and hardware footprints. DPI design must account for: operational energy efficiency; hardware longevity (avoiding unnecessary upgrade cycles in terminal devices); and the energy intensity of identity and authentication systems. Centralised data systems require data center governance aligned with the [Data Centers model](../../data-centers/full-model/).
 
 ---
 
@@ -158,7 +158,7 @@ At national scale, DPI operates on infrastructure with significant energy and ha
 >
 > (f) Prohibit DPI data from being transferred to vendor systems for purposes other than service delivery without explicit governmental authorisation.
 
-*Reference: [Open Source in Government model](../open-source-in-government/full-model/); [Digital Sovereignty model](../digital-sovereignty/full-model/)*
+*Reference: [Open Source in Government model](../../open-source-in-government/full-model/); [Digital Sovereignty model](../../digital-sovereignty/full-model/)*
 
 ---
 
@@ -175,7 +175,7 @@ At national scale, DPI operates on infrastructure with significant energy and ha
 >
 > (e) An equity impact assessment shall be conducted before deployment and annually thereafter, assessing uptake and exclusion rates by gender, disability, income level, language, and rural/urban location.
 
-*Reference: [Digital Accessibility model](../accessibility/full-model/)*
+*Reference: [Digital Accessibility model](../../accessibility/full-model/)*
 
 ---
 
@@ -306,12 +306,12 @@ At national scale, DPI operates on infrastructure with significant energy and ha
 
 | Related Domain | Relationship |
 |---|---|
-| [Open Source in Government](../open-source-in-government/full-model/) | DPI should prefer open source; open standards requirement aligns with OS preference |
-| [Digital Sovereignty](../digital-sovereignty/full-model/) | DPI vendor independence, exit rights, and open standards are sovereignty requirements |
-| [Digital Accessibility](../accessibility/full-model/) | DPI user interfaces must meet accessibility standards; non-digital alternatives preserve inclusion |
-| [AI Adoption](../ai-adoption/full-model/) | AI in DPI (fraud detection, eligibility scoring) requires AI governance framework |
-| [Algorithmic Accountability](../algorithmic-accountability/full-model/) | Automated decisions in benefit delivery via DPI require accountability mechanisms |
-| [Smart Cities & Privacy](../smart-cities/full-model/) | City-level DPI deployments must align with smart city data governance |
+| [Open Source in Government](../../open-source-in-government/full-model/) | DPI should prefer open source; open standards requirement aligns with OS preference |
+| [Digital Sovereignty](../../digital-sovereignty/full-model/) | DPI vendor independence, exit rights, and open standards are sovereignty requirements |
+| [Digital Accessibility](../../accessibility/full-model/) | DPI user interfaces must meet accessibility standards; non-digital alternatives preserve inclusion |
+| [AI Adoption](../../ai-adoption/full-model/) | AI in DPI (fraud detection, eligibility scoring) requires AI governance framework |
+| [Algorithmic Accountability](../../algorithmic-accountability/full-model/) | Automated decisions in benefit delivery via DPI require accountability mechanisms |
+| [Smart Cities & Privacy](../../smart-cities/full-model/) | City-level DPI deployments must align with smart city data governance |
 
 ---
 

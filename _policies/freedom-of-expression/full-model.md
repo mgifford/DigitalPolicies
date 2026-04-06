@@ -5,7 +5,7 @@
 > **Status:** `Draft`
 > **Last updated:** 2026-04-05
 > **Maintainers:** Open Digital Policies community
-> **Related domains:** [Children & Technology](../children-technology/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/), [AI Adoption](../ai-adoption/full-model/), [Digital Sovereignty](../digital-sovereignty/full-model/)
+> **Related domains:** [Children & Technology](../../children-technology/full-model/), [Algorithmic Accountability](../../algorithmic-accountability/full-model/), [AI Adoption](../../ai-adoption/full-model/), [Digital Sovereignty](../../digital-sovereignty/full-model/)
 > **Key sources:** EU Digital Services Act (DSA), UN Special Rapporteur on Freedom of Expression, Santa Clara Principles, ICCPR Article 19, EU Audiovisual Media Services Directive
 
 ---
@@ -70,7 +70,7 @@ Content governance policies developed for one cultural and political context oft
 
 ### Environmental Considerations
 
-AI-powered content moderation at scale consumes significant compute resources. Platforms should include environmental cost in content moderation system design decisions, favouring energy-efficient approaches where equally effective. See [Data Centers model](../data-centers/full-model/) and [AI Adoption model](../ai-adoption/full-model/).
+AI-powered content moderation at scale consumes significant compute resources. Platforms should include environmental cost in content moderation system design decisions, favouring energy-efficient approaches where equally effective. See [Data Centers model](../../data-centers/full-model/) and [AI Adoption model](../../ai-adoption/full-model/).
 
 ---
 
@@ -154,7 +154,7 @@ AI-powered content moderation at scale consumes significant compute resources. P
 >
 > (d) Conduct and publish annual assessments of whether recommender systems systematically amplify or suppress content based on the political view, religion, race, gender, or sexual orientation of the content creator;
 >
-> (e) Apply the [Algorithmic Accountability framework](../algorithmic-accountability/full-model/) to recommender systems used in platforms with significant public discourse impact.
+> (e) Apply the [Algorithmic Accountability framework](../../algorithmic-accountability/full-model/) to recommender systems used in platforms with significant public discourse impact.
 
 *Rationale: EU DSA Article 27 requires very large platforms to offer at least one recommender system not based on profiling. The research evidence on algorithmic amplification of harmful content (including the Facebook Files and Twitter internal research published by Elon Musk) demonstrates that recommender systems have systematic effects on public discourse that platforms have been slow to acknowledge or address.*
 
@@ -311,10 +311,10 @@ AI-powered content moderation at scale consumes significant compute resources. P
 
 | Related Domain | Relationship |
 |---|---|
-| [Children & Technology](../children-technology/full-model/) | Content governance for minors requires heightened protections; age differentiation in content rules |
-| [Algorithmic Accountability](../algorithmic-accountability/full-model/) | Recommender systems are content governance mechanisms and require algorithmic accountability |
-| [AI Adoption](../ai-adoption/full-model/) | AI-powered content moderation must meet AI adoption governance standards; AI-generated content requires provenance standards |
-| [Digital Sovereignty](../digital-sovereignty/full-model/) | Platform concentration creates sovereignty risks; exit rights and interoperability are structural remedies |
+| [Children & Technology](../../children-technology/full-model/) | Content governance for minors requires heightened protections; age differentiation in content rules |
+| [Algorithmic Accountability](../../algorithmic-accountability/full-model/) | Recommender systems are content governance mechanisms and require algorithmic accountability |
+| [AI Adoption](../../ai-adoption/full-model/) | AI-powered content moderation must meet AI adoption governance standards; AI-generated content requires provenance standards |
+| [Digital Sovereignty](../../digital-sovereignty/full-model/) | Platform concentration creates sovereignty risks; exit rights and interoperability are structural remedies |
 
 ---
 

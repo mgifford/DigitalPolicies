@@ -5,7 +5,7 @@
 > **Status:** `Draft`
 > **Last updated:** 2026-04-05
 > **Maintainers:** Open Digital Policies community
-> **Related domains:** [Digital Accessibility](../accessibility/full-model/), [AI Adoption](../ai-adoption/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/), [Digital Sovereignty](../digital-sovereignty/full-model/)
+> **Related domains:** [Digital Accessibility](../../accessibility/full-model/), [AI Adoption](../../ai-adoption/full-model/), [Algorithmic Accountability](../../algorithmic-accountability/full-model/), [Digital Sovereignty](../../digital-sovereignty/full-model/)
 
 ---
 
@@ -65,7 +65,7 @@ Smart city technology frequently fails disabled people, older adults, and low-in
 
 ### Environmental Considerations
 
-Smart city sensor networks, compute infrastructure, and data storage have material energy and hardware footprints. Connected streetlights and adaptive traffic signals can reduce energy consumption — but server infrastructure, always-on sensors, and AI processing can offset those gains. Smart city procurements must include lifecycle energy assessment, hardware longevity requirements, and e-waste obligations. See [Data Centers model](../data-centers/full-model/).
+Smart city sensor networks, compute infrastructure, and data storage have material energy and hardware footprints. Connected streetlights and adaptive traffic signals can reduce energy consumption — but server infrastructure, always-on sensors, and AI processing can offset those gains. Smart city procurements must include lifecycle energy assessment, hardware longevity requirements, and e-waste obligations. See [Data Centers model](../../data-centers/full-model/).
 
 ---
 
@@ -174,7 +174,7 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 > Cities should explore governance models under which smart city data is held in a community data trust — a legal structure ensuring that the data is governed in the community's interest, with elected or selected trustees, and that the data may only be used for purposes approved by the trust. Barcelona's City Data Exchange and Amsterdam's data governance work provide reference models.
 
 > **Aspirational Standard 2: Open Source Smart City Infrastructure**
-> Where cities develop or commission custom smart city software, they should release it as open source to enable peer city reuse, independent audit, and community scrutiny. See [Open Source in Government model](../open-source-in-government/full-model/).
+> Where cities develop or commission custom smart city software, they should release it as open source to enable peer city reuse, independent audit, and community scrutiny. See [Open Source in Government model](../../open-source-in-government/full-model/).
 
 ---
 
@@ -199,10 +199,10 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 > A Privacy Impact Assessment (PIA) shall be completed and published before any smart city technology procurement. The PIA must assess risks under GDPR (or equivalent), identify data minimisation measures, document purpose limitation controls, and identify residual risks. The PIA must be reviewed by the designated privacy authority before procurement.
 
 > **Procurement Clause B: Algorithmic Accountability Integration**
-> Any smart city system that makes automated recommendations or decisions affecting individuals must comply with the [Algorithmic Accountability full model](../algorithmic-accountability/full-model/) in addition to this policy.
+> Any smart city system that makes automated recommendations or decisions affecting individuals must comply with the [Algorithmic Accountability full model](../../algorithmic-accountability/full-model/) in addition to this policy.
 
 > **Procurement Clause C: Accessibility Requirement**
-> All resident-facing smart city interfaces — kiosks, apps, signage — must conform to WCAG 2.2 AA. This requirement applies to the full user journey, not only the digital interface. See [Digital Accessibility model](../accessibility/full-model/).
+> All resident-facing smart city interfaces — kiosks, apps, signage — must conform to WCAG 2.2 AA. This requirement applies to the full user journey, not only the digital interface. See [Digital Accessibility model](../../accessibility/full-model/).
 
 ---
 
@@ -300,11 +300,11 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 
 | Related Domain | Relationship |
 |---|---|
-| [AI Adoption](../ai-adoption/full-model/) | Smart city AI systems (predictive policing, traffic AI) must comply with AI Adoption governance requirements |
-| [Algorithmic Accountability](../algorithmic-accountability/full-model/) | Automated smart city decision systems require bias auditing and individual rights to challenge |
-| [Digital Accessibility](../accessibility/full-model/) | All resident-facing smart city interfaces must meet accessibility standards |
-| [Digital Sovereignty](../digital-sovereignty/full-model/) | Smart city data sovereignty, vendor lock-in, and exit rights follow the Digital Sovereignty model |
-| [Open Source in Government](../open-source-in-government/full-model/) | Open source smart city software enables community audit and peer city reuse |
+| [AI Adoption](../../ai-adoption/full-model/) | Smart city AI systems (predictive policing, traffic AI) must comply with AI Adoption governance requirements |
+| [Algorithmic Accountability](../../algorithmic-accountability/full-model/) | Automated smart city decision systems require bias auditing and individual rights to challenge |
+| [Digital Accessibility](../../accessibility/full-model/) | All resident-facing smart city interfaces must meet accessibility standards |
+| [Digital Sovereignty](../../digital-sovereignty/full-model/) | Smart city data sovereignty, vendor lock-in, and exit rights follow the Digital Sovereignty model |
+| [Open Source in Government](../../open-source-in-government/full-model/) | Open source smart city software enables community audit and peer city reuse |
 
 ---
 

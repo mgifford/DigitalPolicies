@@ -8,7 +8,7 @@ domain: web-sustainability
 
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
-> **Related domains:** [Data Centers & Environmental Sustainability](../data-centers/full-model/), [Right to Repair & E-Waste](../right-to-repair/full-model/), [Digital Accessibility](../accessibility/full-model/), [Open Source in Government](../open-source-in-government/full-model/)
+> **Related domains:** [Data Centers & Environmental Sustainability](../../data-centers/full-model/), [Right to Repair & E-Waste](../../right-to-repair/full-model/), [Digital Accessibility](../../accessibility/full-model/), [Open Source in Government](../../open-source-in-government/full-model/)
 > **Key sources:** W3C Web Sustainability Guidelines (WSG 1.0, 2023; Draft Note 2025), EU Ecodesign Regulation, GRI Digital Sustainability Standards (draft), ISO/IEC 14001 Environmental Management
 
 ---

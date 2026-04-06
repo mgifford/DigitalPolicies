@@ -8,7 +8,7 @@ domain: digital-sovereignty
 
 > **Status:** `Draft`
 > **Last updated:** 2026-04-04
-> **Related domains:** [Open Source in Government](../open-source-in-government/full-model/), [Data Centers & Environmental Sustainability](../data-centers/full-model/), [AI Adoption & Governance](../ai-adoption/full-model/), [Algorithmic Accountability](../algorithmic-accountability/full-model/)
+> **Related domains:** [Open Source in Government](../../open-source-in-government/full-model/), [Data Centers & Environmental Sustainability](../../data-centers/full-model/), [AI Adoption & Governance](../../ai-adoption/full-model/), [Algorithmic Accountability](../../algorithmic-accountability/full-model/)
 > **Key sources:** EU Cyber Resilience Act, EU Data Act (2024), EU Cloud Rules (EUCS), FSFE "Public Money, Public Code", French Loi pour une République Numérique, German IT-Sicherheitsgesetz, UNDP Digital Public Infrastructure framework
 
 ---
