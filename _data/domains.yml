@@ -92,14 +92,16 @@
     Governments are adopting AI in healthcare, justice, social services, and hiring
     — often without meaningful oversight. This model establishes what legitimate
     public sector AI looks like: assessed for risk, transparent to affected people,
-    and contestable.
+    contestable, and required to disclose when it's AI.
   core_tension: "Efficiency vs. due process and human dignity"
   key_standards:
-    - "Prohibited AI uses (real-time biometric surveillance, social scoring)"
+    - "Prohibited AI uses (biometric surveillance, social scoring, AI impersonation)"
     - "Mandatory Algorithmic Impact Assessment before deployment"
-    - "Right to know AI was used and to request human review"
-    - "Mandatory AI Use Registry (public)"
-  jurisdictions_count: 5
+    - "Right to know AI was used, challenge decisions, and request human review"
+    - "Mandatory AI Use Registry with structured vendor risk disclosure"
+    - "Worker consultation required before automating public sector roles"
+    - "Regulatory sandbox model for evidence-based rulemaking (Utah pattern)"
+  jurisdictions_count: 6
 
 - id: algorithmic-accountability
   taxonomy_title: "Who's Holding the Algorithm Accountable?"
