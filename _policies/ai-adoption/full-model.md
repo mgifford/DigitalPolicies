@@ -3,7 +3,7 @@
 # AI Adoption & Governance — Model Policy
 
 > **Status:** `Draft`
-> **Last updated:** 2026-04-04
+> **Last updated:** 2026-04-13
 > **Maintainers:** Open Digital Policies community
 > **Related domains:** [Algorithmic Accountability](../../algorithmic-accountability/full-model/), [Data Centers](../../data-centers/full-model/), [Open Source in Government](../../open-source-in-government/full-model/), [Digital Sovereignty](../../digital-sovereignty/full-model/)
 
@@ -86,7 +86,9 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 >
 > (e) Predictive policing systems that target individuals or groups based on predicted future offending rather than specific evidence of past conduct;
 >
-> (f) Systems that deduce protected characteristics (race, religion, sexual orientation, political opinion, health status) from proxy variables for the purpose of differential treatment.
+> (f) Systems that deduce protected characteristics (race, religion, sexual orientation, political opinion, health status) from proxy variables for the purpose of differential treatment;
+>
+> (g) AI systems configured to deny being artificial intelligence when sincerely asked by a user, or to simulate the identity of a specific named human official or employee.
 
 *Rationale: These prohibitions are drawn directly from EU AI Act Article 5 (prohibited AI practices, effective February 2025). They represent the international consensus of what is incompatible with human dignity and fundamental rights. The list is not exhaustive — new prohibited applications may be added through the review process as technology and evidence evolve.*
 
@@ -105,7 +107,9 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 >
 > (d) For Level IV systems: require that final decisions be made by a human being, with the AI system serving only in an advisory capacity; and require external peer review and published summary;
 >
-> (e) Be updated and re-submitted whenever the system, its training data, or its operational context changes materially.
+> (e) Be updated and re-submitted whenever the system, its training data, or its operational context changes materially;
+>
+> (f) For any AI system that generates natural language outputs visible to members of the public or used in official government communications: include vendor-provided documentation of (i) adversarial prompt testing for harmful and misleading outputs, (ii) factual reliability evaluation relative to the intended use case, and (iii) bias evaluation of generated content across protected characteristics. This documentation must appear in the vendor's tender response alongside materials required under Standard 4(a).
 
 *Rationale: Canada's Directive on Automated Decision-Making (2019) is the most developed national implementation of tiered AI impact assessment for government. Its four-level impact framework with proportionate mitigation requirements provides a tested model. The 65-question AIA questionnaire developed by the Treasury Board Secretariat demonstrates that this level of assessment is operationally feasible.*
 
@@ -122,7 +126,9 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 >
 > (c) Given information about how to challenge or seek review of the decision;
 >
-> (d) Able to request a decision made or reviewed by a human being, without penalty or unexplained delay.
+> (d) Able to request a decision made or reviewed by a human being, without penalty or unexplained delay;
+>
+> (e) Where the public body uses an AI system that interacts with members of the public through a conversational interface (chatbot, virtual assistant, or similar): informed at the outset of each interaction that they are communicating with an AI system, not a human. AI-generated written communications issued under the name of a public official, public body, or public service must include a prominent disclosure that the content was produced with AI assistance. Public bodies must not deploy conversational AI systems configured to deny being AI when sincerely asked, nor configure AI to present itself as a named human employee or official.
 >
 > These rights apply regardless of whether the AI system is proprietary. Vendors may not contract away the public body's obligation to provide explanations to affected individuals.
 
@@ -143,7 +149,9 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 >
 > (d) The AI system is assessed against accessibility requirements (WCAG 2.2 AA minimum for any user-facing component) before procurement;
 >
-> (e) The operational energy consumption of the deployed system is disclosed by the vendor, and this information is considered in procurement evaluation.
+> (e) The operational energy consumption of the deployed system is disclosed by the vendor, and this information is considered in procurement evaluation;
+>
+> (f) The AI system does not originate from a vendor: (i) subject to export controls relating to surveillance or censorship technology in any relevant jurisdiction; (ii) with documented supply relationships providing surveillance AI capabilities to governments sanctioned by the procuring jurisdiction for human rights violations; or (iii) whose contractual terms would require transfer of operational data to a foreign government authority without judicial process. The procuring body must certify compliance with this sub-clause in the procurement record.
 
 *Rationale: Public bodies are at a structural disadvantage in AI procurement — vendors have far more information about their systems than buyers. Performance data, audit rights, and exit rights are minimum safeguards against procurement capture. The energy disclosure requirement integrates AI governance with environmental policy.*
 
@@ -164,7 +172,9 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 >
 > (f) Whether public comment was sought and a summary of responses;
 >
-> (g) Operational energy consumption (where disclosed by vendor or measurable).
+> (g) Operational energy consumption (where disclosed by vendor or measurable);
+>
+> (h) For systems at Impact Level II or above: a link to, or reproduction of, a structured vendor risk disclosure covering — (i) intended use cases and uses the system is not designed for; (ii) known failure modes and performance degradation conditions; (iii) error rates disaggregated by demographic subgroup where available; (iv) training data sources and known gaps; (v) any third-party red-teaming or adversarial evaluation completed. The oversight body must publish a standard template for this disclosure within six months of policy adoption. Vendors that refuse to provide this disclosure are ineligible for Level II or above contracts.
 >
 > The registry must be machine-readable and updated within 30 days of any material change.
 
@@ -190,6 +200,20 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 
 ---
 
+> **Aspirational Standard 3: Regulatory Sandbox for Evidence-Based AI Governance**
+> Jurisdictions should consider establishing a time-limited regulatory sandbox — administered by the AI oversight body — that allows controlled real-world deployment of AI systems under temporary waivers of specified regulations, subject to mandatory oversight, reporting, and safety constraints. The sandbox must: (a) assign liability and insurance obligations before deployment, not after; (b) restrict participation to specific use cases and workflows, not to AI as a category; (c) require systematic data collection on failures, successes, and unintended effects; (d) feed findings into the AIA methodology, prohibited-uses list, and impact level classification on a defined schedule; and (e) publish all findings publicly within 12 months of each sandbox cycle. Participation in the sandbox must not be used to obtain permanent exemptions from the standards in this policy; all sandbox participants are subject to full policy requirements upon expiry of the sandbox period.
+
+*Rationale: Utah's Artificial Intelligence Policy Act (2024) and Office of AI Policy established the most operationally detailed government AI sandbox to date, demonstrating that evidence-based rulemaking — writing rules from observed deployment data rather than hypothetical risk — is feasible. The core pattern (controlled testing → regulatory flexibility → mandatory data collection → permanent rulemaking) is directly transferable to public sector AI governance. Key design principles: liability must be assigned upfront; waivers must be use-case specific, not categorical; findings must be public; and the sandbox produces governance improvements, not permanent exemptions.*
+
+---
+
+> **Aspirational Standard 4: International Governance Coordination**
+> The oversight body should seek participation in international AI governance coordination forums and maintain formal information-sharing relationships with equivalent oversight bodies in at least three other jurisdictions. The oversight body should contribute to, and adopt where appropriate, internationally coordinated standards for high-risk AI categories, vendor risk disclosure formats (Standard 5(h)), and audit methodologies. Participation in such forums must not create obligations to defer to any foreign regulatory body or to weaken the protections established by this policy.
+
+*Rationale: CHT Principle 6 identifies coordinated international limits as essential to preventing AI from being used to surveil, manipulate, and destabilise across borders. Within the existing government scope this translates to institutional coordination rather than regulatory harmonisation — preserving local sovereignty while enabling shared learning and joint standard-setting.*
+
+---
+
 ### Standards Cross-Reference
 
 | Standard Referenced | Body | Version | Notes |
@@ -200,6 +224,8 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 | WCAG | W3C | 2.2 | Accessibility requirement for user-facing AI components |
 | ISO/IEC 42001 | ISO | 2023 | AI management system standard — aspirational |
 | NIST AI RMF | NIST | 1.0 (2023) | AI risk management framework — useful for AIA methodology |
+| Utah Artificial Intelligence Policy Act | Utah Legislature | 2024 (SB 149) | Regulatory sandbox model; evidence-based rulemaking; upfront liability assignment |
+| CHT AI Doc & Liability Framework | Center for Humane Technology | 2024 | Duty of care principles; AI Data Sheet concept; products liability approach for AI |
 
 ---
 
@@ -219,6 +245,20 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 
 > **Procurement Clause C: Vendor Accountability**
 > AI procurement contracts must include: (a) performance targets and demographic fairness metrics with defined consequences for underperformance; (b) the right for the public body to commission independent audits without vendor consent; (c) a requirement that the vendor notify the public body within 30 days of becoming aware of any material error, bias finding, or security vulnerability in the deployed system; (d) no indemnification clause that transfers liability for discriminatory outcomes from the vendor to the public body.
+
+---
+
+> **Procurement Clause D: Worker Consultation**
+> Before executing a contract for an AI system that would substantially automate, reduce, or restructure tasks currently performed by public sector employees, the procuring body must conduct documented consultation with recognised labour organisations representing affected workers. Consultation must occur before the AIA is finalised and must address: (a) the nature and scope of anticipated changes to roles and responsibilities; (b) retraining, redeployment, or other workforce transition commitments; (c) how productivity gains will be allocated between service improvement and workforce impact. A summary of consultation outcomes must be published as part of the AIA.
+
+---
+
+### Small Jurisdiction Implementation
+
+> **Proportionality Clause**
+> A jurisdiction that lacks the internal technical capacity to conduct a full independent AIA may use a streamlined process for Level I and Level II systems, provided it: (a) uses the centralised pre-certification list published by the oversight body, covering AI systems that have been pre-assessed against this policy's standards; (b) documents in the procurement record why full independent assessment is not feasible; and (c) accepts that pre-certification does not exempt the jurisdiction from the transparency, registry, and worker consultation requirements. Small jurisdictions remain subject to the full AIA requirement for Level III and Level IV systems without exception. The oversight body must publish an initial list of pre-assessed common AI systems within 12 months of policy adoption, and update it at least annually.
+
+*Rationale: The AIA process requires technical capacity that small municipalities cannot realistically sustain independently. Shared pre-certification infrastructure allows smaller jurisdictions to benefit from this policy framework without being effectively locked out of AI procurement. The model draws on the CHT principle that regulatory protections should be proportionate to deployer scale, adapted here for jurisdictional scale. Full protections for high-risk systems (Level III–IV) are preserved regardless of size.*
 
 ---
 
@@ -312,14 +352,25 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 
 ---
 
+### Utah — Artificial Intelligence Policy Act and Regulatory Sandbox
+**Enacted:** 2024
+**Type:** State legislation + dedicated regulator (Office of AI Policy)
+**Link:** https://le.utah.gov/~2024/bills/static/SB0149.html
+**Summary:** Utah established a dedicated AI regulatory sandbox allowing companies to operate under temporary waivers of licensing, scope-of-practice, and other regulations — but only within a controlled environment with mandatory oversight, reporting, and safety constraints. The Office of AI Policy assigns liability upfront before deployment and often requires insurance covering AI outputs, resolving the "who is responsible if AI fails?" paralysis common in AI regulation. The sandbox operates on use-case and workflow specificity rather than regulating "AI" as a category — low-risk prescription renewals via AI were permitted under supervision. Findings from sandbox deployments feed back into permanent rulemaking. **What makes it genuinely innovative:** evidence-based rulemaking (rules written from observed operational data rather than hypothetical risk); institutionalised experimentation inside government; liability integration into the framework at the design stage; and fast iteration without waiting for legislative cycles. **Real limitations:** each sandbox requires bespoke agreements and is not scalable as-is; regulators choose who receives exemptions, creating favouritism risk; administrative overhead remains significant; the sandbox is temporary by design — it produces insights, not permanent governance. The Utah model is a pilot, not a complete regulatory system, but its core pattern — controlled testing environment → regulatory flexibility → mandatory data collection → permanent rulemaking — is transferable to digital public infrastructure, accessibility automation, procurement reform, and other domains.
+
+---
+
 ## Gaps and Known Weaknesses
 
-- **Generative AI is underspecified** — This model predates the full proliferation of generative AI in public sector contexts. The AIA framework and prohibited uses list need explicit provisions for LLM-based systems, including hallucination risks, content generation in public communications, and AI-generated legal or administrative documents.
-- **Agentic AI is not addressed** — Autonomous AI agents that take actions (not just produce outputs) require additional governance frameworks around decision chains, audit trails, and the assignment of accountability across multi-agent systems.
-- **Environmental cost methodology** — Standard 1's prohibition on adoption where "environmental cost is disproportionate to public benefit" is not yet operationalised. A methodology for comparing AI energy cost to service value is needed.
+- **Generative AI is partially addressed** — Standard 2(f) now requires pre-deployment testing documentation for LLM-based systems used in public communications, and Standard 3(e) requires disclosure in conversational AI contexts. However, hallucination risks in AI-generated legal or administrative documents, and AI-assisted public consultations, require further specification.
+- **Agentic AI is not addressed** — Autonomous AI agents that take actions (not just produce outputs) require additional governance frameworks around decision chains, audit trails, and the assignment of accountability across multi-agent systems. The AIA framework assumes a system with identifiable discrete outputs; agentic systems produce chains of actions that may not be traceable to a single decision point.
+- **Environmental cost methodology** — Pillar 1's prohibition on adoption where "environmental cost is disproportionate to public benefit" is not yet operationalised. A methodology for comparing AI energy cost to service value is needed.
 - **Private sector AI affecting public rights** — This model applies to public bodies. Private sector AI used in employment, credit, housing, and other areas affecting fundamental rights falls outside scope. The Algorithmic Accountability model addresses some of this gap but a fuller treatment is needed.
-- **International and exported AI** — Development assistance organisations and international institutions that deploy AI in Global South contexts often apply lower governance standards than they would domestically. This gap is noted but not addressed.
-- **Small jurisdiction capacity** — The AIA process requires significant technical capacity. Small municipalities cannot realistically conduct independent bias analysis. Shared assessment infrastructure or centralised pre-certification for common AI systems is needed.
+- **International and exported AI** — Standard 4(f) now restricts procurement from vendors with sanctioned-government supply relationships; Aspirational Standard 3 establishes an international coordination mandate for the oversight body. However, development assistance organisations and international institutions that deploy AI in Global South contexts often apply lower governance standards than they would domestically — this gap is noted but not addressed.
+- **Small jurisdiction capacity** — The Proportionality Clause in the Implementation section creates a pre-certification pathway for Level I–II systems. The oversight body must still build and maintain the pre-certification list, and the resourcing for this is not specified.
+- **AI identity and anthropomorphism in ongoing service contexts** — Standard 3(e) now requires disclosure at the outset of conversational AI interactions and prohibits AI configured to deny being AI. However, AI used in advisory, therapeutic, or companion contexts — where the relationship develops over time rather than a single session — may require stronger protections, particularly for vulnerable users. This is noted but not addressed.
+- **Worker impact operationalisation** — Procurement Clause D now requires pre-AIA worker consultation. However, no AIA methodology currently includes a worker impact dimension as a scored factor. The impact level classification (Level I–IV) does not account for workforce disruption — a system with minimal individual decision impact could still cause substantial workforce harm. A workforce impact dimension should be added to the AIA questionnaire.
+- **Vendor risk disclosure standardisation** — Standard 5(h) now requires a structured vendor risk disclosure for Level II+ systems and requires the oversight body to publish a standard template. Until the template is published, procuring bodies must apply the disclosure criteria as written. Comparability across procurements will be limited until a shared template is in place.
 
 ---
 
@@ -371,6 +422,7 @@ All substantive changes go through a minimum 14-day public comment period before
 | Version | Date | Summary of changes |
 |---|---|---|
 | 0.1 | 2026-04-04 | Initial draft — four pillars, real-world examples from EU, Canada, US, New Zealand, Seattle |
+| 0.2 | 2026-04-13 | CHT review: added Standard 1(g) (AI impersonation prohibition), Standard 2(f) (generative AI pre-deployment testing), Standard 3(e) (AI identity disclosure in conversational contexts), Standard 4(f) (international procurement restriction), Standard 5(h) (structured vendor risk disclosure), Procurement Clause D (worker consultation), Small Jurisdiction Proportionality Clause, Aspirational Standards 3–4 (regulatory sandbox; international coordination); added Utah sandbox and CHT as real-world examples and Standards Cross-Reference entries; updated Gaps section to reflect partial gap closures and add three new documented gaps (agentic AI in AIA, worker impact in AIA scoring, vendor disclosure standardisation timeline) |
 
 ---
 
