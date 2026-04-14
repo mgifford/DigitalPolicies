@@ -128,3 +128,277 @@ layout: default
   </a>
 
 </div>
+
+<style>
+  .policy-assistant-trigger {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1200;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .policy-assistant-trigger:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .policy-assistant-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .policy-assistant-modal[hidden] { display: none; }
+
+  .policy-assistant-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .policy-assistant-modal__panel {
+    position: relative;
+    width: min(1100px, 100%);
+    height: min(88vh, 860px);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .policy-assistant-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+  }
+
+  .policy-assistant-modal__header h2 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .policy-assistant-close {
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+  }
+
+  .policy-assistant-close:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .policy-assistant-body {
+    padding: 1rem;
+    overflow: auto;
+    height: 100%;
+  }
+
+  .policy-assistant-personas {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 720px;
+  }
+
+  .policy-assistant-persona {
+    text-align: left;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+  }
+
+  .policy-assistant-persona strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .policy-assistant-persona:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-pale);
+  }
+
+  .policy-assistant-workspace[hidden] { display: none; }
+
+  .policy-assistant-workspace__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .policy-assistant-workspace__controls button,
+  .policy-assistant-workspace__controls a {
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 0.35rem 0.7rem;
+    text-decoration: none;
+  }
+
+  .policy-assistant-iframe {
+    width: 100%;
+    height: calc(100% - 2.7rem);
+    min-height: 450px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: #fff;
+  }
+</style>
+
+<button type="button"
+        class="policy-assistant-trigger"
+        id="policy-assistant-trigger"
+        aria-haspopup="dialog"
+        aria-controls="policy-assistant-modal">
+  Policy Assistant
+</button>
+
+<div id="policy-assistant-modal" class="policy-assistant-modal" hidden>
+  <div class="policy-assistant-modal__backdrop" data-close-assistant="true"></div>
+  <div class="policy-assistant-modal__panel"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="policy-assistant-title">
+    <div class="policy-assistant-modal__header">
+      <h2 id="policy-assistant-title">Policy Assistant</h2>
+      <button type="button" class="policy-assistant-close" data-close-assistant="true">Close</button>
+    </div>
+    <div class="policy-assistant-body">
+      <div id="policy-assistant-persona-step">
+        <p style="margin-top: 0; margin-bottom: 0.75rem; color: var(--color-text-muted);">
+          Choose your persona to open the right prompt builder for this policy domain.
+        </p>
+        <div class="policy-assistant-personas">
+          <button type="button" class="policy-assistant-persona" data-tool="advocate">
+            <strong>📢 Advocate</strong>
+            Letters, testimony, and community messaging.
+          </button>
+          <button type="button" class="policy-assistant-persona" data-tool="policy-pro">
+            <strong>📋 Policy professional</strong>
+            Procurement, legal adaptation, and policy gap analysis.
+          </button>
+        </div>
+      </div>
+
+      <div id="policy-assistant-workspace" class="policy-assistant-workspace" hidden>
+        <div class="policy-assistant-workspace__controls">
+          <button type="button" id="policy-assistant-back">← Choose another persona</button>
+          <a id="policy-assistant-open-link" href="#" target="_blank" rel="noopener">Open this tool in a new tab ↗</a>
+        </div>
+        <iframe id="policy-assistant-iframe"
+                class="policy-assistant-iframe"
+                loading="lazy"
+                title="Policy assistant prompt builder"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const trigger = document.getElementById('policy-assistant-trigger');
+    const modal = document.getElementById('policy-assistant-modal');
+    const personaStep = document.getElementById('policy-assistant-persona-step');
+    const workspace = document.getElementById('policy-assistant-workspace');
+    const iframe = document.getElementById('policy-assistant-iframe');
+    const openLink = document.getElementById('policy-assistant-open-link');
+    const backBtn = document.getElementById('policy-assistant-back');
+    const domainId = "{{ domain.id | default: '' }}";
+
+    if (!trigger || !modal || !personaStep || !workspace || !iframe || !openLink || !backBtn) return;
+
+    const tools = {
+      advocate: "{{ site.baseurl }}/tools/advocate/",
+      "policy-pro": "{{ site.baseurl }}/tools/policy-pro/"
+    };
+
+    let lastFocus = null;
+
+    function buildToolUrl(path) {
+      const url = new URL(path, window.location.origin);
+      if (domainId) url.searchParams.set('domain', domainId);
+      return url.toString();
+    }
+
+    function showPersonaStep() {
+      personaStep.hidden = false;
+      workspace.hidden = true;
+      iframe.removeAttribute('src');
+      openLink.setAttribute('href', '#');
+    }
+
+    function openAssistant() {
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      showPersonaStep();
+      const firstPersona = modal.querySelector('.policy-assistant-persona');
+      if (firstPersona) firstPersona.focus();
+    }
+
+    function closeAssistant() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      showPersonaStep();
+      if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    }
+
+    trigger.addEventListener('click', openAssistant);
+
+    modal.querySelectorAll('[data-close-assistant="true"]').forEach(el => {
+      el.addEventListener('click', closeAssistant);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!modal.hidden && event.key === 'Escape') closeAssistant();
+    });
+
+    modal.querySelectorAll('.policy-assistant-persona').forEach(button => {
+      button.addEventListener('click', () => {
+        const tool = button.getAttribute('data-tool');
+        if (!tool || !tools[tool]) return;
+        const targetUrl = buildToolUrl(tools[tool]);
+        personaStep.hidden = true;
+        workspace.hidden = false;
+        iframe.src = targetUrl;
+        iframe.title = tool === 'advocate'
+          ? 'Advocate Prompt Builder'
+          : 'Policy Professional Builder';
+        openLink.href = targetUrl;
+      });
+    });
+
+    backBtn.addEventListener('click', showPersonaStep);
+  })();
+</script>
