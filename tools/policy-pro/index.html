@@ -539,5 +539,18 @@ document.querySelectorAll('input, select, textarea').forEach(el => {
   el.addEventListener('change', updatePrompt);
 });
 
+function applyQueryPrefill() {
+  const params = new URLSearchParams(window.location.search);
+  const domainId = params.get('domain');
+  if (!domainId) return;
+  const domainField = document.getElementById('field-domain');
+  if (!domainField) return;
+  const hasDomain = Array.from(domainField.options).some(option => option.value === domainId);
+  if (!hasDomain) return;
+  domainField.value = domainId;
+}
+
+applyQueryPrefill();
+
 updatePrompt();
 </script>
