@@ -78,6 +78,7 @@ This file documents known adoptions or near-adoptions of model language from Ope
 | European Union | EU | 2024 | Enacted | Parallel | EU AI Act (Regulation 2024/1689) — risk-based framework, prohibited uses, high-risk obligations | EUR-Lex |
 | Canada | Canada | 2019 | Enacted | Parallel | Directive on Automated Decision-Making — impact levels, AIA requirement, human oversight | TBS-SCT |
 | United States | USA | 2023 | Enacted | Parallel | Executive Order 14110 on Safe, Secure, and Trustworthy AI — federal agency requirements | Federal Register |
+| Maryland | USA | 2025 | Enacted | Parallel | Legi-Assist — open-source LLM toolkit for automated legislative tracking, plain-language bill summarisation, fiscal impact analysis, and agency relevance scoring; deployed by Maryland State Innovation Team | [GitHub](https://github.com/Maryland-State-Innovation-Team/Legi-Assist) |
 
 ---
 
