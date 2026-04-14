@@ -370,6 +370,14 @@ AI model training is among the most energy-intensive computing tasks. Inference 
 
 ---
 
+### Maryland — Legi-Assist (Maryland State Innovation Team)
+**Enacted:** 2025
+**Type:** Open-source state government AI tool (operational deployment)
+**Links:** https://github.com/Maryland-State-Innovation-Team/Legi-Assist | https://apolitical.co/en/articles/legi-assist-how-marylands-innovation-team-modernized-legislative-tracking-and-review
+**Summary:** The Maryland State Innovation Team developed and open-sourced Legi-Assist, an automated toolkit that uses large language models to collect, process, and analyse legislation from the Maryland General Assembly. The pipeline runs nightly, syncing the latest bill texts, adopted amendments, and fiscal notes directly from the MGA website; LLMs then generate plain-language summaries and fiscal impact analyses — specifically handling the strikethroughs and amendment formatting that defeat conventional text processing. A core feature is agency relevance scoring: every introduced bill is evaluated against descriptions of each state agency so staff can filter relevant legislation without reading the full session corpus. The tool is open-sourced under a permissive licence and supports multiple LLM providers (Google Gemini, OpenAI GPT, or locally-run Ollama models), meaning agencies can operate it without sharing legislative data with any external service. **What makes it a useful model:** it operationalises several AI governance principles simultaneously — transparency through open-sourcing the code; auditability through public version control and logged pipeline runs; human oversight preserved (the tool summarises and scores, but humans decide); flexible AI provider allowing data-sovereignty choices; and deployment in a low-stakes assistive context before expanding to higher-risk uses. **Limitations:** the tool is an internal efficiency aid and does not yet include a public-facing AI use registry entry, an Algorithmic Impact Assessment, or a formal published governance policy — illustrating the gap between practical AI deployment and documented governance compliance that this model's Standard 1 (AI Use Registry) and Standard 2 (AIA) are designed to close.
+
+---
+
 ## Gaps and Known Weaknesses
 
 - **Generative AI is partially addressed** — Standard 2(f) now requires pre-deployment testing documentation for LLM-based systems used in public communications, and Standard 3(e) requires disclosure in conversational AI contexts. However, hallucination risks in AI-generated legal or administrative documents, and AI-assisted public consultations, require further specification.
