@@ -9,11 +9,27 @@ on:
   workflow_dispatch:
 
 jobs:
+  gate:
+    name: "Check if axe run is needed"
+    runs-on: ubuntu-latest
+    permissions: {}
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - id: check
+        run: |
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" || $(( $GITHUB_RUN_NUMBER % 5 )) -eq 0 ]]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
   axe-matrix:
     name: "axe — ${{ matrix.label }}"
     runs-on: ubuntu-latest
+    needs: gate
     # Run every 5 commits to avoid noise; always run on manual dispatch.
-    if: github.event_name == 'workflow_dispatch' || github.run_number % 5 == 0
+    if: needs.gate.outputs.should_run == 'true'
 
     strategy:
       # Never cancel siblings — we want the full picture across all configurations.
