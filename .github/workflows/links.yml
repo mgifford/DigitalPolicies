@@ -27,7 +27,6 @@ jobs:
           args: >-
             --config .lychee.toml
             --no-progress
-            --output ./lychee/out.md
             --format markdown
             --exit-code-1-if-exits
             _policies/
