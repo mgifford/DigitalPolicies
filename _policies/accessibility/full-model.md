@@ -274,6 +274,15 @@ Accessible design is generally more sustainable digital design. Semantic HTML, c
 
 ---
 
+### New Hampshire HB 406 — United States (State)
+**Status:** Proposed (2026 legislative session)
+**Source:** [NH Bulletin, April 2026](https://newhampshirebulletin.com/2026/04/13/a-bill-would-explore-making-nh-a-technology-first-state-on-disability-heres-what-that-means/)
+**What it proposes:** Establishes a study committee to examine making New Hampshire a **"technology first"** state for disability services. Under a technology-first approach, when a person with a disability applies for state services or supports, the state's default offer is a technology-based solution — assistive devices, apps, digital tools, or technology-mediated services — before considering other options. The bill does not mandate any individual outcome; it creates the policy process to assess whether and how the state could adopt this framework.
+**Why this matters for digital policy:** Technology-first models shift procurement priorities: the state must evaluate, procure, and fund assistive technology at scale. This has direct implications for accessibility procurement standards (ensuring procured technology actually works for users of assistive technology), AI adoption governance (AI tools offered to disabled individuals must meet the same accessibility requirements as any other public digital service), and algorithmic accountability (automated eligibility or routing decisions must be transparent and contestable by people with disabilities).
+**Cross-domain note:** A technology-first disability policy is only meaningful if the technologies offered are themselves accessible. It creates demand for strong assistive technology procurement standards and reinforces the case for real-user testing requirements rather than automated-only conformance testing.
+
+---
+
 ## Gaps and Known Weaknesses
 
 - **WCAG 3.0 transition** — WCAG 3.0 is under development and will introduce a fundamentally different conformance model (outcome-based rather than criterion-based). This model policy will need significant revision when WCAG 3.0 is finalised.
@@ -288,9 +297,9 @@ Accessible design is generally more sustainable digital design. Semantic HTML, c
 
 | Related Domain | Relationship |
 |---|---|
-| AI Adoption | AI systems in public services must be accessible; AI-generated content needs accessibility standards |
+| AI Adoption | AI systems in public services must be accessible; AI-generated content needs accessibility standards; AI tools offered to disabled people under technology-first models must meet full accessibility requirements |
 | Smart Cities & Privacy | Smart city interfaces (kiosks, apps) must meet same accessibility standards as other public digital services |
-| Algorithmic Accountability | Explainability of automated decisions must be accessible — not just technically available |
+| Algorithmic Accountability | Explainability of automated decisions must be accessible — not just technically available; automated eligibility routing in disability services must be transparent and contestable |
 | Open Source in Government | Open source civic tech must include accessibility in its contribution standards |
 | Children & Technology | Age-appropriate design must include cognitive and motor accessibility for children with disabilities |
 
@@ -314,6 +323,8 @@ Accessible design is generally more sustainable digital design. Semantic HTML, c
 
 **Plain Language:** Writing that is clear, concise, and appropriate to the audience's reading level. Not a technical writing style — a communication principle. Required under the US Plain Writing Act for federal agencies.
 
+**Technology First:** A disability services policy model in which states or governments default to offering technology-based solutions (assistive devices, apps, digital tools) as the first option when a person with a disability seeks services or supports, before considering other alternatives. Adopted in several US states; under exploration in New Hampshire (HB 406, 2026). A technology-first approach only delivers its intended benefits if the technologies offered are themselves accessible.
+
 ---
 
 ## Changelog
@@ -321,3 +332,4 @@ Accessible design is generally more sustainable digital design. Semantic HTML, c
 | Version | Date | Summary |
 |---|---|---|
 | 0.1 | 2026-04-04 | Initial draft, drawing on WAD, EAA, Section 508 2025 assessment, WCAG 2.2 |
+| 0.2 | 2026-04-18 | Added New Hampshire HB 406 (technology-first disability bill) as real-world example; added Technology First glossary term; expanded cross-domain dependencies for AI Adoption and Algorithmic Accountability |

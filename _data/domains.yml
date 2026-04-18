@@ -39,9 +39,7 @@
     - "Accessibility as pass/fail in procurement (not advisory)"
     - "Real user testing for high-impact services"
     - "Civil society standing for enforcement complaints"
-  jurisdictions_count: 4
-
-- id: right-to-repair
+  jurisdictions_count: 5
   taxonomy_title: "You Own It. You Should Be Able to Fix It."
   official_name: "Right to Repair, Interoperability & E-Waste"
   slug: right-to-repair
