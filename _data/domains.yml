@@ -219,3 +219,69 @@
   core_tension: "Efficiency of centralised platforms vs. openness and public governance"
   key_standards: []
   jurisdictions_count: 0
+
+- id: platform-work
+  taxonomy_title: "Who's Managing the Algorithm Managing You?"
+  official_name: "Platform Work & Algorithmic Labour Rights"
+  slug: platform-work
+  status: draft
+  full_model: /domains/platform-work/full-model/
+  icon: "👷"
+  description: >
+    Platform workers — drivers, delivery couriers, freelancers — have their pay set,
+    tasks assigned, performance monitored, and livelihoods ended by algorithms they
+    cannot see or challenge. This model establishes rights to algorithmic transparency,
+    human review of automated decisions, pay formula disclosure, and collective
+    governance of the systems that manage their work.
+  core_tension: "Platform efficiency vs. workers' right to understand and contest the systems that control their livelihoods"
+  key_standards:
+    - "Mandatory disclosure of algorithmic management logic and data inputs"
+    - "Right to human review of deactivation, pay reduction, and performance decisions"
+    - "Pay formula transparency and minimum pay calculated on active time"
+    - "Worker data portability and aggregate data access for worker organisations"
+    - "Prohibition on algorithmic retaliation against workers exercising rights"
+  jurisdictions_count: 4
+
+- id: surveillance-pricing
+  taxonomy_title: "Why Are You Paying More Than Your Neighbour?"
+  official_name: "Surveillance Pricing & Consumer Data Rights"
+  slug: surveillance-pricing
+  status: draft
+  full_model: /domains/surveillance-pricing/full-model/
+  icon: "💰"
+  description: >
+    Retailers, insurers, and platforms use your browsing history, location, financial
+    status, and psychological profile to charge you more than they charge other people
+    for the same product. This model establishes the right to know when your price
+    was personalised, protection against vulnerability-based exploitation, and
+    prohibition on discriminatory pricing through algorithmic proxy variables.
+  core_tension: "Platform personalisation benefits vs. data-driven price exploitation and wage suppression"
+  key_standards:
+    - "Right to know your price was personalised and which data categories were used"
+    - "Prohibition on vulnerability-based pricing using financial stress or emergency signals"
+    - "Prohibition on protected-characteristic proxy variables in pricing algorithms"
+    - "Data minimisation for pricing: no third-party broker data without consent"
+    - "Opt-out from personalised pricing with access to non-personalised rate"
+  jurisdictions_count: 3
+
+- id: platform-liability
+  taxonomy_title: "Who Is Accountable When Platforms Cause Harm?"
+  official_name: "Platform Liability & Systemic Accountability"
+  slug: platform-liability
+  status: draft
+  full_model: /domains/platform-liability/full-model/
+  icon: "⚖️"
+  description: >
+    Large platforms profit from algorithmic amplification of harmful, false, and
+    manipulative content. Yet liability shields designed for a 1996 internet let them
+    escape accountability for the foreseeable consequences of their design choices.
+    This model establishes systemic risk assessments, independent audits, user due
+    process rights, and penalties scaled to global revenue.
+  core_tension: "Platform immunity from liability vs. accountability for foreseeable harms from algorithmic design"
+  key_standards:
+    - "Annual systemic risk assessment for platforms above 45 million active users"
+    - "Algorithmic amplification documentation and non-personalised feed option"
+    - "User due process rights: notice, appeal, and external dispute resolution"
+    - "Independent audit access with no trade-secret shield against regulatory review"
+    - "Penalties scaled to global annual revenue (up to 6% for repeat violations)"
+  jurisdictions_count: 3

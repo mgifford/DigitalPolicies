@@ -325,6 +325,9 @@ The environmental footprint of algorithmic decision-making is primarily in model
 | [Children & Technology](../../children-technology/full-model/) | Algorithmic systems used in educational settings require the heightened protections of that domain |
 | [Data Centers](../../data-centers/full-model/) | Large-scale algorithmic processing requires energy-efficient infrastructure |
 | [Freedom of Expression](../../freedom-of-expression/full-model/) | Content moderation algorithms are a key application of algorithmic accountability standards |
+| [Platform Work & Algorithmic Labour Rights](../../platform-work/full-model/) | Algorithmic management systems used in platform work are covered by this domain's bias audit standards; the Platform Work domain addresses worker-specific rights |
+| [Surveillance Pricing & Consumer Data Rights](../../surveillance-pricing/full-model/) | Algorithmic pricing systems require bias audit and disparate impact testing consistent with the standards in this domain |
+| [Platform Liability & Systemic Accountability](../../platform-liability/full-model/) | Platform recommendation systems are algorithmic decision systems requiring the transparency and audit standards established here |
 
 ---
 
@@ -363,6 +366,7 @@ All substantive changes go through a minimum 14-day public comment period before
 | Version | Date | Summary of changes |
 |---|---|---|
 | 0.1 | 2026-04-04 | Initial draft — four pillars, real-world examples from NYC, Colorado, Illinois, Canada, EU, Santa Clara Principles |
+| 0.2 | 2026-04-18 | Added cross-domain dependencies to Platform Work, Surveillance Pricing, and Platform Liability domains |
 
 ---
 
