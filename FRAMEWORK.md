@@ -204,6 +204,39 @@ This domain covers platform transparency requirements, algorithmic amplification
 
 ---
 
+### 👷 Platform Work & Algorithmic Labour Rights
+*Platform workers have their livelihoods managed by algorithms they cannot see, challenge, or collectively negotiate over.*
+
+Algorithmic management systems set pay, assign tasks, monitor performance, and can deactivate platform workers without human review. These systems concentrate power in platform operators while workers bear the risks — and the classification of workers as independent contractors has been used to strip away the labour protections that would otherwise apply. This domain establishes rights to algorithmic transparency, human review of automated decisions, pay formula disclosure, worker data access, and collective governance of algorithmic systems.
+
+**Key tensions addressed:** platform efficiency vs. workers' right to understand and contest the systems that control their livelihoods; employment classification vs. functional labour rights; individual data rights vs. collective data governance; algorithmic management vs. traditional labour law.
+
+*Grounded in:* EU Platform Work Directive (near-final 2024–2025); GDPR Articles 15, 20, 22; NYC TLC Minimum Pay Rules; EU AI Act Annex III (work management AI as high-risk); UK Supreme Court *Uber v. Aslam* (2021).
+
+---
+
+### 💰 Surveillance Pricing & Consumer Data Rights
+*Why are you paying more than your neighbour for the same product? Because your data told them you would.*
+
+Surveillance pricing uses behavioural, locational, and demographic data to charge different people different prices for identical goods and services. The same mechanism operates in labour markets where platforms suppress wages for workers who show willingness to accept lower pay. This domain establishes the right to know when your price was personalised, protection against vulnerability-based exploitation, prohibition on discriminatory pricing through algorithmic proxy variables, and data minimisation requirements that limit the surveillance infrastructure on which these systems depend.
+
+**Key tensions addressed:** market personalisation vs. price exploitation; consumer data rights vs. surveillance infrastructure; anti-discrimination law vs. proxy variables; individual transparency rights vs. structural prohibition.
+
+*Grounded in:* EU Digital Markets Act (2022); EU Unfair Commercial Practices Directive; FTC surveillance pricing inquiry (2024); Colorado SB21-169 (insurance algorithm testing); GDPR data minimisation and purpose limitation principles.
+
+---
+
+### ⚖️ Platform Liability & Systemic Accountability
+*Large platforms are not neutral infrastructure — they make deliberate algorithmic choices that produce foreseeable harms at scale.*
+
+Platforms built their business models on engagement-maximising algorithms that amplify sensational, harmful, and manipulative content because it generates more interaction. Liability frameworks designed for a 1996 internet have been used to shield them from accountability for the foreseeable consequences of these design choices. This domain establishes systemic risk assessments, independent audit requirements, user due process rights, algorithmic transparency obligations, and penalties scaled to global revenue — addressing platform accountability for the design of their systems, not liability for individual content decisions.
+
+**Key tensions addressed:** platform immunity from liability vs. accountability for algorithmic design; free expression vs. systemic harm amplification; transparency vs. trade secrecy; regulatory independence vs. capture; individual content liability vs. systemic design responsibility.
+
+*Grounded in:* EU Digital Services Act (2022); UK Online Safety Act (2023); US Section 230 reform debate; EU AI Act recommender system obligations; Santa Clara Principles 2.0.
+
+---
+
 ## What "Model Language" Means
 
 Policy models in this repository are not off-the-shelf ordinances to be adopted verbatim. They are:
