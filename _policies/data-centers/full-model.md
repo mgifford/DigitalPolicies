@@ -267,6 +267,14 @@ For all other data centers, the above requirements are strongly recommended and 
 
 ---
 
+### European Union — Corporate Sustainability Reporting Directive (CSRD)
+**Enacted:** 2022 (Directive 2022/2464); first reports filed 2024 (large companies) with phased rollout to 2028
+**Type:** EU Directive
+**Link:** https://ec.europa.eu/info/business-economy-euro/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en
+**Summary:** The CSRD requires large companies operating in the EU to report on their environmental, social, and governance (ESG) impacts under a standardised framework (European Sustainability Reporting Standards, ESRS). For digital infrastructure operators, this includes disclosure of energy consumption, carbon emissions (Scope 1, 2, and 3 where material), water use, and transition plans. The ESRS E1 standard on climate change requires disclosure of absolute energy consumption disaggregated by source (renewable vs. non-renewable) — directly applicable to data center operators. Compared to voluntary schemes, CSRD mandates external assurance of sustainability disclosures, closing the self-reporting verification gap. Limitation: applies to companies with 500+ employees and either €150M+ turnover or balance sheet above €20M in the EU; smaller operators are phased in from 2026–2028 and micro-enterprises may be excluded. Does not mandate efficiency targets or renewable energy thresholds — it is a disclosure requirement, not a performance standard.
+
+---
+
 ## Gaps and Known Weaknesses
 
 - **Scope 3 emissions accounting** — Hardware manufacturing (particularly semiconductors) is a major source of embodied carbon, but supply chain complexity makes this very difficult to measure and enforce at a local or national level. This model does not yet include enforceable scope 3 requirements beyond the hardware lifecycle provisions.
@@ -319,3 +327,4 @@ For all other data centers, the above requirements are strongly recommended and 
 | Version | Date | Summary |
 |---|---|---|
 | 0.1 | 2026-04-04 | Initial draft |
+| 0.2 | 2026-04-18 | Added EU Corporate Sustainability Reporting Directive (CSRD) as real-world example |

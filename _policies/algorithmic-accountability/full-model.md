@@ -313,6 +313,7 @@ The environmental footprint of algorithmic decision-making is primarily in model
 - **Who audits the auditors** — No jurisdiction has established auditor accreditation or oversight. Audit quality is unverifiable; conflicts of interest are possible. A meta-audit requirement (as proposed in Pillar 4) is one partial remedy, but formal auditor standards are needed.
 - **Global South** — Algorithmic accountability legislation is almost entirely a North American and European phenomenon. High-stakes algorithmic systems are deployed in Global South contexts, often by international organisations and development banks, with no accountability framework.
 - **Intersectionality** — Most bias audit requirements test protected characteristics independently. Systems can produce discriminatory outcomes specifically for people at the intersection of multiple characteristics (e.g. Black women, disabled immigrants) that are invisible to single-axis analysis. Intersectional testing methodology needs development.
+- **Data access for researchers** — Meaningful algorithmic accountability requires independent researchers to be able to audit platform and operator systems, replicate claimed audit results, and study systemic effects across populations. Access to the data needed for such research is almost entirely controlled by operators. The EU Digital Services Act's vetted researcher access provisions (Article 40) represent the most significant enacted step toward research data access, but the framework is limited to very large platforms and to content-related data rather than algorithmic decision data. No equivalent exists in North America. Research-grade access to algorithmic decision data — with appropriate privacy protections — is a prerequisite for meaningful independent accountability.
 
 ---
 
@@ -327,7 +328,7 @@ The environmental footprint of algorithmic decision-making is primarily in model
 | [Freedom of Expression](../../freedom-of-expression/full-model/) | Content moderation algorithms are a key application of algorithmic accountability standards |
 | [Platform Work & Algorithmic Labour Rights](../../platform-work/full-model/) | Algorithmic management systems used in platform work are covered by this domain's bias audit standards; the Platform Work domain addresses worker-specific rights |
 | [Surveillance Pricing & Consumer Data Rights](../../surveillance-pricing/full-model/) | Algorithmic pricing systems require bias audit and disparate impact testing consistent with the standards in this domain |
-| [Platform Liability & Systemic Accountability](../../platform-liability/full-model/) | Platform recommendation systems are algorithmic decision systems requiring the transparency and audit standards established here |
+| [Platform Liability & Systemic Accountability](../../platform-liability/full-model/) | Platform recommendation systems are algorithmic decision systems requiring the transparency and audit standards established here; the EU Digital Services Act establishes research data access and algorithmic transparency obligations for large platforms that complement this model |
 
 ---
 
@@ -367,6 +368,7 @@ All substantive changes go through a minimum 14-day public comment period before
 |---|---|---|
 | 0.1 | 2026-04-04 | Initial draft — four pillars, real-world examples from NYC, Colorado, Illinois, Canada, EU, Santa Clara Principles |
 | 0.2 | 2026-04-18 | Added cross-domain dependencies to Platform Work, Surveillance Pricing, and Platform Liability domains |
+| 0.3 | 2026-04-18 | Updated Platform Liability cross-domain dependency to reference EU DSA researcher access; added data access for researchers as identified gap |
 
 ---
 
