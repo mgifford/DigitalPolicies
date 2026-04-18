@@ -294,6 +294,14 @@ The environmental footprint of platform work algorithms is primarily in the comp
 
 ---
 
+### International Labour Organization (ILO) — Platform Work Research and Standards
+**Published:** Ongoing; key reports 2021–2024
+**Type:** International research and standards body
+**Link:** https://www.ilo.org/global/topics/platform-economy/lang--en/index.htm
+**Summary:** The ILO has produced the most comprehensive cross-national research on platform work globally, documenting employment conditions, wage levels, working hours, and the impact of algorithmic management across ride-hailing, food delivery, professional services, and micro-task platforms in both high-income and lower-income countries. Key findings: the majority of platform workers earn below local minimum wages after expenses; algorithmic management routinely circumvents collective bargaining protections; workers in the Global South face amplified risks due to weaker regulatory environments. The ILO's 2021 report *World Employment and Social Outlook: The Role of Digital Labour Platforms in Transforming the World of Work* and subsequent research provide the primary evidence base for the equity considerations and gap analysis in this policy model. The ILO does not itself regulate platform work — its standards are recommendations, not binding obligations — but its research is used directly in EU Platform Work Directive negotiations and national legislative debates. Limitation: ILO instruments on platform work are soft law; enforcement depends entirely on national implementation. The organisation has been slower than the pace of platform expansion in developing specific standards for algorithmic management.
+
+---
+
 ## Gaps and Known Weaknesses
 
 - **Classification complexity** — Employment classification law varies dramatically by jurisdiction and is actively contested by platform operators through litigation and lobbying. The rights in this model are designed to be classification-neutral, but enforcement mechanisms may not be available to workers classified as independent contractors in all jurisdictions.
@@ -302,6 +310,7 @@ The environmental footprint of platform work algorithms is primarily in the comp
 - **Collective bargaining scope** — Most jurisdictions have not extended collective bargaining rights to independent contractors. The aspirational collective bargaining standard is achievable but requires legislative action that faces significant opposition.
 - **Global South gap** — Platform work is growing fastest in lower-income countries. Regulatory frameworks are almost absent. The standards in this model reflect primarily EU and North American experience.
 - **Surveillance beyond work allocation** — Algorithmic management increasingly includes continuous surveillance of workers — tracking location, monitoring phone use, audio and video recording — that goes beyond task allocation and pay. This model does not fully address the surveillance dimension.
+- **Data labour and AI supply chains** — Workers who annotate training data, perform micro-tasks to evaluate AI outputs, or contribute content that trains AI systems occupy a distinct category not addressed by platform work or AI governance frameworks. Data annotation work — largely invisible, globally distributed, and poorly compensated — underpins AI systems deployed in high-income markets. No jurisdiction has enacted legislation that recognises data labour as a distinct legal category, establishes minimum standards for data annotation working conditions, or requires transparency in AI training supply chains. The EU AI Act requires documentation of training data sources but imposes no obligations on the working conditions under which that data was produced. This is a significant gap in both labour rights and AI accountability frameworks.
 
 ---
 
@@ -344,6 +353,7 @@ Priority contribution needs for this model:
 - **Global South examples** — Platform work regulation or advocacy from African, Asian, and Latin American jurisdictions where platform work is growing
 - **Surveillance beyond work allocation** — Model language addressing continuous algorithmic surveillance of platform workers beyond task assignment and pay
 - **Enforcement model** — Detailed analysis of which enforcement mechanisms have produced measurable compliance outcomes in platform work regulation
+- **Data labour model language** — Draft standards for data annotation and AI training supply chains: minimum working conditions, transparency requirements, and recognition of data labour as a distinct category
 
 All substantive changes go through a minimum 14-day public comment period before merging.
 
@@ -354,6 +364,7 @@ All substantive changes go through a minimum 14-day public comment period before
 | Version | Date | Summary of changes |
 |---|---|---|
 | 0.1 | 2026-04-18 | Initial draft — four pillars, real-world examples from EU, NYC, California, UK |
+| 0.2 | 2026-04-18 | Added ILO platform work research as real-world example; added data labour/AI supply chains as identified gap |
 
 ---
 
