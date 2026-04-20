@@ -157,6 +157,28 @@ description: Build a policy-grounded prompt for your AI assistant — letters, t
   border-color: rgba(255,255,255,0.7);
 }
 
+/* Dark mode: primary header is bright green (#4ade80); darken button bg so white text passes 4.5:1 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .copy-btn {
+    background: rgba(0,0,0,0.5);
+    border-color: rgba(255,255,255,0.5);
+  }
+  :root:not([data-theme="light"]) .copy-btn:hover { background: rgba(0,0,0,0.65); }
+  :root:not([data-theme="light"]) .copy-btn.copied {
+    background: rgba(0,0,0,0.65);
+    border-color: rgba(255,255,255,0.7);
+  }
+}
+:root[data-theme="dark"] .copy-btn {
+  background: rgba(0,0,0,0.5);
+  border-color: rgba(255,255,255,0.5);
+}
+:root[data-theme="dark"] .copy-btn:hover { background: rgba(0,0,0,0.65); }
+:root[data-theme="dark"] .copy-btn.copied {
+  background: rgba(0,0,0,0.65);
+  border-color: rgba(255,255,255,0.7);
+}
+
 .output-card__body {
   padding: 1.5rem;
   max-height: 65vh;
