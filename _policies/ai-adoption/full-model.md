@@ -1,4 +1,6 @@
 ---
+title: "AI Adoption & Governance — Model Policy"
+description: "Model policy language for legitimate public-sector AI: risk-assessed, transparent to affected people, contestable, and required to disclose when it's AI."
 ---
 # AI Adoption & Governance — Model Policy
 

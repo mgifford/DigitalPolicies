@@ -1,4 +1,6 @@
 ---
+title: "Right to Repair, Interoperability & E-Waste — Model Policy"
+description: "Model policy language closing software loopholes that prevent repair, requiring spare parts and repair documentation, and holding producers responsible for e-waste."
 ---
 # Right to Repair & Interoperability — Model Policy
 

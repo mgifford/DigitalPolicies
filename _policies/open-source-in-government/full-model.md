@@ -1,4 +1,6 @@
 ---
+title: "Open Source in Government — Model Policy"
+description: "Model policy language requiring open release of publicly-funded software, prohibiting vendor lock-in, and establishing open source preference in public procurement."
 ---
 # Open Source in Government — Model Policy
 

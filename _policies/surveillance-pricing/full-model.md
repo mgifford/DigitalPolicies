@@ -1,4 +1,6 @@
 ---
+title: "Surveillance Pricing & Consumer Data Rights — Model Policy"
+description: "Model policy language giving consumers the right to know when prices are personalised, protection from vulnerability-based exploitation, and data minimisation rights."
 ---
 # Surveillance Pricing & Consumer Data Rights — Model Policy
 

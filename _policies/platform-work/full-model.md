@@ -1,4 +1,6 @@
 ---
+title: "Platform Work & Algorithmic Labour Rights — Model Policy"
+description: "Model policy language establishing rights to algorithmic transparency, human review, pay formula disclosure, and collective governance for platform workers."
 ---
 # Platform Work & Algorithmic Labour Rights — Model Policy
 

@@ -1,4 +1,6 @@
 ---
+title: "Platform Liability & Systemic Accountability — Model Policy"
+description: "Model policy language establishing systemic risk assessments, independent audits, user due process rights, and revenue-scaled penalties for platform harms."
 ---
 # Platform Liability & Systemic Accountability — Model Policy
 

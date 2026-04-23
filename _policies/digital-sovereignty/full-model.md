@@ -1,6 +1,7 @@
 ---
 layout: domain-full
 title: "Digital Sovereignty — Model Policy"
+description: "Model policy language ensuring communities can understand, audit, and exit the digital systems they depend on — making dependency transparent, voluntary, and reversible."
 domain: digital-sovereignty
 ---
 

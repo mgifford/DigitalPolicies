@@ -1,4 +1,6 @@
 ---
+title: "Digital Accessibility & Inclusion — Model Policy"
+description: "Model policy language to make digital public services work for everyone — enforcing accessibility as a right through procurement, not a courtesy applied after the fact."
 ---
 # Digital Accessibility & Inclusion — Model Policy
 

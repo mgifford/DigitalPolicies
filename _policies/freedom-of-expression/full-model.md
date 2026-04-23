@@ -1,4 +1,6 @@
 ---
+title: "Freedom of Expression & Content Governance — Model Policy"
+description: "Model policy language that honestly surfaces the trade-offs between harm prevention and free expression in platform content moderation."
 ---
 # Freedom of Expression & Content Governance — Model Policy
 

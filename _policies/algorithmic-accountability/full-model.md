@@ -1,4 +1,6 @@
 ---
+title: "Algorithmic Accountability — Model Policy"
+description: "Model policy language establishing independent bias auditing, individual rights to challenge automated decisions, and meaningful human review of algorithms."
 ---
 # Algorithmic Accountability — Model Policy
 
