@@ -13,9 +13,9 @@ author:
   url: https://github.com/mgifford/DigitalPolicies
 
 # Social / SEO
-twitter:
-  username: mgifford
-  card: summary_large_image
+# twitter.username removed intentionally — we do not link to X/Twitter
+# The twitter:card type is kept via a manual tag in default.html because it is
+# re-used by other platforms (e.g. social card format hinting).
 
 # Default social image — referenced by jekyll-seo-tag for og:image
 logo: /DigitalPolicies/assets/img/og-image.png

@@ -1,4 +1,6 @@
 ---
+title: "Digital Public Infrastructure — Model Policy"
+description: "Model policy language for digital identity, payment rails, and data exchange platforms that are open, governed in the public interest, and accessible to all."
 ---
 # Digital Public Infrastructure — Model Policy
 

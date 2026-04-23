@@ -1,6 +1,7 @@
 ---
 layout: domain-full
 title: "Web Sustainability — Model Policy"
+description: "Model policy language for a greener web — addressing software design, device longevity, hosting choices, and how digital services reduce their material footprint."
 domain: web-sustainability
 ---
 

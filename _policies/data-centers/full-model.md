@@ -1,4 +1,6 @@
 ---
+title: "Data Centers & Environmental Sustainability — Model Policy"
+description: "Model policy language ensuring communities share the benefits of data centres and aren't left with the environmental and infrastructure costs of AI and cloud computing."
 ---
 # Data Centers & Environmental Sustainability — Model Policy
 

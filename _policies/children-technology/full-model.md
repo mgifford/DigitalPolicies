@@ -1,4 +1,6 @@
 ---
+title: "Children & Technology — Model Policy"
+description: "Model policy language protecting children from manipulation, surveillance, and algorithmic amplification of harmful content in digital environments."
 ---
 # Children & Technology — Model Policy
 

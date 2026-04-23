@@ -1,4 +1,6 @@
 ---
+title: "Smart Cities & Privacy — Model Policy"
+description: "Model policy language for smart city technology with procurement limits, data minimisation, and community consent mechanisms to prevent mass surveillance."
 ---
 # Smart Cities & Privacy — Model Policy
 
