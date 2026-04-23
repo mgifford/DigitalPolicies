@@ -285,7 +285,7 @@ AI-powered content moderation at scale consumes significant compute resources. P
 
 ### Council of Europe — Recommendation on Content Moderation
 **Published:** 2022 (CM/Rec(2022)16)
-**Link:** https://www.coe.int/en/web/freedom-expression/recommendation-cm-rec-2022-16
+**Link:** https://rm.coe.int/recommendation-cm-rec-2022-16-of-the-committee-of-ministers-to-member-st/1680a8a67a
 **Summary:** The Council of Europe's Recommendation on content moderation in online environments sets out human rights-compliant principles for platform content governance, drawing on Article 10 ECHR and Article 8 (privacy). It explicitly addresses the need for transparency, appeal rights, independent oversight, and the human rights impact of algorithmic systems. Unlike the DSA, the Recommendation is non-binding — it provides normative guidance rather than enforceable standards. It is notable for its explicit integration of the human rights framework with platform governance requirements.
 
 ---

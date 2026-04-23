@@ -92,7 +92,7 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 
 *Rationale: EU AI Act Article 5 prohibits (a), (c), (d), and forms of (e). San Francisco, Oakland, Boston, and other US cities have enacted facial recognition bans for city departments. Portland OR enacted the most comprehensive local facial recognition ban in the US (2020), covering both city agencies and private entities in public accommodations. NYC Local Law 144 (2021) addresses automated employment tools. The prohibited list above draws on these enacted models.*
 
-*Reference: EU AI Act Article 5; [San Francisco Ordinance 103-19](https://sfbos.org/sites/default/files/o0103-19.pdf); [Portland OR Ordinance 190114](https://www.portland.gov/sites/default/files/2020/190114.pdf); [ACLU Smart Cities Principles](https://www.aclu.org/report/dawn-robot-surveillance)*
+*Reference: EU AI Act Article 5; [San Francisco Ordinance 103-19](https://sfbos.org/sites/default/files/o0103-19.pdf); [Portland OR Ordinance 190114](https://www.portland.gov/bts/surveillance-and-ai); [ACLU Smart Cities Principles](https://www.aclu.org/report/dawn-robot-surveillance)*
 
 ---
 
@@ -119,7 +119,7 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 
 *Rationale: Seattle's Surveillance Ordinance (CB 119501, 2017) requires a Surveillance Impact Report before acquiring surveillance technology and annual reviews. Nashville, Nashville, Durham, and Nashville have similar ordinances. The register requirement here extends to all smart city data collection, not just technologies classified as "surveillance."*
 
-*Reference: [Seattle Surveillance Ordinance](https://seattle.legistar.com/LegislationDetail.aspx?ID=3330606); [ACLU Community Control Over Police Surveillance (CCOPS) model ordinance](https://www.aclu.org/legislative-model-government-surveillance)*
+*Reference: [Seattle Surveillance Ordinance](https://seattle.legistar.com/LegislationDetail.aspx?ID=3330606); [ACLU Community Control Over Police Surveillance (CCOPS) model ordinance](https://www.aclu.org/issues/privacy-technology/surveillance-technologies/community-control-over-police-surveillance)*
 
 ---
 
@@ -273,7 +273,7 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 
 ### Toronto — Sidewalk Labs Waterfront Withdrawal (Cautionary Example)
 **Timeline:** 2017–2020
-**Summary:** Alphabet subsidiary Sidewalk Labs proposed a "smart city from the internet up" on Toronto's waterfront, offering significant investment in exchange for data rights over a major urban development. After three years of community opposition — centred on data governance, privacy, and the transfer of public planning authority to a private corporation — the project was cancelled in May 2020 citing "unprecedented economic uncertainty" (though community opposition was a major factor). The Toronto case is the defining cautionary example of what happens when smart city development prioritises corporate data interests over community governance. The [Sidewalk Toronto Data Governance Proposal](https://sidewalktoronto.ca/) and the work of the [Waterfront Toronto Digital Strategy Advisory Panel](https://www.waterfrontoronto.ca/our-work/transforming-our-waterfront/quayside/digital-strategy) provide detailed reference material.
+**Summary:** Alphabet subsidiary Sidewalk Labs proposed a "smart city from the internet up" on Toronto's waterfront, offering significant investment in exchange for data rights over a major urban development. After three years of community opposition — centred on data governance, privacy, and the transfer of public planning authority to a private corporation — the project was cancelled in May 2020 citing "unprecedented economic uncertainty" (though community opposition was a major factor). The Toronto case is the defining cautionary example of what happens when smart city development prioritises corporate data interests over community governance. The [Sidewalk Toronto Data Governance Proposal](https://sidewalktoronto.ca/) and the work of the [Waterfront Toronto Digital Strategy Advisory Panel](https://www.waterfrontoronto.ca/) provide detailed reference material.
 
 ---
 
@@ -282,7 +282,7 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 **Type:** Municipal programme
 **Summary:** Barcelona's Superblocks programme redesigns streets for pedestrians and cyclists using sensor data for monitoring. Critically, Barcelona's Digital City Plan (2016) established city data sovereignty principles — the city retains data ownership, vendors cannot resell city data, and open standards are required. Barcelona also pioneered the use of distributed data infrastructure (FIWARE) to avoid vendor lock-in. Barcelona's approach demonstrates that smart city benefits can be achieved alongside strong data sovereignty.
 
-*Reference: [Barcelona Digital City Plan](https://ajuntament.barcelona.cat/digital/en/digital-innovation/data-driven-city-management/data-sovereignty)*
+*Reference: [Barcelona Digital City Plan](https://ajuntament.barcelona.cat/digital/en/)*
 
 ---
 

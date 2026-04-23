@@ -104,7 +104,7 @@ The internet's material footprint is distributed across user devices (approximat
 
 *Rationale:* Page weight is the single most actionable metric for web sustainability. The average web page has grown from approximately 500 KB in 2012 to over 2.5 MB in 2024, driven primarily by JavaScript frameworks, unoptimised images, and third-party tracking scripts — none of which are necessary for public information services. A 1 MB limit for informational pages is achievable with standard HTML and CSS; it does not prohibit rich functionality but requires deliberate design decisions. Core Web Vitals are Google's standardised performance indicators that proxy for user experience quality and, indirectly, energy efficiency.
 
-*Reference:* [HTTP Archive Web Almanac](https://almanac.httparchive.org/): annual data on page weight and web performance across millions of sites. [W3C WSG 5.18 — Minify Your HTML/CSS/JS](https://www.w3.org/TR/sustyweb/#minify-your-html-css-js).
+*Reference:* [HTTP Archive Web Almanac](https://almanac.httparchive.org/): annual data on page weight and web performance across millions of sites. [W3C WSG 5.18 — Minify Your HTML/CSS/JS](https://w3c.github.io/sustyweb/#minify-your-html-css-js).
 
 ---
 
@@ -122,7 +122,7 @@ The internet's material footprint is distributed across user devices (approximat
 
 *Rationale:* The W3C Web Sustainability Guidelines are the most comprehensive and technically rigorous framework for web sustainability currently available. They are structured analogously to WCAG — with guidelines, success criteria, and conformance levels — making them directly usable as procurement criteria. Requiring a vendor WSG Alignment Statement creates accountability without mandating full conformance immediately; the roadmap requirement creates a trajectory toward improvement. This mirrors the approach taken with accessibility (VPAT / ACR statements) that has driven consistent accessibility improvement in procured software.
 
-*Reference:* [W3C Web Sustainability Guidelines (WSG 1.0)](https://www.w3.org/TR/sustyweb/): the primary technical reference for this provision.
+*Reference:* [W3C Web Sustainability Guidelines (WSG 1.0)](https://w3c.github.io/sustyweb/): the primary technical reference for this provision.
 
 ---
 
