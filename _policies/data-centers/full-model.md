@@ -75,7 +75,7 @@ Current global data center electricity consumption is estimated at 200–250 TWh
 
 *Rationale:* Communities cannot evaluate the impact of digital infrastructure they cannot measure. Transparency at the pre-permit stage — not just post-construction reporting — is the only mechanism that gives communities genuine leverage. Current practice in most jurisdictions involves little or no pre-approval disclosure; data center developers often negotiate with economic development agencies in private before communities are aware of a project.
 
-*Reference:* [Ireland's Data Centre Planning Guidelines (2022)](https://www.gov.ie/en/publication/): Ireland's national framework includes impact assessment requirements at the planning stage. [Virginia SB 1398 (2024)](https://lis.virginia.gov): community impact transparency requirements tied to tax incentives.
+*Reference:* [Ireland's Data Centre Planning Guidelines (2022)](https://www.gov.ie/en/collection/data-centre-planning-guidelines/): Ireland's national framework includes impact assessment requirements at the planning stage. [Virginia SB 1398 (2024)](https://lis.virginia.gov): community impact transparency requirements tied to tax incentives.
 
 ---
 
@@ -147,7 +147,7 @@ For all other data centers, the above requirements are strongly recommended and 
 
 *Rationale:* Server hardware carries significant embodied carbon — the emissions from manufacturing often exceed operational emissions over the equipment's lifetime. Extending useful server life from 3–4 years (typical industry norm) to 5+ years reduces embodied carbon substantially. More importantly, massive volumes of perfectly functional servers are discarded purely because a newer model is available, while communities and public institutions lack access to affordable computing hardware. The refurbishment and donation provisions address both the environmental and equity dimensions of this failure. This is listed as aspirational because it goes beyond current regulatory requirements in most jurisdictions — but it is achievable with standard procurement and contracting practice, and should be made mandatory for facilities receiving public support.
 
-*Reference:* [EU Ecodesign Regulation for servers (in development)](https://ec.europa.eu/info/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/ecodesign/products-and-packaging_en): EU is developing minimum durability and recyclability standards for server hardware. [iFixit Right to Repair for data centers](https://www.ifixit.com): framework for server repairability.
+*Reference:* [EU Ecodesign Regulation for servers (in development)](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/ecodesign-sustainable-products-regulation_en): EU is developing minimum durability and recyclability standards for server hardware. [iFixit Right to Repair for data centers](https://www.ifixit.com): framework for server repairability.
 
 ---
 

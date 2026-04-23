@@ -131,7 +131,7 @@ The environmental footprint of platform work algorithms is primarily in the comp
 
 *Rationale: New York City's TLC Minimum Pay Rules (2019) established that rideshare drivers must receive at minimum the NYC minimum wage after expenses, calculated per minute and per mile — the first regulatory framework to mandate algorithmic pay transparency and minimum pay for platform workers. The pay formula is now public and auditable. This standard generalises that model to all platform work, requiring disclosure of the complete pay structure, not just a floor.*
 
-*Reference: NYC TLC Minimum Pay Rules (effective January 2019); [NYC TLC minimum pay page](https://www.nyc.gov/site/tlc/businesses/minimum-pay.page); Mishel (EPI), "Uber and the labor market", 2018*
+*Reference: NYC TLC Minimum Pay Rules (effective January 2019); [NYC TLC minimum pay page](https://www.nyc.gov/site/tlc/industry/driver-pay.page); Mishel (EPI), "Uber and the labor market", 2018*
 
 ---
 
@@ -273,7 +273,7 @@ The environmental footprint of platform work algorithms is primarily in the comp
 ### New York City — TLC Minimum Pay Rules
 **Enacted:** 2018; in effect January 2019
 **Type:** City regulatory rule
-**Link:** https://www.nyc.gov/site/tlc/businesses/minimum-pay.page
+**Link:** https://www.nyc.gov/site/tlc/industry/driver-pay.page
 **Summary:** New York City's Taxi and Limousine Commission established minimum pay for app-based for-hire vehicle drivers, calculated as a per-minute and per-mile formula ensuring drivers net at least the NYC minimum wage after expenses. Uber and Lyft were required to implement the formula and provide pay transparency to drivers. The first regulatory framework in North America to constrain algorithmic wage-setting for platform workers. Results: average driver earnings increased; platform companies challenged the rules through litigation without success. The NYC formula has been studied and referenced in multiple jurisdictions considering similar rules. Limitation: applies only to for-hire vehicle drivers, not other platform work categories.
 
 ---
@@ -297,7 +297,7 @@ The environmental footprint of platform work algorithms is primarily in the comp
 ### International Labour Organization (ILO) — Platform Work Research and Standards
 **Published:** Ongoing; key reports 2021–2024
 **Type:** International research and standards body
-**Link:** https://www.ilo.org/global/topics/platform-economy/lang--en/index.htm
+**Link:** https://www.ilo.org/topics/platform-economy
 **Summary:** The ILO has produced the most comprehensive cross-national research on platform work globally, documenting employment conditions, wage levels, working hours, and the impact of algorithmic management across ride-hailing, food delivery, professional services, and micro-task platforms in both high-income and lower-income countries. Key findings: the majority of platform workers earn below local minimum wages after expenses; algorithmic management routinely circumvents collective bargaining protections; workers in the Global South face amplified risks due to weaker regulatory environments. The ILO's 2021 report *World Employment and Social Outlook: The Role of Digital Labour Platforms in Transforming the World of Work* and subsequent research provide the primary evidence base for the equity considerations and gap analysis in this policy model. The ILO does not itself regulate platform work — its standards are recommendations, not binding obligations — but its research is used directly in EU Platform Work Directive negotiations and national legislative debates. Limitation: ILO instruments on platform work are soft law; enforcement depends entirely on national implementation. The organisation has been slower than the pace of platform expansion in developing specific standards for algorithmic management.
 
 ---

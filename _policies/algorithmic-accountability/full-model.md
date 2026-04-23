@@ -276,7 +276,7 @@ The environmental footprint of algorithmic decision-making is primarily in model
 ### Illinois — Artificial Intelligence Video Interview Act (AIEA)
 **Enacted:** January 2020
 **Type:** State law
-**Link:** https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=4015&ChapterID=68
+**Link:** https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=4015
 **Summary:** Employers using AI to analyse video interviews must notify applicants before the interview, explain how AI analysis works, describe what characteristics the AI evaluates, and obtain consent. Applicants who do not consent cannot have AI used to analyse their interview. Upon request, employers must delete video recordings and instruct any third parties in possession of the recordings to delete them within 30 days. First enacted AI transparency requirement specifically targeting hiring algorithms, and notable for requiring informed consent rather than just disclosure. Weakness: does not require bias auditing or publication of aggregate results.
 
 ---

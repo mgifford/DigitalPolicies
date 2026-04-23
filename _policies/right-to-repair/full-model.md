@@ -96,7 +96,7 @@ The average smartphone is replaced every 2.5–3 years. The average laptop every
 
 *Rationale:* This is the "interoperability by design" principle advocated by FSFE and embedded (imperfectly) in the EU Digital Markets Act. The DMA's approach has been criticised because it creates a request-based process controlled by the gatekeeper. This provision establishes the obligation proactively, without requiring an individual request, and explicitly protects open source implementations.
 
-*Reference:* [EU Digital Markets Act (DMA)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1925); [FSFE Device Neutrality](https://fsfe.org/activities/deviceneutrality/); [EFF on interoperability](https://www.eff.org/deeplinks/2024/01/what-competition-reform-could-look-like)
+*Reference:* [EU Digital Markets Act (DMA)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1925); [FSFE Device Neutrality](https://fsfe.org/activities/deviceneutrality/); [EFF on interoperability](https://www.eff.org/issues/competition)
 
 ---
 
@@ -112,7 +112,7 @@ The average smartphone is replaced every 2.5–3 years. The average laptop every
 
 *Rationale:* France introduced a mandatory "repairability index" (indice de réparabilité) in 2021, later evolving into a "durability index" (indice de durabilité). This is the first legally mandated product repairability scoring system. It gives consumers and public buyers comparable information about repairability and creates market incentives for more repairable design.
 
-*Reference:* [France Repairability Index](https://www.indicereparabilite.fr/en/)
+*Reference:* [France Repairability Index](https://www.indicereparabilite.fr/)
 
 ---
 

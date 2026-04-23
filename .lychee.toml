@@ -36,6 +36,21 @@ exclude = [
   # Twitter/X requires login for many pages
   "twitter\\.com",
   "x\\.com",
+  # Sites that return 403 for automated checkers but serve content to browsers
+  "doi\\.colorado\\.gov",
+  "ftc\\.gov",
+  "e3p\\.jrc\\.ec\\.europa\\.eu",
+  "amsterdam\\.nl",
+  "legifrance\\.gouv\\.fr",
+  "undp\\.org",
+  "substack\\.com",
+  # Sites with HTTP/2 protocol issues in CI
+  "esafety\\.gov\\.au",
+  # Sites with intermittent connection failures in CI
+  "digital-services-act\\.ec\\.europa\\.eu",
+  # Sites that consistently time out from CI runners
+  "gesetze-im-internet\\.de",
+  "gdpr\\.eu",
 ]
 
 # Skip these file patterns
