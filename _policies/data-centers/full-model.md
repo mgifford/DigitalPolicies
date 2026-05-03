@@ -77,7 +77,7 @@ Current global data center electricity consumption is estimated at 200–250 TWh
 
 *Rationale:* Communities cannot evaluate the impact of digital infrastructure they cannot measure. Transparency at the pre-permit stage — not just post-construction reporting — is the only mechanism that gives communities genuine leverage. Current practice in most jurisdictions involves little or no pre-approval disclosure; data center developers often negotiate with economic development agencies in private before communities are aware of a project.
 
-*Reference:* [Ireland's Data Centre Planning Guidelines (2022)](https://www.gov.ie/en/collection/data-centre-planning-guidelines/): Ireland's national framework includes impact assessment requirements at the planning stage. [Virginia SB 1398 (2024)](https://lis.virginia.gov): community impact transparency requirements tied to tax incentives.
+*Reference:* [Ireland's Data Centre Planning Guidelines (2022)](https://web.archive.org/web/20231201120000/https://www.gov.ie/en/collection/data-centre-planning-guidelines/): Ireland's national framework includes impact assessment requirements at the planning stage. [Virginia SB 1398 (2024)](https://lis.virginia.gov): community impact transparency requirements tied to tax incentives.
 
 ---
 
