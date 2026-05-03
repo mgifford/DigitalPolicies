@@ -44,6 +44,9 @@ exclude = [
   "legifrance\\.gouv\\.fr",
   "undp\\.org",
   "substack\\.com",
+  "claude\\.ai",
+  # Council of Europe document server returns 401 to bots but is publicly accessible
+  "rm\\.coe\\.int",
   # Sites with HTTP/2 protocol issues in CI
   "esafety\\.gov\\.au",
   # Sites with intermittent connection failures in CI

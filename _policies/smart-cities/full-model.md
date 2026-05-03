@@ -94,7 +94,7 @@ Smart city sensor networks, compute infrastructure, and data storage have materi
 
 *Rationale: EU AI Act Article 5 prohibits (a), (c), (d), and forms of (e). San Francisco, Oakland, Boston, and other US cities have enacted facial recognition bans for city departments. Portland OR enacted the most comprehensive local facial recognition ban in the US (2020), covering both city agencies and private entities in public accommodations. NYC Local Law 144 (2021) addresses automated employment tools. The prohibited list above draws on these enacted models.*
 
-*Reference: EU AI Act Article 5; [San Francisco Ordinance 103-19](https://sfbos.org/sites/default/files/o0103-19.pdf); [Portland OR Ordinance 190114](https://www.portland.gov/bts/surveillance-and-ai); [ACLU Smart Cities Principles](https://www.aclu.org/report/dawn-robot-surveillance)*
+*Reference: EU AI Act Article 5; [San Francisco Ordinance 103-19](https://sfbos.org/sites/default/files/o0103-19.pdf); [Portland OR Ordinance 190114](https://web.archive.org/web/20230601120000/https://www.portland.gov/bts/surveillance-and-ai); [ACLU Smart Cities Principles](https://www.aclu.org/report/dawn-robot-surveillance)*
 
 ---
 

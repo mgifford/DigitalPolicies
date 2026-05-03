@@ -79,7 +79,7 @@ Accessible design is generally more sustainable digital design. Semantic HTML, c
 
 *Rationale:* WCAG 2.2 is the current W3C standard (September 2023), adding nine new success criteria over WCAG 2.1 — particularly strengthening protections for users with cognitive and motor disabilities. The EU EAA and WAD currently reference WCAG 2.1 via EN 301 549; 2.2 is the more current baseline. WCAG 3.0 is in development and not yet ready for adoption.
 
-*Reference:* [WCAG 2.2 (W3C)](https://www.w3.org/TR/WCAG22/); [EN 301 549 v3 (ETSI)](https://www.etsi.org/technologies/accessibility); [EU Web Accessibility Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L2102); [EU European Accessibility Act](https://ec.europa.eu/social/main.jsp?catId=1202)
+*Reference:* [WCAG 2.2 (W3C)](https://www.w3.org/TR/WCAG22/); [EN 301 549 v3 (ETSI)](https://web.archive.org/web/20230601120000/https://www.etsi.org/technologies/accessibility); [EU Web Accessibility Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L2102); [EU European Accessibility Act](https://ec.europa.eu/social/main.jsp?catId=1202)
 
 ---
 
@@ -88,7 +88,7 @@ Accessible design is generally more sustainable digital design. Semantic HTML, c
 
 *Rationale:* EN 301 549 is the EU harmonised standard that covers the full range of ICT — not just websites. It incorporates WCAG for web content but adds requirements for hardware, documents, video, telephony, and other ICT types. It is functionally equivalent to the US Section 508 standards (both are derived from the same source). Using EN 301 549 or equivalent gives procurement teams a single, comprehensive technical standard.
 
-*Reference:* [ETSI EN 301 549](https://www.etsi.org/technologies/accessibility); [US Section 508 standards cross-reference](https://www.section508.gov/manage/laws-and-policies/)
+*Reference:* [ETSI EN 301 549](https://web.archive.org/web/20230601120000/https://www.etsi.org/technologies/accessibility); [US Section 508 standards cross-reference](https://www.section508.gov/manage/laws-and-policies/)
 
 ---
 
