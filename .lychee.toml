@@ -54,6 +54,12 @@ exclude = [
   # Sites that consistently time out from CI runners
   "gesetze-im-internet\\.de",
   "gdpr\\.eu",
+  # NYC government sites block automated link checkers (403)
+  "nyc\\.gov",
+  # Wayback Machine exact-timestamp snapshot URLs are fragile:
+  # a specific timestamp may have no crawl, returning 404.
+  # These URLs serve as historical references and are excluded from automated checking.
+  "web\\.archive\\.org",
 ]
 
 # Skip these file patterns
