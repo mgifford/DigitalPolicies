@@ -45,6 +45,8 @@ exclude = [
   "undp\\.org",
   "substack\\.com",
   "claude\\.ai",
+  # ChatGPT returns 403 to automated link checkers but is publicly accessible
+  "chatgpt\\.com",
   # Council of Europe document server returns 401 to bots but is publicly accessible
   "rm\\.coe\\.int",
   # Sites with HTTP/2 protocol issues in CI
